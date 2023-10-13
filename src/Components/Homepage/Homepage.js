@@ -1,6 +1,7 @@
-import NavBar from "./NavBar/NavBar";
+import NavBar from "../NavBar/NavBar";
 
 function Homepage() {
+  
   return (
     <>
       <header className="home-header">
