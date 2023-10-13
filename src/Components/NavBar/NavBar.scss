@@ -1,0 +1,19 @@
+.nav-bar {
+  display: flex;
+  align-items: center;
+  background-color: aqua;
+  min-height: 3rem;
+  padding: .5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.active {
+  text-decoration: underline .2rem;
+}
+
