@@ -14,7 +14,6 @@ function App() {
         <Route exact path='/provideAid' element={<ProvideAidPage />} />
         <Route exact path='/OurMission' element={<OurMissionPage />} />
       </Routes>
-      <Test />
     </>
   );
 }
