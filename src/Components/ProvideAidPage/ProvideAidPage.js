@@ -3,6 +3,8 @@ import NavBar from '../NavBar/NavBar';
 import { useQuery } from '@apollo/client';
 import { gql } from '@apollo/client';
 import '../ProvideAidPage/ProvideAidPage.scss';
+import welcomeImage from '../../images/welcome-usa-refugee.png';
+
 
 
 const GET_ORGANIZATIONS = gql`
@@ -37,7 +39,7 @@ const GET_ORGANIZATIONS = gql`
 const ProvideAidPage = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedOrganization, setSelectedOrganization] = useState(null);
-    const [showSearchResults, setShowSearchResults] = useState(false); 
+    const [showSearchResults, setShowSearchResults] = useState(false);
 
     const { loading, error, data } = useQuery(GET_ORGANIZATIONS);
 
@@ -74,9 +76,9 @@ const ProvideAidPage = () => {
     return (
         <div className="provide-aid-page">
             <NavBar />
-    
+
             <div className="content-section">
-    
+
                 {/* Left Section */}
                 <div className="left-section">
                     <div className="search-section">
@@ -88,7 +90,7 @@ const ProvideAidPage = () => {
                         />
                         <button onClick={handleSearchChange}>Find</button>
                     </div>
-    
+
                     <div className="filter-fields">
                         <select>
                             <option value="filter1">Filter 1</option>
@@ -101,7 +103,7 @@ const ProvideAidPage = () => {
                             <option value="filterC">Filter C</option>
                         </select>
                     </div>
-    
+
                     <ul>
                         {example_aid_requests.map(item => (
                             <li key={item.id}>
@@ -111,10 +113,10 @@ const ProvideAidPage = () => {
                         ))}
                     </ul>
                 </div>
-    
+
                 {/* Right Section */}
                 <div className="right-section">
-                {selectedOrganization ? (
+                    {selectedOrganization ? (
                         <>
                             <h2>{selectedOrganization.name}</h2>
                             <p>Phone: {selectedOrganization.contactPhone}</p>
@@ -128,21 +130,21 @@ const ProvideAidPage = () => {
                                 Map Here (Integration with map service required)
                             </div>
                         </>
-                        ) : showSearchResults ? null : (
-    <div>
-      <img
-        src="your-image-url-here"
-        alt="Placeholder Image"
-        style={{ width: '300px', height: '300px' }}
-      />
-    </div>
-  )}
+                    ) : showSearchResults ? null : (
+                        <div className="welcome-image-container">
+                            <img
+                                src={welcomeImage}
+                                alt="welcome-usa-refugee"
+                                className="welcome-image"
+                            />
+                        </div>
+                    )}
                 </div>
-    
+
             </div>
         </div>
     );
-    
+
 
 };
 
