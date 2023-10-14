@@ -7,12 +7,9 @@ export default function SearchResults({ queryType }) {
   if (error) return <p>Error: {error.message}</p>;
 
   return data.requests.map(
-    ({ id, organization_id, organization_name, type, description, status }) => (
+    ({ id }) => (
       <article key={id}>
-        <h3>{type}</h3>
-        <p id={organization_id}> {organization_name}</p>
-        <p>{description}</p>
-        <p>{status}</p>
+       {id}
       </article>
     ),
   );
