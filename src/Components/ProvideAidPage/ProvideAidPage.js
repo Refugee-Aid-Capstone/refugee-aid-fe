@@ -37,6 +37,7 @@ const GET_ORGANIZATIONS = gql`
 const ProvideAidPage = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedOrganization, setSelectedOrganization] = useState(null);
+    const [showSearchResults, setShowSearchResults] = useState(false); 
 
     const { loading, error, data } = useQuery(GET_ORGANIZATIONS);
 
@@ -58,9 +59,16 @@ const ProvideAidPage = () => {
         const value = e.target.value;
         setSearchTerm(value);
 
+        setShowSearchResults(value !== '');
+
         const foundRequest = aidRequests.find(req => req.description.toLowerCase().includes(value.toLowerCase()));
         setSelectedOrganization(foundRequest);
 
+    };
+
+    const handleFindButtonClick = () => {
+
+        setShowSearchResults(true);
     };
 
     return (
@@ -106,7 +114,7 @@ const ProvideAidPage = () => {
     
                 {/* Right Section */}
                 <div className="right-section">
-                    {selectedOrganization && (
+                {selectedOrganization ? (
                         <>
                             <h2>{selectedOrganization.name}</h2>
                             <p>Phone: {selectedOrganization.contactPhone}</p>
@@ -120,7 +128,15 @@ const ProvideAidPage = () => {
                                 Map Here (Integration with map service required)
                             </div>
                         </>
-                    )}
+                        ) : showSearchResults ? null : (
+    <div>
+      <img
+        src="your-image-url-here"
+        alt="Placeholder Image"
+        style={{ width: '300px', height: '300px' }}
+      />
+    </div>
+  )}
                 </div>
     
             </div>

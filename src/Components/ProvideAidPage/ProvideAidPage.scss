@@ -3,12 +3,19 @@ body, html {
     padding: 0;
 }
 
+.NavBar, .nav-bar {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 1rem;
+}
+
 .provide-aid-page {
     display: flex;
-    flex-direction: column; 
-    padding: 20px;
+    flex-direction: column;
     background-color: #f8f9fa;
     font-family: 'Arial', sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
 
     .content-section {
         display: flex;
@@ -20,8 +27,9 @@ body, html {
         margin-bottom: 20px;
 
         input[type="text"] {
-            flex: 1; // This ensures the input takes up the available space but not too much
-            max-width: 300px; // Adjusts the maximum length of the search bar
+            flex: 1; 
+            max-width: 300px; 
+            height: 40px; 
         }
 
         .filter-fields {
@@ -38,17 +46,20 @@ body, html {
     
         button {
             margin-left: 10px;
-            padding: 10px 15px;
-            background-color: #c1c5ca;
-            color: #fff;
+            padding: 12px 19px;
+            background-color: silver;
+            color: #ffffff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            margin-left: 10px;
-    
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 40px;
+            
             &:hover {
-                background-color: #dae0e6;
+                background-color: silver;
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
             }
         }
     }    
@@ -56,13 +67,14 @@ body, html {
     .left-section,
     .right-section {
         padding: 20px;
-        background-color: #ffffff;
+        background-color: rgb(233, 235, 229);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .left-section {
         flex: 1;
         border-right: 2px solid #e0e0e0;
+        margin-right: 20px;    
 
         input[type="text"] {
             width: 100%;
@@ -99,7 +111,6 @@ body, html {
             }
         }
     }
-    
 
     .right-section {
         flex: 2;
