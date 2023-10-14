@@ -1,9 +1,11 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
 }
 
-.NavBar, .nav-bar {
+.NavBar,
+.nav-bar {
     margin-top: 0;
     padding-top: 0;
     margin-bottom: 1rem;
@@ -27,15 +29,15 @@ body, html {
         margin-bottom: 20px;
 
         input[type="text"] {
-            flex: 1; 
-            max-width: 300px; 
-            height: 40px; 
+            flex: 1;
+            max-width: 300px;
+            height: 40px;
         }
 
         .filter-fields {
             display: flex;
             gap: 10px;
-        
+
             select {
                 padding: 10px;
                 border: none;
@@ -43,7 +45,7 @@ body, html {
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             }
         }
-    
+
         button {
             margin-left: 10px;
             padding: 12px 19px;
@@ -56,13 +58,13 @@ body, html {
             margin-bottom: 1rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             height: 40px;
-            
+
             &:hover {
                 background-color: silver;
-                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
             }
         }
-    }    
+    }
 
     .left-section,
     .right-section {
@@ -81,17 +83,16 @@ body, html {
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    
+
     .welcome-image {
         max-width: 100%;
         max-height: 100%;
     }
-    
 
     .left-section {
         flex: 1;
         border-right: 2px solid #e0e0e0;
-        margin-right: 20px;    
+        margin-right: 20px;
 
         input[type="text"] {
             width: 100%;
@@ -129,22 +130,22 @@ body, html {
         }
     }
 
-.left-section .filter-fields select {
-    flex: 1;
-    padding: 10px 25px;
-    margin-right: 50px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 13px;
-    transition: box-shadow 0.3s;
-    margin-bottom: 4rem;
-    margin-top: -20rem;
+    .left-section .filter-fields select {
+        flex: 1;
+        padding: 10px 25px;
+        margin-right: 50px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 13px;
+        transition: box-shadow 0.3s;
+        margin-bottom: 4rem;
+        margin-top: -20rem;
 
-    &:focus {
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-        outline: none;
+        &:focus {
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
     }
-}
 
 
     .right-section {
@@ -169,5 +170,24 @@ body, html {
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+    }
+}
+
+.some-element {
+    width: 300px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .some-element {
+        width: 200px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .some-element {
+        width: 100%;
+        font-size: 12px;
     }
 }
