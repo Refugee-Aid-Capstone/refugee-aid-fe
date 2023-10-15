@@ -20,7 +20,9 @@ function App() {
         <Route exact path='/provideAid' element={<ProvideAidPage />} />
         <Route exact path='/OurMission' element={<OurMissionPage />} />
         <Route path='/error500' element={<Error500 />} />
-        <Route path='/500-test' element={<Error500Test />} /> 
+        {window.location.pathname === '/500-test' && (
+          <Route path="/500-test" element={<Error500 />} />
+        )}
         <Route path="/general-error" element={<GeneralError />} />
         <Route path="*" element={<Error404 />} />
       </Routes>

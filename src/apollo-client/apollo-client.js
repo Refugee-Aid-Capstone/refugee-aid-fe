@@ -15,15 +15,12 @@ const httpLink = createHttpLink({
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors) {
-    graphQLErrors.map(({ message }) => {
-      if (message.includes('500')) {
-        window.location.href = '/error500';
-      }
-      return null;
+    graphQLErrors.forEach((error) => {
+      console.error('GraphQL Error:', error);
     });
   }
   if (networkError && networkError.statusCode === 500) {
-    window.location.href = '/error500';
+    console.log('Network Error:', networkError);
   }
 });
 

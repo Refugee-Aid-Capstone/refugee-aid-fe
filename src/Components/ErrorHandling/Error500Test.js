@@ -9,9 +9,9 @@ function Error500Test() {
     console.log("Error:", error);
 
     if (loading) return <p>Loading...</p>;
-    if (error) return <Error500 />;
-
     return <div>Data loaded successfully</div>;
+    
+    if (error) return <Error500 />;
 }
 
 export default Error500Test;
