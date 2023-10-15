@@ -20,3 +20,4 @@ function GeneralError() {
 
 export default GeneralError;
 
+// navigate to the URL http://localhost:3000/general-error, you should see the "General Error" page
