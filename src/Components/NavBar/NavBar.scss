@@ -1,20 +1,27 @@
 .nav-bar {
   display: flex;
   align-items: center;
-  // background-color: aqua;
-  background-color: rgb(15, 147, 70);
+  background-color: #43b6ff;
+  // background-color: #3c8bc9;
   min-height: 3rem;
   padding: .5rem;
-}
 
-.nav-link {
-  text-decoration: none;
-  color: rgb(0, 3, 1);
-  padding-left: 1rem;
-  cursor: pointer;
-}
+  .navbar-logo {
+    img {
+      width: 5rem; 
+      height: auto;
+      margin-right: 1rem;
+    }
+  }
 
-.active {
-  text-decoration: underline .2rem;
-}
+  .nav-link {
+    text-decoration: none;
+    color: rgb(0, 3, 1);
+    padding-left: 1rem;
+    cursor: pointer;
+  }
 
+  .active {
+    text-decoration: underline .2rem;
+  }
+}
