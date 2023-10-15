@@ -4,8 +4,7 @@ import { useQuery } from '@apollo/client';
 import { gql } from '@apollo/client';
 import '../ProvideAidPage/ProvideAidPage.scss';
 import welcomeImage from '../../images/welcome-usa-refugee.png';
-
-
+import Spinner from '../Spinner/Spinner'
 
 const GET_ORGANIZATIONS = gql`
     query {
@@ -43,11 +42,13 @@ const ProvideAidPage = () => {
 
     const { loading, error, data } = useQuery(GET_ORGANIZATIONS);
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <Spinner />;
+
     if (error) return <p>Error: {error.message}</p>;
     console.log(data);  // dont forget to delete
 
-    const aidRequests = data && data.requests ? data.requests : [];
+    const aidRequests = data && data.aidRequests ? data.aidRequests : [];
+
 
     console.log(aidRequests[0]); //dont forget to delete
     const example_aid_requests = aidRequests.slice(0, 5);
@@ -68,10 +69,10 @@ const ProvideAidPage = () => {
 
     };
 
-    const handleFindButtonClick = () => {
+    // const handleFindButtonClick = () => {
 
-        setShowSearchResults(true);
-    };
+    //     setShowSearchResults(true);
+    // };
 
     return (
         <div className="provide-aid-page">

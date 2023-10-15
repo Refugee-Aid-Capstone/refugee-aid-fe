@@ -1,0 +1,150 @@
+$primary-color: #5a3822;
+$secondary-color: #FFC300;
+$btn-color:  #FFD700;
+$font-stack: 'Times New Roman', serif;
+
+.not-found-page-container {
+  color: $primary-color; 
+  text-align: center;
+  padding: 2em;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  font-family: $font-stack;
+
+  & .not-found-heading {
+    h1 {
+      font-size: 2em;
+      margin-bottom: 1em;
+      text-align: center;
+      border-bottom: 3px solid $secondary-color; 
+      padding-bottom: 0.5em;
+    }
+  }
+
+  & .not-found-handling {
+    h3 {
+      font-size: 1em;
+      margin-bottom: 2em;
+      margin-top: 10px;
+    }
+  }
+
+  & .error404-go-home-button {
+    // background-color: $btn-color !important;
+    background-color: $btn-color;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    margin-top: 20px;
+
+    &:hover {
+      // background-color: $btn-color !important;
+      background-color: $secondary-color;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transform: translateY(-2px);
+    }
+  }
+  
+  & .error404-navlink {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  & .ref-fact-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 1.5em;
+    padding: 0.7em;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); 
+    justify-content: center;
+    max-width: 90%;
+    max-height: 10rem;
+
+    & .ref-fact-heading, & .ref-fact {
+      padding: 0.1em; 
+      margin: 0.1em;
+    }
+  }
+
+  & .refugee-image {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10%;
+    margin-right: 5%; 
+    border-radius: 1%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .not-found-page-container {
+    & .not-found-heading {
+      h1 {
+        font-size: 2em;
+      }
+    }
+
+    & .not-found-handling {
+      h3 {
+        font-size: 1.2em;
+      }
+    }
+
+    & .ref-fact {
+      font-size: 1.5em;
+    }
+
+    & .error404-go-home-button {
+      padding: 0.5em;
+      font-size: 0.9em;
+      margin-top: 15px;
+    }
+
+    & .refugee-image {
+      margin-top: 5%;
+    }
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .not-found-page-container {
+    & .not-found-heading {
+      h1 {
+        font-size: 2.5em;
+      }
+    }
+
+    & .not-found-handling {
+      h3 {
+        font-size: 1.4em;
+      }
+    }
+
+    & .ref-fact {
+      font-size: 1.8em;
+    }
+
+    & .error404-go-home-button {
+      padding: 0.75em;
+      font-size: 1em;
+      margin-top: 18px;
+    }
+
+    & .refugee-image {
+      margin-top: 7%;
+    }
+  }
+}

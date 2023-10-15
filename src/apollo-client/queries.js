@@ -28,3 +28,22 @@ export const GET_ORG_REQUESTS = gql`
     }
   }
 `;
+
+export const GET_AID_REQUESTS_WITH_ORG_NAME = gql`
+  query {
+    aidRequests(city: "Cincinatti", state: "OH") {
+      id
+      aidType
+      status
+      organization {
+        name
+      }
+    }
+  }
+`;
+
+export const TEST_ERROR_500 = gql`
+  query TestError500 {
+    someFieldOrQueryThatWillCauseAnError
+  }
+`;

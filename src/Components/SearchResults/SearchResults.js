@@ -1,9 +1,10 @@
 import { useQuery } from "@apollo/client";
+import Spinner from '../Spinner/Spinner'
 
 export default function SearchResults({ queryType }) {
   const { loading, error, data } = useQuery(queryType);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Spinner />;
   if (error) return <p>Error: {error.message}</p>;
 
   return data.requests.map(
