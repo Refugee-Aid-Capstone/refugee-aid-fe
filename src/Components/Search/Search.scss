@@ -4,6 +4,7 @@
   margin-bottom: 20px;
 
   input[type='text'] {
+    margin-right: 1rem;
     flex: 1;
     max-width: 300px;
     height: 40px;
@@ -21,10 +22,9 @@
     }
   }
   button {
-    margin-left: 10px;
     padding: 12px 19px;
-    background-color: silver;
-    color: #ffffff;
+    background-color: #37b3fe;
+    color: whitesmoke;
     border: none;
     border-radius: 5px;
     cursor: pointer;

@@ -36,11 +36,11 @@ export default function Search({ selectOrganization }) {
           placeholder='State'
         />
         <button onClick={findOrgs}>Find</button>
-        <select>
+        {/* <select>
           <option value='filter1'>Filter 1</option>
           <option value='filter2'>Filter 2</option>
           <option value='filter3'>Filter 3</option>
-        </select>
+        </select> */}
       </div>
       <SearchResults selectOrganization={selectOrganization} data={data} loading={loading} error={error} />
     </div>
