@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Error404.scss";
-// import logo from "../../Images/amnisty-international-logo.png";
-import RefugeeImage from '../../images/welcome-usa-refugee3.png';
+import AILogo from "../../images/amnisty-international-logo.png";
+// import RefugeeImage from '../../images/welcome-usa-refugee3.png';
 
 const refugeeInformativeFacts = [
   "Refugees: A refugee is someone who has been forced to flee his or her country because of persecution, war, or violence. They often can't return home or are afraid to do so.",
@@ -28,13 +28,13 @@ function Error404() {
       <h1 className="not-found-heading">404 - Page Not Found</h1>
       <div className="not-found-handling">
         <h3>
-          Sorry! That page doesn't seem to exist. Try going back to the home
+          Sorry! That page doesn't seem to exist. Try going back to the Home
           page.
         </h3>
       </div>
       <NavLink to="/" className="error404-navlink">
         <button className="error404-go-home-button">
-          Return to Home
+          Return Home
         </button>
       </NavLink>
 
@@ -48,7 +48,8 @@ function Error404() {
         </p>
       </div>
       <div className="image-container">
-        <img src={RefugeeImage} alt="Refugee Image" className="refugee-image" />
+        {/* <img src={RefugeeImage} alt="Refugee Image" className="refugee-image" /> */}
+        <img src={AILogo} alt="Amnisty International Logo" className="refugee-image" />
       </div>
     </div>
   );

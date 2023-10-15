@@ -1,12 +1,9 @@
 $primary-color: #5a3822;
-$secondary-color: #d2a45b;
-$btn-color: #FFC300;
+$secondary-color: #FFC300;
+$btn-color:  #FFD700;
 $font-stack: 'Times New Roman', serif;
 
 .not-found-page-container {
-//   background-image: url('../../Images/parchment-paper.png');
-//   background-size: cover;
-//   background-repeat: no-repeat;
   color: $primary-color; 
   text-align: center;
   padding: 2em;
@@ -32,12 +29,13 @@ $font-stack: 'Times New Roman', serif;
     h3 {
       font-size: 1em;
       margin-bottom: 2em;
-      margin-top: -10px;
+      margin-top: 10px;
     }
   }
 
   & .error404-go-home-button {
-    background-color: $btn-color !important;
+    // background-color: $btn-color !important;
+    background-color: $btn-color;
     color: rgb(11, 0, 0);
     padding: 1em;
     border: none;
@@ -52,12 +50,13 @@ $font-stack: 'Times New Roman', serif;
     margin-right: 1.25rem; 
 
     &:hover {
-      background-color: $btn-color !important;
+      // background-color: $btn-color !important;
+      background-color: $btn-color;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       transform: translateY(-2px);
     }
   }
-
+  
   & .error404-navlink {
     background-color: transparent;
     box-shadow: none;
@@ -79,8 +78,7 @@ $font-stack: 'Times New Roman', serif;
 
     & .ref-fact-heading, & .ref-fact {
       padding: 0.5em; 
-      margin: 0.5em; 
-      border: 0.5px solid $secondary-color; 
+      margin: 0.5em;
     }
   }
 
