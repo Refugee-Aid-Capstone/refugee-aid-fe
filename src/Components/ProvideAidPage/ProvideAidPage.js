@@ -69,10 +69,10 @@ const ProvideAidPage = () => {
 
     };
 
-    const handleFindButtonClick = () => {
+    // const handleFindButtonClick = () => {
 
-        setShowSearchResults(true);
-    };
+    //     setShowSearchResults(true);
+    // };
 
     return (
         <div className="provide-aid-page">

@@ -8,6 +8,7 @@ import ProvideAidPage from '../ProvideAidPage/ProvideAidPage';
 import Error404 from '../ErrorHandling/Error404'; 
 import Error500 from '../ErrorHandling/Error500';
 import Error500Test from '../ErrorHandling/Error500Test'; 
+import GeneralError from '../ErrorHandling/GeneralError';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/OurMission' element={<OurMissionPage />} />
         <Route path='/error500' element={<Error500 />} />
         <Route path='/500-test' element={<Error500Test />} /> 
+        <Route path="/general-error" element={<GeneralError />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </>
