@@ -1,18 +1,27 @@
-import { useQuery } from "@apollo/client";
+import { useState , useEffect} from 'react';
+import RequestCard from '../RequestCard/RequestCard';
 import Spinner from '../Spinner/Spinner'
 
-export default function SearchResults({ queryType }) {
-  const { loading, error, data } = useQuery(queryType);
+export default function SearchResults({selectOrganization, data, loading, error }) {
+  const [cards, setCards] = useState([])
+  const [noResults, setNoResults] = useState(true)
 
-  if (loading) return <Spinner />;
-  if (error) return <p>Error: {error.message}</p>;
+  useEffect(() => {
+    const noResults = data ? false : true;
+    setNoResults(noResults)
 
-  return data.requests.map(
-    ({ id }) => (
-      <article key={id}>
-       {id}
-      </article>
-    ),
+    if (data) {
+      setCards(data.aidRequests.map(request => <RequestCard key={request.id} selectOrganization={selectOrganization} request={request} />));
+    } else {
+      setCards([])
+    }
+  }, [data])
+
+  return (
+    <div>
+      {loading && <Spinner/>}
+      {error && error}
+      {noResults ? <p>There are no aid oportunities here</p>: cards}
+    </div>
   );
-  // ask backend for the org name in allrequests nearby
 }
