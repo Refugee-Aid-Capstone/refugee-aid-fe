@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Error404.scss";
-import AILogo from "../../images/amnisty-international-logo.png";
+import RefugeeKids from "../../images/refugees-kids.png";
 // import RefugeeImage from '../../images/welcome-usa-refugee3.png';
 
 const refugeeInformativeFacts = [
@@ -44,12 +44,19 @@ function Error404() {
         </h2>
 
         <p className="ref-fact">
-          {refFact || "No facts available at the moment."}
-        </p>
+  {refFact 
+    ? <>
+        <strong>{refFact.split(":")[0]}:</strong> 
+        {refFact.split(":")[1]}
+      </>
+    : "No facts available at the moment."
+  }
+</p>
+
       </div>
       <div className="image-container">
         {/* <img src={RefugeeImage} alt="Refugee Image" className="refugee-image" /> */}
-        <img src={AILogo} alt="Amnisty International Logo" className="refugee-image" />
+        <img src={RefugeeKids} alt="Refugees Kids" className="refugee-image" />
       </div>
     </div>
   );
