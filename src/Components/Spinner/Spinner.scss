@@ -1,3 +1,5 @@
+$spinner-color: #006633;
+
 .spinner-overlay {
     display: flex;
     justify-content: center;
@@ -14,9 +16,9 @@
   .spinner {
     border: 6px solid rgba(219, 219, 219, 0.8); 
     border-radius: 50%;
-    border-top: 6px solid #6b8e23; 
-    width: 60px;
-    height: 60px;
+    border-top: 6px solid $spinner-color; 
+    width: 80px;
+    height: 80px;
     animation: spin 1.5s linear infinite;
   }
   
