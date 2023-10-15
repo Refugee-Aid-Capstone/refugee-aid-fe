@@ -1,0 +1,51 @@
+$spinner-green: #0ecb3a; /* Green for hope and growth */
+$spinner-blue: #2196F3; /* Blue for trust and compassion */
+$spinner-white: #FFFFFF; /* White for purity and peace */
+
+.spinner-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 1000;
+}
+
+.spinner {
+  border: 6px solid linear-gradient(to bottom, #006633, #003399, whitesmoke); 
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 3s linear infinite, color-change 3s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes color-change {
+  0% {
+    border-top: 6px solid $spinner-green;
+  }
+  33% {
+    border-top: 6px solid $spinner-blue;
+  }
+  66% {
+    border-top: 6px solid $spinner-white;
+  }
+  100% {
+    border-top: 6px solid $spinner-green;
+  }
+}
+
+
+  

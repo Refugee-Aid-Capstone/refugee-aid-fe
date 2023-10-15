@@ -18,16 +18,16 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.welcome-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+    .welcome-image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        // border: 2px solid silver;
+        border-radius: 5px;
+        // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
 .welcome-image {
   max-width: 100%;
@@ -50,6 +50,10 @@
     }
   }
 }
+
+//button
+//background-color: #37b3fe;
+//color: whitesmoke
 
 .left-section .filter-fields select {
   flex: 1;

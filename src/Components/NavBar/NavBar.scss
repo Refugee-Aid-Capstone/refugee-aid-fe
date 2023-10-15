@@ -1,19 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.paragraph {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+
 .nav-bar {
   display: flex;
   align-items: center;
-  background-color: aqua;
+  background-color: #37b3fe;
+  // background-color: #3c8bc9;
   min-height: 3rem;
   padding: .5rem;
-}
 
-.nav-link {
-  text-decoration: none;
-  color: black;
-  padding-left: 1rem;
-  cursor: pointer;
-}
+  .navbar-logo {
+    img {
+      width: 5rem; 
+      height: auto;
+      margin-right: 1rem;
+    }
+  }
 
-.active {
-  text-decoration: underline .2rem;
-}
+  .nav-link {
+    text-decoration: none;
+    // color: rgb(0, 3, 1);
+    color: #ffffff;
+    padding-left: 1rem;
+    cursor: pointer;
+    font-family: Open Sans;
+  }
 
+  .active {
+    text-decoration: underline .2rem;
+  }
+}

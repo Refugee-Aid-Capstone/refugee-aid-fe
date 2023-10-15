@@ -1,0 +1,63 @@
+$error-background-color: #000;
+$error-font-color: #fff;
+$error-button-color: #FFD700;
+$error-button-hover-color: #FFC300;
+$error-message-color: red;
+
+.error-page-container {
+  background-color: $error-background-color;
+  color: $error-font-color;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    padding-top: 100px;
+  }
+}
+
+.error-heading {
+  font-size: 48px;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 42px;
+  }
+}
+
+.error-message {
+  h3 {
+    font-size: 35px;
+    color: $error-message-color;
+    margin-top: -20px;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
+}
+
+.error500-go-home-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: $error-button-color;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: $error-button-hover-color;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}

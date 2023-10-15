@@ -1,5 +1,6 @@
 import { useState , useEffect} from 'react';
 import RequestCard from '../RequestCard/RequestCard';
+import Spinner from '../Spinner/Spinner'
 
 export default function SearchResults({selectOrganization, data, loading, error }) {
   const [cards, setCards] = useState([])
@@ -18,7 +19,7 @@ export default function SearchResults({selectOrganization, data, loading, error 
 
   return (
     <div>
-      {loading && <p>Loading...</p>}
+      {loading && <Spinner/>}
       {error && error}
       {noResults ? <p>There are no aid oportunities here</p>: cards}
     </div>
