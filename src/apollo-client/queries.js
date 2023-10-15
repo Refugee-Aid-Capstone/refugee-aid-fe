@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const GET_ONE_ORG = gql`
-  query getOneOrg($id: Integer!) {
-    organization(byId: $id) {
+  query getOneOrg($id: ID!) {
+    organization(id: $id) {
       id
       name
       contactPhone
@@ -29,7 +29,7 @@ export const GET_ONE_ORG = gql`
   }
 `;
 
-const GET_ALL_ORGS_BY_AREA = gql`
+export const GET_ALL_ORGS_BY_AREA = gql`
   query getAllOrgs($city: String!, $state: String!) {
     organizations(city: $city, state: $state) {
       id
@@ -58,9 +58,9 @@ const GET_ALL_ORGS_BY_AREA = gql`
   }
 `;
 
-const GET_ALL_REQUESTS_BY_AREA = gql`
+export const GET_ALL_REQUESTS_BY_AREA = gql`
   query getAllRequestByArea($city: String!, $state: String!) {
-    requests(city: $city, state: $state) {
+    aidRequests(city: $city, state: $state) {
       id
       organizationId
       aidType
