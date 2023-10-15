@@ -1,5 +1,5 @@
 import React from 'react';
-import './Spinner.scss';
+import '../Spinner/Spinner.scss';
 
 export default function Spinner() {
   return (
@@ -8,20 +8,3 @@ export default function Spinner() {
     </div>
   );
 }
-
-
-// import tree from "../../images/pine.png";
-// import "./LoadingComponent.css";
-
-// function LoadingComponent() {
-//   return (
-//     <div className="LoadingComponent">
-//       <header className="LoadingComponent-header">
-//         <img src={tree} className="LoadingComponent-logo" alt="tree" />
-//         <p>Loading...</p>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default LoadingComponent;
