@@ -34,7 +34,7 @@ function Error404() {
       </div>
       <NavLink to="/" className="error404-navlink">
         <button className="error404-go-home-button">
-          Return Home
+          Return to Home Page
         </button>
       </NavLink>
 

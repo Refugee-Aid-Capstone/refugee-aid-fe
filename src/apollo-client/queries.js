@@ -41,3 +41,9 @@ export const GET_AID_REQUESTS_WITH_ORG_NAME = gql`
     }
   }
 `;
+
+export const TEST_ERROR_500 = gql`
+  query TestError500 {
+    someFieldOrQueryThatWillCauseAnError
+  }
+`;

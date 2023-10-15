@@ -36,22 +36,18 @@ $font-stack: 'Times New Roman', serif;
   & .error404-go-home-button {
     // background-color: $btn-color !important;
     background-color: $btn-color;
-    color: rgb(11, 0, 0);
-    padding: 1em;
+    color: black;
+    padding: 10px 20px;
     border: none;
-    border-radius: 24px;
+    border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-weight: bold;
-    margin-top: 2px;
-    margin-right: 1.25rem; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    margin-top: 20px;
 
     &:hover {
       // background-color: $btn-color !important;
-      background-color: $btn-color;
+      background-color: $secondary-color;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       transform: translateY(-2px);
     }
