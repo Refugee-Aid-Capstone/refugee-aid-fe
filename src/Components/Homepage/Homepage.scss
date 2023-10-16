@@ -1,14 +1,20 @@
-// .container-with-background {
-//   background-image: url('../../images/refugees.png');
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   height: 400px;
-// }
-
 $primary-color: #37b3fe;
 $secondary-color: #3c8bc9;
 $default-padding: 10px;
 $netflix-red: #E50914;
+
+.home-header {
+  .navbar-container {
+    width: 100%;
+  }
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .content-section {
   display: flex;
@@ -21,19 +27,29 @@ $netflix-red: #E50914;
     flex: 1;
     padding: $default-padding;
 
-    img.refugees-img {
-      max-width: 60rem;
+    .refugee-image-container {
+      width: 20rem;
+      height: 20rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; 
+  }
+
+    .refugees-img {
+      max-width: 20rem;
       height: auto;
       display: block;
       margin-top: -20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
       margin-right: -4rem;
-      margin-left: 10rem
+      margin-left: 10rem;
     }
   }
 
   .text-side {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,36 +71,38 @@ $netflix-red: #E50914;
       font-size: 1.1rem;
       line-height: 1.6;
       color: rgba(0, 0, 0, 0.7);
-      line-height: 1.5; 
-      text-align: justify; 
-      max-width: 80%; 
+      text-align: justify;
+      max-width: 80%;
       font-size: 1.1rem;
       color: #555;
     }
-
-    button.play-video {
-      background-color: $netflix-red;
-      color: #FFFFFF;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: darken($netflix-red, 10%);
-      }
-    }
   }
 
-  @media (max-width: 768px) {
+  .play-video, .hide-video {
+    margin-top: 15px;
+    background-color: $netflix-red;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #cc0000;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .content-section {
     flex-direction: column;
 
-    .media-side,
-    .text-side {
+    .media-side, .text-side {
       width: 100%;
     }
   }
 }
+
