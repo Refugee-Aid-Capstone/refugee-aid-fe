@@ -3,7 +3,7 @@ import welcomeImage from '../../images/welcome-usa-refugee.png'
 
 export default function OrganizationDisplay({ selectedOrganization }) {
   return (
-    <div className='right-section'>
+    <div className='organization-display'>
       {selectedOrganization.name ? (
         <>
           <h2>{selectedOrganization.name}</h2>
