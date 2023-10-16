@@ -10,59 +10,6 @@ $secondary-color: #3c8bc9;
 $default-padding: 10px;
 $netflix-red: #E50914;
 
-// .content-section {
-//   display: flex;
-//   justify-content: space-between;
-
-//   .media-side {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 50%; // adjust based on your design requirements
-
-//     iframe {
-//       max-width: 100%;
-//       max-height: 100%;
-//     }
-//   }
-// }
-
-// .content-section {
-//   display: flex;
-//   justify-content: space-between;
-
-//   .media-side {
-//     display: flex;
-//     flex-direction: column; // This will stack video and button vertically
-//     justify-content: center;
-//     align-items: center;
-//     width: 50%; // adjust based on your design requirements
-
-//     iframe {
-//       max-width: 100%;
-//       max-height: 70%; // adjust to make room for the button below
-//     }
-
-//     .hide-video {
-//       margin-top: 10px;
-//       background-color: red;
-//       color: #FFFFFF;
-//       border: none;
-//       padding: 12px 24px;
-//       font-size: 1.2rem;
-//       font-weight: bold;
-//       border-radius: 4px;
-//       cursor: pointer;
-//       transition: background-color 0.3s ease;
-
-//       &:hover {
-//         background-color: darken(red, 10%);
-//       }
-//     }
-//   }
-// }
-
-
 .content-section {
   display: flex;
   align-items: center;
