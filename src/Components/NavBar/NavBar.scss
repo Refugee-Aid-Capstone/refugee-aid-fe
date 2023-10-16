@@ -20,12 +20,12 @@ body {
   align-items: center;
   // background-color: #37b3fe;
   background-color: #30acf6;
-  min-height: 3rem;
+  min-height: 2rem !important;
   padding: .5rem;
 
   .navbar-logo {
     img {
-      width: 5rem; 
+      width: 4rem; 
       height: auto;
       margin-right: 1rem;
     }

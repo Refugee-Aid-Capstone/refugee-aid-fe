@@ -1,8 +1,78 @@
 
+// .container-with-background {
+//   background-image: url('../../images/refugees.png');
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   height: 400px;
+// }
 
-.refugees-img {
-    width: 100%;
-    height: 50%;
-    display: block;
+$primary-color: #37b3fe;
+$secondary-color: #3c8bc9;
+$default-padding: 10px;
+$netflix-red: #E50914;
+
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // justify-content: space-between;
+  margin: 5px 0;
+  padding: 0 $default-padding;
+
+  .media-side {
+    flex: 1;
+    padding: $default-padding;
+
+    img.refugees-img {
+      max-width: 60rem;
+      height: auto;
+      display: block;
+      margin-top: -20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-right: -4rem;
+      margin-left: 10rem
+    }
   }
-  
+
+  .text-side {
+    h2 {
+      color: $primary-color;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+  button.play-video {
+    background-color: $netflix-red !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+
+    &:hover {
+      background-color: darken($netflix-red, 10%)!important;
+    }
+  }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .media-side,
+    .text-side {
+      width: 100%;
+    }
+  }
+}
+
+
