@@ -19,7 +19,7 @@ export const GET_ONE_ORG = gql`
       shareEmail
       aidRequests {
         id
-        orgnizationId
+        organizationId
         aidType
         language
         description
@@ -59,7 +59,7 @@ export const GET_ALL_ORGS_BY_AREA = gql`
 `;
 
 export const GET_ALL_REQUESTS_BY_AREA = gql`
-  query getAllRequestByArea($city: String!, $state: String!) {
+  query getAllRequestsByArea($city: String!, $state: String!) {
     aidRequests(city: $city, state: $state) {
       id
       organizationId
@@ -70,3 +70,4 @@ export const GET_ALL_REQUESTS_BY_AREA = gql`
     }
   }
 `;
+
