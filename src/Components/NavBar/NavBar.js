@@ -1,7 +1,7 @@
 import React from 'react';
 import './NavBar.scss'; 
 import { NavLink } from 'react-router-dom';
-import logoImage from '../../images/refuge.PNG';
+import logoImage from '../../images/refuge.png';
 
 export default function NavBar() {
   return (
