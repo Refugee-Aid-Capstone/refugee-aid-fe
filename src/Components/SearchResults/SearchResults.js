@@ -1,13 +1,14 @@
 import { useState , useEffect} from 'react';
 import RequestCard from '../RequestCard/RequestCard';
 import Spinner from '../Spinner/Spinner'
+import './SearchResults.scss'
 
 export default function SearchResults({selectOrganization, data, loading, error }) {
   const [cards, setCards] = useState([])
   const [noResults, setNoResults] = useState(true)
 
   useEffect(() => {
-    const noResults = data ? false : true;
+    const noResults = data?.aidRequests.length ? false : true;
     setNoResults(noResults)
 
     if (data) {
@@ -18,10 +19,10 @@ export default function SearchResults({selectOrganization, data, loading, error 
   }, [data])
 
   return (
-    <div>
+    <div className='search-results'>
       {loading && <Spinner/>}
       {error && error}
-      {noResults ? <p>There are no aid oportunities here</p>: cards}
+      {cards.length ? cards: <p>Start by inputting a location!</p>}
     </div>
   );
 }
