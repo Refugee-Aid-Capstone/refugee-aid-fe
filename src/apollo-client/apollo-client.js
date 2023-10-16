@@ -1,16 +1,9 @@
-// import { ApolloClient, InMemoryCache, gql } from "@apollo/client"
-
-// export const client = new ApolloClient({
-//   uri: 'https://4f71dde4-4ca6-4a29-b363-5b329b3036f0.mock.pstmn.io/graphql',
-//   cache: new InMemoryCache
-// })
-
 import { ApolloClient, InMemoryCache, createHttpLink } from "@apollo/client";
 import { onError } from "@apollo/client/link/error";
 import { ApolloLink } from "@apollo/client/core";
 
 const httpLink = createHttpLink({
-  uri: 'https://4f71dde4-4ca6-4a29-b363-5b329b3036f0.mock.pstmn.io/graphql',
+  uri: 'https://refugee-aid-capstone-be-fb1ab84cf89d.herokuapp.com/graphql',
 });
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
