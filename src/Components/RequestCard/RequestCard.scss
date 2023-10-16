@@ -1,0 +1,27 @@
+.request-card {
+  padding: 1rem 2rem;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  
+  &:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.card-text {
+  text-transform: capitalize;
+  margin: 0.5rem 0;
+
+  &.type {
+    text-decoration: underline;
+  }
+
+  &.org {
+    font-weight: 700;
+  }
+
+  &.description {
+    text-transform: none;
+  }
+}
