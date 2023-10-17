@@ -4,6 +4,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: #f4f4f4;
 }
+
 .header {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -16,20 +17,26 @@ body {
 
 .nav-bar {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #30acf6;
-  // padding: .25rem;
-  padding: 1rem 2rem;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
-
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #30acf6;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #30acf6, 0 0 25px #30acf6, 0 0 30px #30acf6, 0 0 35px #30acf6;
+    height: 100px; 
+    overflow: hidden;
 }
 
 .navbar-logo {
   margin-right: 2rem;
+  padding: 0.5rem; 
+  transition: transform 0.3s ease; 
+
+  &:hover {
+    transform: scale(1.05);
+  }
   
   img {
-    width: 4rem; 
+    width: 4rem;
     height: auto;
     margin-right: 0.5rem;
     transition: transform 0.3s ease;
@@ -42,9 +49,10 @@ body {
 
 .nav-link {
   text-decoration: none;
-  // color: #ffffff;
   cursor: pointer;
   font-family: Open Sans;
+  font-weight: 700; 
+  font-size: 1.3rem;
   margin-right: 1rem; 
   color: #EDEDED;
   font-weight: 600;
