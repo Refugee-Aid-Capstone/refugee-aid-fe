@@ -67,7 +67,22 @@ export const GET_ALL_REQUESTS_BY_AREA = gql`
       language
       description
       status
+      organization {
+        id
+        name
+        contactPhone
+        contactEmail
+        streetAddress
+        website
+        city
+        state
+        zip
+        latitude
+        longitude
+        shareAddress
+        sharePhone
+        shareEmail
+      }
     }
   }
 `;
-

@@ -3,13 +3,14 @@ import NavBar from '../NavBar/NavBar';
 import '../ProvideAidPage/ProvideAidPage.scss';
 import Search from '../Search/Search';
 import OrganizationDisplay from '../OrganizationDisplay/OrganizationDisplay';
-import Spinner from '../Spinner/Spinner'
+import './ProvideAidPage.scss'
 
 export default function ProvideAidPage() {
   const [selectedOrganization, setSelectedOrganization] = useState({});
 
   function selectOrganization(organization) {
     setSelectedOrganization(organization)
+    console.log(selectOrganization)
   }
 
   return (
