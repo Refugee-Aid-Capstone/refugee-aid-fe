@@ -1,9 +1,5 @@
 import { useState } from 'react';
 import {
-<<<<<<< HEAD
-  // GET_ALL_ORGS_BY_AREA,
-=======
->>>>>>> main
   GET_ALL_REQUESTS_BY_AREA,
 } from '../../apollo-client/queries';
 import { useLazyQuery } from '@apollo/client';
@@ -14,10 +10,6 @@ export default function Search({ selectOrganization }) {
   // filter by type
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
-<<<<<<< HEAD
-  // const [results, setResults] = useState([]);
-=======
->>>>>>> main
 
   const [findOrgs, { loading, error, data }] = useLazyQuery(
     GET_ALL_REQUESTS_BY_AREA,
