@@ -6,8 +6,8 @@ import '../Homepage/Homepage.scss'
 function Homepage() {
   const [showVideo, setShowVideo] = useState(false);
 
-  console.log('Homepage component is rendering');
-  console.log('Value of showVideo is:', showVideo);
+  console.log('Homepage component is rendering'); //dont forget to delet
+  console.log('Value of showVideo is:', showVideo); //dont forget to delete
 
   return (
     <header className="home-header">
@@ -30,24 +30,19 @@ function Homepage() {
                     allowfullscreen>
                   </iframe>
                 </div>
-
               ) : (
                 <div className="refugee-image-container">
                   <img src={refugeesImage} alt="Refugees" className="refugees-img" />
                 </div>
               )}
             </div>
-            <div className="video-controls">
-              {!showVideo ? (
-                <button className="play-video" onClick={() => setShowVideo(true)}>
-                  Play Video
-                </button>
-              ) : (
+            {showVideo && (
+              <div className="video-controls">
                 <button className="hide-video" onClick={() => setShowVideo(false)}>
                   Hide Video
                 </button>
-              )}
-            </div>
+              </div>
+            )}
           </div>
           <div className="text-side">
             <div className="title-container">
@@ -57,6 +52,13 @@ function Homepage() {
             <p>Article 14 of the UN Declaration of Human Rights promises that all individuals have "the right to seek and enjoy asylum from persecution in other countries."</p>
             <p>At Refuge, we are dedicated to helping people realize and exercise this right, no matter where they are in their journey.</p>
             <p>We do everything within our power and capabilities to transform the fear in the hearts of those in need into hope.</p>
+            {!showVideo && (
+              <div className="video-controls">
+                <button className="play-video" onClick={() => setShowVideo(true)}>
+                  Play Video
+                </button>
+              </div>
+            )}
           </div>
         </section>
       </main>
