@@ -1,28 +1,46 @@
-import { useState , useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import RequestCard from '../RequestCard/RequestCard';
-import Spinner from '../Spinner/Spinner'
-import './SearchResults.scss'
+import Spinner from '../Spinner/Spinner';
+import './SearchResults.scss';
 
-export default function SearchResults({selectOrganization, data, loading, error }) {
-  const [cards, setCards] = useState([])
-  const [noResults, setNoResults] = useState(true)
+export default function SearchResults({
+  selectOrganization,
+  data,
+  loading,
+  error,
+  searchFilter,
+}) {
+  const [searchResults, setSearchResults] = useState([]);
+  const [noResults, setNoResults] = useState(true);
 
   useEffect(() => {
     const noResults = data?.aidRequests.length ? false : true;
-    setNoResults(noResults)
+    setNoResults(noResults);
 
-    if (data) {
-      setCards(data.aidRequests.map(request => <RequestCard key={request.id} selectOrganization={selectOrganization} request={request} />));
-    } else {
-      setCards([])
+    let results = data ? data.aidRequests : [];
+
+    if (searchFilter) {
+      results = results.filter(
+        aidRequest => aidRequest.aidType === searchFilter,
+      );
     }
-  }, [data])
+
+    setSearchResults(results);
+  }, [data, searchFilter]);
+
+  const cards = searchResults.map(request => (
+    <RequestCard
+      key={request.id}
+      selectOrganization={selectOrganization}
+      request={request}
+    />
+  ));
 
   return (
     <div className='search-results'>
-      {loading && <Spinner/>}
+      {loading && <Spinner />}
       {error && error}
-      {cards.length ? cards: <p>Start by inputting a location!</p>}
+      {searchResults.length ? cards : <p>Start by inputting a location!</p>}
     </div>
   );
 }
