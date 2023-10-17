@@ -5,12 +5,12 @@
     </h1>
 </div>
 
-
-<!-- Dive into a world of curiosity with **Avicenna Method**! Named after the legendary polymath Avicenna (Ibn Sina), this trivia application is designed for those who seek a delightful blend of challenge and learning. -->
+**Step into a realm of hope and connection with Refuge!** Inspired by the global effort to support displaced communities, this platform is crafted for those who aspire to bridge gaps and foster unity. Bringing together aid providers and seekers, **Refuge** stands as a testament to the power of solidarity in challenging times.
 
 ### <span style="color:#2E8B57;">Description</span>
 
-<!-- **Avicenna Method** offers trivia enthusiasts and casual learners a chance to test and expand their knowledge across diverse categories. With a focus on a seamless user experience, app lets users tailor their quiz sessions and discover new facts in an engaging manner. -->
+**Refuge - AidConnect/RefugeeAid** emerges as a platform addressing the challenge of efficiently connecting aid workers and compassionate citizens with refugee camps or organisations. It ensures that assistance meets the refugees, asylees and migrants' current and specific needs in an engaging, real-time feed.
+
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/07d2bf4c-0b57-42b3-8254-56e133f377a3">
 
@@ -24,8 +24,9 @@
 
 ### <span style="color:#2E8B57;">Features</span>
 
-<!-- - **Dynamic Quiz Generation**: Choose your preferred category and set the number of questions.
-- **Flashcard Interaction**: Click to flip and reveal the answers. -->
+- **Real-time Feed**: A dynamic feed showcasing each camp's current needs.
+- **Integrated Map Interface**: Swiftly locate and connect with nearby refugee camps.
+- **Educational Resources**: Empower yourself with insights on effective assistance methods and cultural considerations.
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/ed99f7c3-67db-4b94-b607-0b2856770eb1">
 
@@ -38,6 +39,16 @@
 ### <span style="color:#2E8B57;">Technologies:</span>
 
 **Refuge** is built using a blend of modern web technologies:
+<!-- <div>  
+  <a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
+  <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
+  <a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
+  <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>  
+  <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
+  <a href="https://react.dev/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
+  <a href="https://docs.cypress.io/guides/overview/why-cypress" target="_blank"><img style="margin: 10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoXfntUBC8eXPGA7V8dQp74I5Xofeze3tnRua5hKQkd0ofyH0cy5mJm3_Y-zPhHO2ty9k&usqp=CAU" alt="Cypress" height="50" /></a>  
+</div> -->
+
 <div>  
   <a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
   <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
@@ -46,6 +57,9 @@
   <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
   <a href="https://react.dev/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
   <a href="https://docs.cypress.io/guides/overview/why-cypress" target="_blank"><img style="margin: 10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoXfntUBC8eXPGA7V8dQp74I5Xofeze3tnRua5hKQkd0ofyH0cy5mJm3_Y-zPhHO2ty9k&usqp=CAU" alt="Cypress" height="50" /></a>  
+  <a href="https://graphql.org/" target="_blank"><img style="margin: 10px" src="https://graphql.org/img/logo.svg" alt="GraphQL" height="50" /></a>
+  <a href="https://www.apollographql.com/" target="_blank"><img style="margin: 10px" src="https://www.apollographql.com/docs/react/logo-apollo.svg" alt="Apollo Client" height="50" /></a>
+  <a href="#" target="_blank"><img style="margin: 10px" src="https://cdn.iconscout.com/icon/free/png-256/ci-cd-2957902-2445791.png" alt="CI/CD" height="50" /></a>
 </div>
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/7b5f262b-9ed5-4594-acb2-5e71efe3c2ff">
@@ -63,10 +77,9 @@ Get **Refuge** running on your machine:
 
 ### <span style="color:#2E8B57;">Learning Highlights</span>
 
-<!-- - Deepened understanding of **React** and it's capabilities in building scalable applications.
-- Delved into **Cypress**, navigating its complexities to ensure reliable testing.
-- Successfully integrated with the Open Trivia Database API, bringing dynamic data to our quizzes.
-- Embraced challenges, especially in crafting a user-centric multi-page experience with **React Router**. -->
+- **GraphQL Mastery**: Delved deep into the world of GraphQL, harnessing its power for efficient and flexible data retrieval.
+- **CI/CD Implementation**: Integrated Continuous Integration and Continuous Deployment pipelines, ensuring smooth transitions from development to production.
+
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/4d3bd651-f26c-45fc-8994-d1e81f47cee2">
 
@@ -100,7 +113,7 @@ Meet the developer behind **Refuge**:
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/d07cdccf-01dc-4aad-ab97-143def51d789">
 
 ### <span style="color:#2E8B57;">Reflections</span>
-<!-- The "Refuge" project was both a challenge and a learning curve. Delving deeper into React, Router, and asynchronous JavaScript expanded my understanding of frontend development. E2E with Cypress highlighted the significance of thorough testing, and designing for a specific audience underscored the importance of user-centric development. Despite the hurdles, like complex error handling, each obstacle strengthened my resolve and skills as a budding developer. -->
+
 
 <h4>
   <img src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge.png" 
@@ -128,3 +141,92 @@ Meet the developer behind **Refuge**:
 <!-- - Grappling with Cypress: Dived deep to achieve comprehensive end-to-end testing.
 - Error Handling Challenges: Faced complexities in error propagation, which added intricacies to the Cypress testing process.
 - Ensuring Smooth User Experience: Despite challenges, implemented error handling to ensure users enjoy uninterrupted sessions. -->
+
+<div>
+    <h1 style="color:red; display: inline;">
+      Refuge - AidConnect/RefugeeAid - Capstone
+         <img src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge.png" alt="refuge logo" width="105" style="margin-left: 5px; border-radius: 50%; vertical-align: middle;">
+    </h1>
+</div>
+
+
+
+<!-- 
+## Description
+
+**AidConnect/RefugeeAid** emerges as a platform addressing the challenge of efficiently connecting compassionate citizens and aid workers with refugee camps and organisations. It ensures that assistance meets the refugees' current and specific needs in an engaging, real-time feed.
+
+<img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/07d2bf4c-0b57-42b3-8254-56e133f377a3">
+
+## Live Demo
+
+[Engage with Refuge](https://refugee-aid-fe.vercel.app/).
+
+<img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/11311fac-e5a5-4ee8-aa0c-f1008cb1ad03">
+
+## Features
+
+- **Real-time Feed**: A dynamic feed showcasing each camp's current needs.
+- **Integrated Map Interface**: Swiftly locate and connect with nearby refugee camps.
+- **Educational Resources**: Empower yourself with insights on effective assistance methods and cultural considerations.
+
+<img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/ed99f7c3-67db-4b94-b607-0b2856770eb1">
+
+## Preview of App
+
+![Refuge](https://github.com/Sulton88Mehron90/showcase-project/blob/main/src/Images/avicenna-method-romjon.gif)
+
+<img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/b3c82159-82b5-4ba6-bae0-f26675c94957">
+
+## Technologies
+
+**Refuge** is built using a blend of modern web technologies:
+
+<div>  
+  <a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
+  <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
+  <a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
+  <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>  
+  <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
+  <a href="https://react.dev/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
+  <a href="https://docs.cypress.io/guides/overview/why-cypress" target="_blank"><img style="margin: 10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoXfntUBC8eXPGA7V8dQp74I5Xofeze3tnRua5hKQkd0ofyH0cy5mJm3_Y-zPhHO2ty9k&usqp=CAU" alt="Cypress" height="50" /></a>  
+</div>
+
+<img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/7b5f262b-9ed5-4594-acb2-5e71efe3c2ff">
+
+## Setup & Installation
+
+Get **Refuge** running on your machine:
+
+1. Clone the repository: `git clone git@github.com:Sulton88Mehron90/showcase-project.git`
+2. Move to the project directory: `cd showcase-project`
+3. Grab the dependencies: `npm install`
+4. Fire up the app: `npm start`
+
+<img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/abbf0809-d7de-43fa-b2be-a7d1ac2a4fb1">
+
+## Learning Highlights
+
+- **React & Router**: Crafted a multi-page application, navigating the complexities of React Router.
+- **Cypress**: Delved into Cypress, ensuring a robust frontend testing experience.
+- **User-Centric Design**: Prioritized the user, focusing on their needs and feedback to drive the platform's features and design.
+
+## Contributors
+
+Meet the minds behind **AidConnect/RefugeeAid**:
+
+| Name | Role | GitHub | LinkedIn |
+|------|------|--------|----------|
+| Artemy Gibson | Backend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
+| Ethan Black | Backend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
+| Davis Weimer | Backend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
+| Renee Pinna | Frontend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
+| Parvin Sattorova | Frontend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
+
+## Reflections
+
+**AidConnect/RefugeeAid** posed challenges, but also provided immense learning. From designing a platform with a real-time feed to ensuring seamless navigation, each challenge paved the way for innovation and growth. The integration of Cypress for frontend testing highlighted the importance of reliable and comprehensive tests, ensuring a bug-free experience for users. The collaboration between frontend and backend teams was pivotal in realizing the project's vision, showcasing the essence of teamwork in software development.
+
+## Feedback & Contributions
+
+Feedback, bug reports -->
