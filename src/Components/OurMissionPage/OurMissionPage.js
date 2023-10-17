@@ -5,7 +5,7 @@ export default function OurMissionPage() {
   return (
     <div>
       <NavBar />
-      mission
+      Hello! 🇺🇸 Салом! 🇹🇯 سلام 🇮🇷 Здравствуйте 🇷🇺
     </div>
   );
 }

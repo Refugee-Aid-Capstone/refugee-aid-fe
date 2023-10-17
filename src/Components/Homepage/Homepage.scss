@@ -1,0 +1,179 @@
+$primary-color: #37b3fe;
+$secondary-color: #3c8bc9;
+$default-padding: 10px;
+$netflix-red: #E50914;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// below is for testing perpose only
+// .content-section { border: 2px solid red; }
+// .media-side { border: 2px solid green; }
+// .text-side { border: 2px solid blue; }
+// .refugee-image-container { border: 2px solid yellow; }
+
+.home-header {
+  .navbar-container {
+    width: 100%;
+  }
+}
+
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+}
+
+.content-section {
+  padding-top: 30px; 
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 0 $default-padding;
+  width: 100%;
+
+  .media-side {
+    flex: 1;
+    padding: $default-padding;
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+
+    button.play-video, 
+    button.hide-video {
+        margin-top: 15px;
+    }    
+
+    .media-content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .video-controls {
+      margin-top: 20px;
+      text-align: center; 
+    }
+
+    .refugee-image-container {
+      padding-top: 30px;
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .refugees-img {
+      margin-top: 30px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-width: 100%; 
+      height: auto;
+      margin: auto; 
+      display: block;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+
+  .text-side {
+    flex: 1;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 40px;
+
+    .title-container {
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #e9f5fc, #fff);
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+
+      h2 {
+        color: $primary-color;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600; 
+        font-size: 2.2rem;
+        line-height: 1.3;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: rgba(0, 0, 0, 0.7);
+      text-align: justify;
+      max-width: 80%;
+      font-size: 1.1rem;
+      color: #555;
+    }
+  }
+
+  .play-video, .hide-video {
+    margin-top: 15px;
+    background-color: $netflix-red;
+    // background-color: #37b3fe;
+    border-radius: 30px;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative;
+
+    &:hover {
+      background-color: #cc0000;
+    }
+  }
+}
+
+.video-container {
+  margin-top: 30px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  border-radius: 15px; 
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1); 
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+
+    .media-side, .text-side {
+      width: 100%;
+    }
+  }
+}
+
