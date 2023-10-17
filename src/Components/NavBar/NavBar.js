@@ -13,7 +13,7 @@ export default function NavBar() {
       </div>
       <NavLink className='nav-link' to='/provideAid'>aid reguest</NavLink>
       <NavLink className='nav-link' to='/'>donate</NavLink>
-      <NavLink className='nav-link' to='/ourMission'>organization</NavLink> 
+      <NavLink className='nav-link' to='/OrganizationDashboard'>organization</NavLink> 
       <NavLink className='nav-link' to='/'>mission</NavLink>
     </nav>
   );
