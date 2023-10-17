@@ -114,6 +114,21 @@ Meet the developer behind **Refuge**:
 
 ### <span style="color:#2E8B57;">Reflections</span>
 
+### Reflections
+
+#### Major Triumphs
+
+- **Collaborative Spirit**: The team showed a remarkable spirit of collaboration, with frontend and backend seamlessly integrating features and addressing challenges.
+  
+- **User-Centric Design**: The consistent focus on the end-user and their needs ensured that every feature added value and enhanced the user experience.
+
+- **Rapid Prototyping**: Through iterative prototyping and feedback sessions, we were able to quickly pivot and refine our features, leading to a polished final product.
+
+#### Hurdles Overcome (continued)
+
+- **Diverse Technologies**: Integrating a plethora of modern web technologies, from GraphQL to CI/CD pipelines, required a steep learning curve and rigorous testing. Yet, the end product stands as a testament to our commitment and persistence.
+
+
 
 <h4>
   <img src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge.png" 
@@ -138,9 +153,11 @@ Meet the developer behind **Refuge**:
   Hurdles Overcome
 </h4>
 
-<!-- - Grappling with Cypress: Dived deep to achieve comprehensive end-to-end testing.
-- Error Handling Challenges: Faced complexities in error propagation, which added intricacies to the Cypress testing process.
-- Ensuring Smooth User Experience: Despite challenges, implemented error handling to ensure users enjoy uninterrupted sessions. -->
+- **Integration with Real-time Data**: Initially, synchronizing the platform's real-time feed with the vast and dynamic data sources posed a challenge. Through collaboration and persistent debugging, we refined our data-fetching algorithms to ensure seamless updates.
+  
+- **Custom Map Interface**: Designing an integrated map interface that was intuitive and user-friendly took several iterations and user feedback sessions. The final result was a blend of performance and aesthetics.
+
+- **Responsive Design**: Ensuring the platform was equally effective across devices was challenging, given the variety of interactive elements. We utilized modern CSS frameworks and regular cross-device testing to achieve this.
 
 <div>
     <h1 style="color:red; display: inline;">
@@ -148,6 +165,44 @@ Meet the developer behind **Refuge**:
          <img src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge.png" alt="refuge logo" width="105" style="margin-left: 5px; border-radius: 50%; vertical-align: middle;">
     </h1>
 </div>
+
+
+
+
+### Reflections
+
+#### Major Triumphs
+
+- **Collaborative Spirit**: The team showed a remarkable spirit of collaboration, with frontend and backend seamlessly integrating features and addressing challenges.
+  
+- **User-Centric Design**: The consistent focus on the end-user and their needs ensured that every feature added value and enhanced the user experience.
+
+- **Rapid Prototyping**: Through iterative prototyping and feedback sessions, we were able to quickly pivot and refine our features, leading to a polished final product.
+
+#### Hurdles Overcome (continued)
+
+- **Diverse Technologies**: Integrating a plethora of modern web technologies, from GraphQL to CI/CD pipelines, required a steep learning curve and rigorous testing. Yet, the end product stands as a testament to our commitment and persistence.
+
+### Technologies
+
+For the CI/CD section, consider this placeholder:
+
+[![CI/CD with Jenkins](https://cdn.iconscout.com/icon/free/png-256/ci-cd-2957902-2445791.png)](https://www.jenkins.io/doc/)
+
+### Feedback & Contributions
+
+We welcome feedback and contributions to **Refuge**. If you have suggestions, bug reports, or wish to contribute to the code, follow these steps:
+
+1. **Fork the Repository**: Start by forking [the main repository](https://github.com/Refugee-Aid-Capstone).
+2. **Clone Your Fork**: `git clone git@github.com:YOUR_USERNAME/REPO_NAME.git`
+3. **Create a New Branch**: `git checkout -b your-branch-name`
+4. **Make Changes & Commit**: After making your changes, commit them with a meaningful commit message.
+5. **Push to Your Fork**: `git push origin your-branch-name`
+6. **Open a Pull Request**: Go to the main repository and open a pull request from your branch.
+
+For bug reports and feedback, please open an issue on our [GitHub issues page](https://github.com/orgs/Refugee-Aid-Capstone/projects/1).
+
+
 
 
 

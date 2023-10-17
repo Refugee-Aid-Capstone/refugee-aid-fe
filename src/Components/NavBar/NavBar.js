@@ -11,9 +11,10 @@ export default function NavBar() {
           <img src={logoImage} alt="Logo" />
         </NavLink>
       </div>
-      <NavLink className='nav-link' to='/provideAid'>Aid</NavLink>
-      <NavLink className='nav-link' to='/ourMission'>Donate</NavLink>
-      <NavLink className='nav-link' to='/ourMission'>Organization</NavLink>
+      <NavLink className='nav-link' to='/provideAid'>aid reguest</NavLink>
+      <NavLink className='nav-link' to='/'>donate</NavLink>
+      <NavLink className='nav-link' to='/ourMission'>organization</NavLink> 
+      <NavLink className='nav-link' to='/'>mission</NavLink>
     </nav>
   );
 }
