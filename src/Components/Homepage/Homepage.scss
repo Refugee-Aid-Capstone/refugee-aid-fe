@@ -9,10 +9,10 @@ $netflix-red: #E50914;
   box-sizing: border-box;
 }
 
-.content-section { border: 2px solid red; }
-.media-side { border: 2px solid green; }
-.text-side { border: 2px solid blue; }
-.refugee-image-container { border: 2px solid yellow; }
+// .content-section { border: 2px solid red; }
+// .media-side { border: 2px solid green; }
+// .text-side { border: 2px solid blue; }
+// .refugee-image-container { border: 2px solid yellow; }
 
 .home-header {
   .navbar-container {
@@ -42,10 +42,26 @@ $netflix-red: #E50914;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; 
+
+    button.play-video, 
+    button.hide-video {
+        margin-top: 15px;
+    }    
+
+    .media-content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .video-controls {
+      margin-top: 20px;
+      text-align: center; 
+    }
 
     .refugee-image-container {
-      // width: 50rem;
-      // height: 50rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -58,8 +74,7 @@ $netflix-red: #E50914;
       left: 0;
       right: 0;
       bottom: 0;
-      max-width: 100%;  
-      // max-height: 100%;
+      max-width: 100%; 
       height: auto;
       margin: auto; 
       display: block;
