@@ -50,7 +50,8 @@ export default function NavBar() {
               e.preventDefault();
               handleLogin();
             }}>
-              <button className='nav-button' type="submit">login</button>
+              <button className='nav-button' type="submit">login please</button>
+              {/* <NavLink className='nav-link' to='/organizationDashboard'>login please</NavLink> */}
             </form>
           )
         )}
