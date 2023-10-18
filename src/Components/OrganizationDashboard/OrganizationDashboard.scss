@@ -1,0 +1,41 @@
+.organization-dashboard-container {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #FFFFFF; 
+  
+    h2, h3 {
+      color: #2196F3; 
+      font-weight: 600;
+    }
+  
+    p {
+      color: #666666;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+  
+    li {
+      padding: 10px;
+      background-color: #0ECB3A; 
+      color: #FFFFFF; 
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+  
+      &:hover {
+        background-color: #02A832; 
+      }
+    }
+  }
+  
+  .login-notice {
+    background-color: #FFE3E3; 
+    padding: 10px;
+    border-radius: 5px;
+    color: #f44336;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

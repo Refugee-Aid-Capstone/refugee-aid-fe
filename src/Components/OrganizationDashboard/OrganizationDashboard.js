@@ -1,57 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import NavBar from '../NavBar/NavBar';
+import { useQuery } from '@apollo/client';
+import { GET_ONE_ORG } from '../../apollo-client/queries';
+import '../OrganizationDashboard/OrganizationDashboard.scss';
+
 
 export default function OrganizationDashboard() {
-  // Assuming the loggedIn state is passed as a prop or accessed via context.
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
-  
+  const { loading, error, data } = useQuery(GET_ONE_ORG, {
+    variables: { id: 'your-organization-id' }
+  });
 
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  const organization = data.organization;
+  
   return (
-    <div>
+    <div className="organization-dashboard-container">
       <NavBar />
       {isLoggedIn ? (
         <div>
-          {/* Render the dashboard content */}
-          {/* ... */}
+          <h2>Welcome, {organization.name}!</h2>
+          <div>
+            <h3>Aid Requests</h3>
+            <ul>
+              {organization.aidRequests.map(request => (
+                <li key={request.id}>
+                  {request.description} - {request.status}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       ) : (
-        <p>Please log in to view the dashboard.</p>
+        <p className="login-notice">Please log in to view the dashboard.</p>
       )}
     </div>
-  );
+  );  
 }
-
-
-// import React, { useState } from 'react';
-// import NavBar from '../NavBar/NavBar';
-// import './OrganizationDashboard.scss';
-// import { NavLink } from 'react-router-dom';
-
-// export default function OrganizationDashboard() {
-//   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-//   const handleLogin = (credentials) => {
-//     setIsLoggedIn(true);
-//   };
-
-//   return (
-//     <div>
-//       <NavBar />
-//       {!isLoggedIn ? (
-//         <div className="login-container">
-//           <form onSubmit={(e) => {
-//             e.preventDefault();
-//             handleLogin();
-//           }}>
-//             <button className='nav-button' type="submit">Login</button>
-//           </form>
-//         </div>
-//       ) : (
-//         <div>
-//           <NavLink className='nav-link' to='/organizationDashboard'>organization dashboard</NavLink>
-//           <button className='nav-button' onClick={() => setIsLoggedIn(false)}>logout</button>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }

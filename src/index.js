@@ -17,13 +17,4 @@ root.render(
   </ApolloProvider>,
 );
 
-// below removed the React.StrictMode to see why the nav bar is rendering 2 times when loggin in to org-dashboard.
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <ApolloProvider client={client}>
-//     <BrowserRouter>
-//       <App />
-//     </BrowserRouter>
-//   </ApolloProvider>,
-// );
 
