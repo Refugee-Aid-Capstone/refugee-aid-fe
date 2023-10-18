@@ -5,6 +5,8 @@ import logoImage from '../../images/refuge.png';
 
 export default function NavBar({ isLoggedIn, setIsLoggedIn }) {
 
+
+  console.log("NavBar rendering. isLoggedIn:", isLoggedIn);
   console.log(typeof setIsLoggedIn); //dont forget to delete
 
   const navigate = useNavigate();
@@ -17,6 +19,7 @@ export default function NavBar({ isLoggedIn, setIsLoggedIn }) {
   const handleOrganizationLogin = () => {
     if (isLoggedIn) {
       setIsLoggedIn(false); 
+      console.log("Attempting to logout and redirect to homepage");
       navigate('/');
     } else {
       setIsLoggedIn(true);
@@ -40,7 +43,10 @@ export default function NavBar({ isLoggedIn, setIsLoggedIn }) {
         {isLoggedIn ? (
           <>
             <NavLink className='nav-link' to='/organizationDashboard'>organization dashboard</NavLink>
-            <button className='nav-button' onClick={handleOrganizationLogin}>logout</button>
+            {/* <button className='nav-button logout' onClick={() => { setIsLoggedIn(false); }}>logout</button> */}
+            <button className='nav-button logout' onClick={() => { console.log('Logout button clicked!'); setIsLoggedIn(false); }}>logout</button>
+
+
           </>
         ) : (
           <button className='nav-button' onClick={handleOrganizationLogin}>organization login</button>

@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
-import NavBar from '../NavBar/NavBar';
 import { useQuery } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 import { GET_ONE_ORG } from '../../apollo-client/queries';
 import '../OrganizationDashboard/OrganizationDashboard.scss';
 import Spinner from '../Spinner/Spinner';
-import replaceFearWithHope from '../../images/replace-fear-with-hope.png';
 
 export default function OrganizationDashboard() {
 
