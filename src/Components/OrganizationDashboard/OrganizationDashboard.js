@@ -39,3 +39,7 @@ export default function OrganizationDashboard() {
     </div>
   );  
 }
+
+//The component where you set up the ApolloProvider (usually the main App component).
+// Any other components or files that might be related to the GraphQL query and its execution.
+// If there are any specific error messages you're seeing, please include them as well.
