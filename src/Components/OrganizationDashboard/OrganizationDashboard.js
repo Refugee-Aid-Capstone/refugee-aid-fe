@@ -52,13 +52,16 @@ export default function OrganizationDashboard() {
         </div>
         
         <div className="right-column">
-          <h3>Organization Details</h3>
-          <p>Address: {organization.streetAddress}</p>
-          <p>City: {organization.city}</p>
-          <p>State: {organization.state}</p>
-          <p>ZIP: {organization.zip}</p>
-          <button>Edit Details</button>
-        </div>
+                  <h3>Organization Details</h3>
+                  <p>Phone: {organization.contactPhone}</p>
+                  <p>Email: {organization.contactEmail}</p>
+                  <p>Address: {organization.streetAddress}</p>
+                  <p>Website: {organization.website}</p>
+                  <p>City: {organization.city}</p>
+                  <p>State: {organization.state}</p>
+                  <p>ZIP: {organization.zip}</p>
+                  <button>Edit Details</button> 
+              </div>
       </div>
     </div>
   );
