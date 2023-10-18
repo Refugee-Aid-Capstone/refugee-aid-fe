@@ -6,12 +6,6 @@ import '../OrganizationDashboard/OrganizationDashboard.scss';
 import Spinner from '../Spinner/Spinner';
 
 export default function OrganizationDashboard() {
-
-  // console.log("Inside OrganizationDashboard Component", setIsLoggedIn); //dont forget to delete
-
-
-  // console.log("OrganizationDashboard.js:", typeof setIsLoggedIn); //dont forget to delete
-
   const TOTAL_ORGANIZATIONS = 10; 
   const randomOrgId = Math.floor(Math.random() * TOTAL_ORGANIZATIONS) + 1;
 
@@ -43,17 +37,28 @@ export default function OrganizationDashboard() {
 
   return (
     <div className="organization-dashboard-container">
-      <h2>Welcome, {organization.name}!</h2>
-      <p>Address: {organization.address}</p> {/* Assuming address is available in the data */}
-      <div>
-        <h3>Aid Requests</h3>
-        <ul>
-          {organization.aidRequests.map(request => (
-            <li key={request.id}>
-              {request.description} - {request.status}
-            </li>
-          ))}
-        </ul>
+      <h1>Welcome, {organization.name}!</h1>
+      
+      <div className="dashboard-content">
+        <div className="left-column">
+          <h3>Aid Requests</h3>
+          <ul>
+            {organization.aidRequests.map(request => (
+              <li key={request.id}>
+                {request.description} - {request.status}
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div className="right-column">
+          <h3>Organization Details</h3>
+          <p>Address: {organization.streetAddress}</p>
+          <p>City: {organization.city}</p>
+          <p>State: {organization.state}</p>
+          <p>ZIP: {organization.zip}</p>
+          <button>Edit Details</button>
+        </div>
       </div>
     </div>
   );

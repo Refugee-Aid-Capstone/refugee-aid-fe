@@ -1,132 +1,44 @@
-
-// .organization-dashboard-container {
-//   font-family: 'Arial', sans-serif;
-//   background-color: #FFFFFF;
-// }
-
-// h2, h3 {
-//   color: #2196F3;
-//   font-weight: 600;
-// }
-
-// p {
-//   color: #666666;
-// }
-
-// ul {
-//   list-style-type: none;
-//   padding-left: 0;
-// }
-
-// li {
-//   padding: 10px;
-//   background-color: #0ECB3A;
-//   color: #FFFFFF;
-//   margin-bottom: 10px;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-//   border-radius: 5px;
-
-//   &:hover {
-//     background-color: #02A832;
-//   }
-// }
-
-// .login-notice {
-//   background-color: gray;
-//   width: 30rem;
-//   margin-top: 3rem;
-//   margin-left: 53rem;
-//   text-align: center;
-//   padding: 10px;
-//   border-radius: 5px;
-//   color: whitesmoke;
-//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-// }
-
-//   .replace-fear-with-hope-container {
-//     margin-top: 40px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     overflow: hidden;
-//     position: relative;
-//   }
-  
-//   .replace-fear-with-hope-img{
-//     width: 60rem;
-//     height: auto; 
-//     margin-top: 30px;
-//     max-width: 100%; 
-//     height: auto;
-//     margin: auto; 
-//     display: block;
-//     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-//     border-radius: 8px;
-//     object-fit: cover;
-//   }
-
 .organization-dashboard-container {
-  font-family: 'Arial', sans-serif;
-  background-color: #FFFFFF;
-}
-
-h2, h3 {
-  color: #2196F3;
-  font-weight: 600;
-}
-
-p {
-  color: #666666;
-}
-
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-li {
-  padding: 10px;
-  background-color: #0ECB3A;
-  color: #FFFFFF;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-
-  &:hover {
-    background-color: #02A832;
-  }
-}
-
-.login-notice {
-  background-color: gray;
-  width: 30rem;
-  margin-top: 3rem;
-  margin-left: 53rem;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  color: whitesmoke;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.replace-fear-with-hope-container {
-  margin-top: 40px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  position: relative;
-}
+  padding: 2rem;
 
-.replace-fear-with-hope-img{
-  width: 60rem;
-  height: auto; 
-  margin-top: 30px;
-  max-width: 100%; 
-  height: auto;
-  margin: auto; 
-  display: block;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  object-fit: cover;
+  h1 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 2rem;
+  }
+
+  .dashboard-content {
+    display: flex;
+    width: 100%;
+    
+    .left-column {
+      flex: 1;
+      padding-right: 1rem;
+      border-right: 2px solid #ccc;
+      overflow-y: auto;
+    }
+    
+    .right-column {
+      flex: 1;
+      padding-left: 1rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: #fff;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
 }

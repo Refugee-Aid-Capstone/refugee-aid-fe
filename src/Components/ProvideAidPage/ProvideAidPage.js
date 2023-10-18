@@ -9,7 +9,7 @@ export default function ProvideAidPage() {
 
   function selectOrganization(organization) {
     setSelectedOrganization(organization)
-    console.log(selectOrganization)
+    console.log(selectOrganization) //dont forget to delete
   }
 
   return (
