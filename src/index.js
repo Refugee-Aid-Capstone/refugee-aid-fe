@@ -17,6 +17,13 @@ root.render(
   </ApolloProvider>,
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// below removed the React.StrictMode to see why the nav bar is rendering 2 times when loggin in to org-dashboard.
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <ApolloProvider client={client}>
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>
+//   </ApolloProvider>,
+// );
+
