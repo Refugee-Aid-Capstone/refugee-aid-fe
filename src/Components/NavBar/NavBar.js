@@ -16,9 +16,10 @@ export default function NavBar({ isLoggedIn, setIsLoggedIn }) {
 
   const handleOrganizationLogin = () => {
     if (isLoggedIn) {
-      setIsLoggedIn(false);  // Logout
+      setIsLoggedIn(false); 
+      navigate('/');
     } else {
-      setIsLoggedIn(true);   // Login
+      setIsLoggedIn(true);
       navigate('/organizationDashboard');
     }
   }
@@ -39,8 +40,7 @@ export default function NavBar({ isLoggedIn, setIsLoggedIn }) {
         {isLoggedIn ? (
           <>
             <NavLink className='nav-link' to='/organizationDashboard'>organization dashboard</NavLink>
-            <button className='nav-button' onClick={() => { setIsLoggedIn(false); }}>logout</button>
-
+            <button className='nav-button' onClick={handleOrganizationLogin}>logout</button>
           </>
         ) : (
           <button className='nav-button' onClick={handleOrganizationLogin}>organization login</button>
