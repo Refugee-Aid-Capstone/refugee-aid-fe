@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import refugeesImage from '../../images/refugees.png';
-import NavBar from "../NavBar/NavBar";
 import '../Homepage/Homepage.scss'
 
 function Homepage() {
@@ -11,9 +10,6 @@ function Homepage() {
 
   return (
     <header className="home-header">
-      <div className="navbar-container">
-        <NavBar />
-      </div>
       <main>
         <section className="content-section">
           <div className="media-side">

@@ -4,25 +4,24 @@ import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import logoImage from '../../images/refuge.png';
 
 export default function NavBar({ isLoggedIn, setIsLoggedIn }) {
+
+  console.log(typeof setIsLoggedIn); //dont forget to delete
+
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    console.log("NavBar Mounted");
+    console.log("NavBar Mounted"); //dont forget to delete
   }, []);
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-    navigate('/organizationDashboard');
-  }
-
-  const handleOrganizationClick = () => {
-    if (!isLoggedIn) {
-      navigate('/OrganizationDashboard');
+  const handleOrganizationLogin = () => {
+    if (isLoggedIn) {
+      setIsLoggedIn(false);  // Logout
+    } else {
+      setIsLoggedIn(true);   // Login
+      navigate('/organizationDashboard');
     }
   }
-
-  const showLoginForm = !isLoggedIn && location.pathname === '/OrganizationDashboard';
 
   return (
     <nav className='nav-bar'>
@@ -34,7 +33,6 @@ export default function NavBar({ isLoggedIn, setIsLoggedIn }) {
       <div className="nav-items">
         <NavLink className='nav-link' to='/provideAid'>aid request</NavLink>
         <NavLink className='nav-link' to='/'>donate</NavLink>
-        {!isLoggedIn && <NavLink className='nav-link' to='/OrganizationDashboard' onClick={handleOrganizationClick}>organization</NavLink>}
         <NavLink className='nav-link' to='/'>mission</NavLink>
       </div>
       <div className="login-container">
@@ -42,17 +40,10 @@ export default function NavBar({ isLoggedIn, setIsLoggedIn }) {
           <>
             <NavLink className='nav-link' to='/organizationDashboard'>organization dashboard</NavLink>
             <button className='nav-button' onClick={() => { setIsLoggedIn(false); }}>logout</button>
+
           </>
         ) : (
-          showLoginForm && (
-            <form onSubmit={(e) => {
-              e.preventDefault();
-              handleLogin();
-            }}>
-              <button className='nav-button' type="submit">login please</button>
-              {/* <NavLink className='nav-link' to='/organizationDashboard'>login please</NavLink> */}
-            </form>
-          )
+          <button className='nav-button' onClick={handleOrganizationLogin}>organization login</button>
         )}
       </div>
     </nav>

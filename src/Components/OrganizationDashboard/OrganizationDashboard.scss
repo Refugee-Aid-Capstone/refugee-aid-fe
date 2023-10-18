@@ -1,4 +1,70 @@
 
+// .organization-dashboard-container {
+//   font-family: 'Arial', sans-serif;
+//   background-color: #FFFFFF;
+// }
+
+// h2, h3 {
+//   color: #2196F3;
+//   font-weight: 600;
+// }
+
+// p {
+//   color: #666666;
+// }
+
+// ul {
+//   list-style-type: none;
+//   padding-left: 0;
+// }
+
+// li {
+//   padding: 10px;
+//   background-color: #0ECB3A;
+//   color: #FFFFFF;
+//   margin-bottom: 10px;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   border-radius: 5px;
+
+//   &:hover {
+//     background-color: #02A832;
+//   }
+// }
+
+// .login-notice {
+//   background-color: gray;
+//   width: 30rem;
+//   margin-top: 3rem;
+//   margin-left: 53rem;
+//   text-align: center;
+//   padding: 10px;
+//   border-radius: 5px;
+//   color: whitesmoke;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+// }
+
+//   .replace-fear-with-hope-container {
+//     margin-top: 40px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     overflow: hidden;
+//     position: relative;
+//   }
+  
+//   .replace-fear-with-hope-img{
+//     width: 60rem;
+//     height: auto; 
+//     margin-top: 30px;
+//     max-width: 100%; 
+//     height: auto;
+//     margin: auto; 
+//     display: block;
+//     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+//     border-radius: 8px;
+//     object-fit: cover;
+//   }
+
 .organization-dashboard-container {
   font-family: 'Arial', sans-serif;
   background-color: #FFFFFF;
@@ -43,25 +109,24 @@ li {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-  .replace-fear-with-hope-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .replace-fear-with-hope-img{
-    width: 60rem;
-    height: auto; 
-    margin-top: 30px;
-    max-width: 100%; 
-    height: auto;
-    margin: auto; 
-    display: block;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    object-fit: cover;
-  }
+.replace-fear-with-hope-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
 
+.replace-fear-with-hope-img{
+  width: 60rem;
+  height: auto; 
+  margin-top: 30px;
+  max-width: 100%; 
+  height: auto;
+  margin: auto; 
+  display: block;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  object-fit: cover;
+}
