@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate, } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import Homepage from '../Homepage/Homepage';
 import OrganizationDashboard from '../OrganizationDashboard/OrganizationDashboard';
@@ -11,10 +11,23 @@ import GeneralError from '../ErrorHandling/GeneralError';
 function App() {
   console.log('App component is rendering');
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const navigate = useNavigate();
+
+  const handleOrganizationLogin = () => {
+    if (isLoggedIn) {
+      setIsLoggedIn(false); 
+      console.log("Attempting to logout and redirect to homepage");
+      navigate('/');
+    } else {
+      setIsLoggedIn(true);
+      navigate('/organizationDashboard');
+    }
+  }
+
 
   return (
     <>
-      <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <NavBar isLoggedIn={isLoggedIn} handleLogin={handleOrganizationLogin} />
       <Routes>
         <Route exact path='/' element={<Homepage />} />
         <Route exact path='/provideAid' element={<ProvideAidPage />} />
