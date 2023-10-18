@@ -86,3 +86,12 @@ export const GET_ALL_REQUESTS_BY_AREA = gql`
     }
   }
 `;
+
+export const GET_ALL_LOCATIONS = gql`
+  query getAllLocations {
+    locations {
+      city
+      state
+    }
+  }
+`

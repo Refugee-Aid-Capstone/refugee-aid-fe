@@ -1,6 +1,9 @@
-import { useState } from 'react';
-import { GET_ALL_REQUESTS_BY_AREA } from '../../apollo-client/queries';
-import { useLazyQuery } from '@apollo/client';
+import { useEffect, useState } from 'react';
+import {
+  GET_ALL_LOCATIONS,
+  GET_ALL_REQUESTS_BY_AREA,
+} from '../../apollo-client/queries';
+import { useLazyQuery, useQuery } from '@apollo/client';
 import SearchResults from '../SearchResults/SearchResults';
 import './Search.scss';
 
@@ -9,10 +12,19 @@ export default function Search({ selectOrganization }) {
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [searchFilter, setSearchFilter] = useState('');
+  const [locations, setLocations] = useState([]);
+
+  const locationsQuery = useQuery(GET_ALL_LOCATIONS);
+
+  useEffect(() => {
+    setLocations(locationsQuery.data);
+  }, [locationsQuery.data]);
 
   const [findOrgs, { loading, error, data }] = useLazyQuery(
     GET_ALL_REQUESTS_BY_AREA,
   );
+
+  
 
   return (
     <div className='search-section'>
@@ -37,9 +49,9 @@ export default function Search({ selectOrganization }) {
           placeholder='State'
           required
         />
-        <button>Find</button>
         <label htmlFor='filter'>Filter Requests by</label>
-        <select id='filter'
+        <select
+          id='filter'
           onChange={e => {
             setSearchFilter(e.target.value);
           }}
@@ -51,6 +63,7 @@ export default function Search({ selectOrganization }) {
           <option value='medical'>Medical</option>
           <option value='other'>Other</option>
         </select>
+        <button>Find</button>
       </form>
       <SearchResults
         searchFilter={searchFilter}
