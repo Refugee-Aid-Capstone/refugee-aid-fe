@@ -69,7 +69,9 @@ $font-stack: 'Arial', sans-serif;
             }
             
             .resources-header {
-                color: $netflix-red
+            //   color: $netflix-red;
+            //   color:#141414;
+              color:#033e62;
             }
 
             ul {
@@ -97,8 +99,11 @@ $font-stack: 'Arial', sans-serif;
 
     .bottom-section {
         margin-top: -30px;
-        background-color:#141414;
-        // background-color:#333333;
+        // background-color:#141414;
+        background-color:#9d9c90;
+        // background-color: #2196F3;
+        // background-color: #2facf6;
+        color: #FFFFFF;
         padding: 1rem;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -115,7 +120,10 @@ $font-stack: 'Arial', sans-serif;
     }
 
         .netflix-red {
-            color: $netflix-red;
+            // color: $netflix-red;
+            // color:#141414;
+            // color: #2196F3;
+            color: #033e62;
             margin-top: 1rem;
             font-weight: 500;
             margin-bottom: 0.7rem;
