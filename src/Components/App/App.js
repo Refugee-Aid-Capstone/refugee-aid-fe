@@ -7,6 +7,7 @@ import ProvideAidPage from '../ProvideAidPage/ProvideAidPage';
 import Error404 from '../ErrorHandling/Error404'; 
 import Error500 from '../ErrorHandling/Error500';
 import GeneralError from '../ErrorHandling/GeneralError';
+import Contact from '../Contact/Contact'
 
 function App() {
   console.log('App component is rendering');
@@ -30,6 +31,7 @@ function App() {
       <NavBar isLoggedIn={isLoggedIn} handleLogin={handleOrganizationLogin} />
       <Routes>
         <Route exact path='/' element={<Homepage />} />
+        <Route exact path='/Contact' element={<Contact />} />
         <Route exact path='/provideAid' element={<ProvideAidPage />} />
         <Route exact path='/OrganizationDashboard' element={<OrganizationDashboard />} />
         <Route path='/error500' element={<Error500 />} />

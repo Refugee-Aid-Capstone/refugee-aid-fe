@@ -26,6 +26,7 @@ export default function NavBar({ isLoggedIn, handleLogin }) {
         <NavLink className='nav-link' to='/provideAid'>aid request</NavLink>
         <NavLink className='nav-link' to='/'>donate</NavLink>
         <NavLink className='nav-link' to='/'>mission</NavLink>
+        <NavLink className='nav-link' to='/contact'>contact us</NavLink>
       </div>
       <div className="login-container">
         {isLoggedIn ? (

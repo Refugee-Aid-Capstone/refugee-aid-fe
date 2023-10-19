@@ -1,0 +1,132 @@
+$primary-color: #37b3fe;
+$secondary-color: #3c8bc9;
+$netflix-red: #E50914;
+$light-gray: #f4f4f4;
+$medium-gray: #ddd;
+$font-stack: 'Arial', sans-serif;
+
+.contact-section {
+    font-family: $font-stack;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+    margin: 5rem auto 0 auto;
+    margin-top: 3rem;
+    background-color: $light-gray;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+
+    h2,
+    h3 {
+        color: $primary-color;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color: $secondary-color;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: darken($secondary-color, 15%);
+        }
+    }
+
+    .top-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        .left-side {
+            flex: 1;
+            margin-right: 2rem;
+
+            img {
+                width: 80%;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin-left: 4rem;
+            }
+        }
+
+        .right-side {
+            flex: 1;
+            margin-left: 50px;
+            font-size: 1rem;
+
+            .right-side h3 {
+                font-size: 3rem;
+          
+            }
+            
+            .resources-header {
+                color: $netflix-red
+            }
+
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+
+                li {
+                    margin-bottom: 1rem;
+                    font-weight: 600;
+                    padding: 0.5rem;
+                    border-radius: 5px;
+                    transition: background-color 0.3s ease;
+
+                    &:hover {
+                        background-color: darken($light-gray, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    .email-link {
+        margin-left: 0.5rem;
+    }
+
+    .bottom-section {
+        margin-top: -30px;
+        background-color:#141414;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        font-size: 0.9rem;
+        color: #fff; 
+
+    h2, h3 {
+        font-size: 1.2rem;
+        color: #fff; 
+    }
+
+        .netflix-red {
+            color: $netflix-red;
+            margin-top: 1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        p > a {
+            margin: 0 0.5rem;
+            color: #fff; 
+        }
+        
+        p.special-links > a {
+            margin: 0 0.25rem;
+        }
+        
+        footer {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
