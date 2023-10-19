@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 import { GET_ONE_ORG } from '../../apollo-client/queries';
+import {OrgRequestCard} from '../OrgResquestCard/OrgRequestCard'
 import '../OrganizationDashboard/OrganizationDashboard.scss';
 import Spinner from '../Spinner/Spinner';
 
@@ -65,14 +66,15 @@ export default function OrganizationDashboard() {
         <div className="left-column">
           <h3>Aid Requests</h3>
           <ul>
-            {aidRequests.map(request => (
+            {/* {aidRequests.map(request => (
               <li key={request.id}>
                 {request.description} - {request.status}
-                <div>
-                <button onClick={() => handleApprove(request.id)}>Approve</button>
-                <button onClick={() => handleDecline(request.id)}>Fulfilled</button>
-                </div>
+               
               </li>
+            ))} */}
+             {aidRequests.map(request => (
+              <OrgRequestCard key={request.id} request={request} handleApprove={handleApprove} handleDecline={handleDecline}/>
+            
             ))}
           </ul>
         </div>
