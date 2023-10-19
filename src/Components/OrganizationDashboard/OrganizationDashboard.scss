@@ -1,4 +1,5 @@
 .organization-dashboard-container {
+  margin-top: 2rem;  
   font-family: 'Arial', sans-serif;
   background-color: #141414;
   color: #e5e5e5;
@@ -112,16 +113,59 @@
         border-radius: 4px;
         // background: linear-gradient(to bottom, #e50914, #db0200);
         background-color: #2196F3;
+        // background-color:  #FFD700;
         color: #fff;
         transition: background-color 0.3s ease;
 
         &:hover {
           background: linear-gradient(to bottom, #db0200, #b50914);
+          // background-color:  #FFD700;
         }
       }
     }
   }
+
+@media (max-width: 992px) {
+
+    .dashboard-content {
+        flex-direction: column;
+
+        .left-column,
+        .right-column {
+            padding: 1rem 0;
+            border-right: none;
+        }
+    }
 }
+
+@media (max-width: 768px) {
+    padding: 1rem;
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard-content .left-column,
+    .dashboard-content .right-column {
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        button {
+            padding: 0.3rem 0.6rem;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard-content .left-column ul li button {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
+    }
+}
+}
+
 
 //just in case team want to change the colors
 // Blue (#2196F3) for trust and confidence
