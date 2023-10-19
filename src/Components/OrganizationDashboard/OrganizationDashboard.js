@@ -68,13 +68,14 @@ export default function OrganizationDashboard() {
             {aidRequests.map(request => (
               <li key={request.id}>
                 {request.description} - {request.status}
+                <div>
                 <button onClick={() => handleApprove(request.id)}>Approve</button>
                 <button onClick={() => handleDecline(request.id)}>Decline</button>
+                </div>
               </li>
             ))}
           </ul>
         </div>
-
 
         <div className="right-column">
           <h3>Organization Details</h3>
