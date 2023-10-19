@@ -17,7 +17,7 @@ export default function SearchResults({
     const noResults = data?.aidRequests.length ? false : true;
     setNoResults(noResults);
 
-    let results = data ? data.aidRequests : [];
+    let results = data ? data.aidRequests.filter(request => request.status === 'active') : [];
 
     if (searchFilter) {
       results = results.filter(

@@ -45,7 +45,7 @@ export default function Search({ selectOrganization }) {
           placeholder='State'
           required
         />
-        <label htmlFor='filter'>Filter Requests by</label>
+        {/* <label htmlFor='filter'>Filter Requests by</label> */}
         <select
           id='filter'
           className='dropDown'
