@@ -33,7 +33,7 @@ function App() {
         <Route exact path='/' element={<Homepage />} />
         <Route exact path='/Contact' element={<Contact />} />
         <Route exact path='/provideAid' element={<ProvideAidPage />} />
-        <Route exact path='/OrganizationDashboard' element={<OrganizationDashboard />} />
+        <Route exact path='/OrganizationDashboard' element={<OrganizationDashboard orgId={99}/>} />
         <Route path='/error500' element={<Error500 />} />
         {window.location.pathname === '/500-test' && (
           <Route path="/500-test" element={<Error500 />} />

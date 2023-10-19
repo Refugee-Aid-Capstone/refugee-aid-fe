@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@apollo/client';
+import OrgRequestCard from '../OrgRequestCard/OrgRequestCard';
 import { useNavigate } from 'react-router-dom';
 import { GET_ONE_ORG } from '../../apollo-client/queries';
-import {OrgRequestCard} from '../OrgResquestCard/OrgRequestCard'
 import '../OrganizationDashboard/OrganizationDashboard.scss';
 import Spinner from '../Spinner/Spinner';
-
-export default function OrganizationDashboard() {
-  const TOTAL_ORGANIZATIONS = 10;
-  const randomOrgId = Math.floor(Math.random() * TOTAL_ORGANIZATIONS) + 1;
+export default function OrganizationDashboard( {orgId}) {
 
   const { loading, error, data } = useQuery(GET_ONE_ORG, {
-    variables: { id: randomOrgId }
+    variables: { id: orgId },
   });
 
   const [aidRequests, setAidRequests] = useState([]);
@@ -22,16 +19,16 @@ export default function OrganizationDashboard() {
     }
   }, [data]);
 
-  const handleApprove = (requestId) => {
+  const handleApprove = requestId => {
     const updatedRequests = aidRequests.map(request =>
-      request.id === requestId ? { ...request, status: 'Approved' } : request
+      request.id === requestId ? { ...request, status: 'Approved' } : request,
     );
     setAidRequests(updatedRequests);
   };
 
-  const handleDecline = (requestId) => {
+  const handleDecline = requestId => {
     const updatedRequests = aidRequests.map(request =>
-      request.id === requestId ? { ...request, status: 'Fulfilled' } : request
+      request.id === requestId ? { ...request, status: 'Fulfilled' } : request,
     );
     setAidRequests(updatedRequests);
   };
@@ -40,10 +37,10 @@ export default function OrganizationDashboard() {
 
   useEffect(() => {
     if (error) {
-      if (error.message.includes("500")) {
-        navigate("/error500");
+      if (error.message.includes('500')) {
+        navigate('/error500');
       } else {
-        navigate("/general-error");
+        navigate('/general-error');
       }
     }
   }, [error, navigate]);
@@ -59,27 +56,22 @@ export default function OrganizationDashboard() {
   const organization = data.organization;
 
   return (
-    <div className="organization-dashboard-container">
+    <div className='organization-dashboard-container'>
       <h1>Welcome, {organization.name}!</h1>
 
-      <div className="dashboard-content">
-        <div className="left-column">
+      <div className='dashboard-content'>
+        <div className='left-column'>
           <h3>Aid Requests</h3>
-          <ul>
-            {/* {aidRequests.map(request => (
-              <li key={request.id}>
-                {request.description} - {request.status}
-               
-              </li>
-            ))} */}
-             {aidRequests.map(request => (
-              <OrgRequestCard key={request.id} request={request} handleApprove={handleApprove} handleDecline={handleDecline}/>
-            
+            {aidRequests.map(request => (
+              <OrgRequestCard
+                key={request.id}
+                request={request}
+                handleApprove={handleApprove}
+                handleDecline={handleDecline}
+              />
             ))}
-          </ul>
         </div>
-
-        <div className="right-column">
+        <div className='right-column'>
           <h3>Organization Details</h3>
           <p>Phone: {organization.contactPhone}</p>
           <p>Email: {organization.contactEmail}</p>
