@@ -1,30 +1,25 @@
-import { useEffect, useState } from 'react';
-import {
-  GET_ALL_LOCATIONS,
-  GET_ALL_REQUESTS_BY_AREA,
-} from '../../apollo-client/queries';
-import { useLazyQuery, useQuery } from '@apollo/client';
+import { useState } from 'react';
+import { GET_ALL_REQUESTS_BY_AREA } from '../../apollo-client/queries';
+import { useLazyQuery } from '@apollo/client';
 import SearchResults from '../SearchResults/SearchResults';
 import './Search.scss';
+import DropDown from '../DropDown/DropDown';
 
 export default function Search({ selectOrganization }) {
-  // filter by type
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [searchFilter, setSearchFilter] = useState('');
-  const [locations, setLocations] = useState([]);
-
-  const locationsQuery = useQuery(GET_ALL_LOCATIONS);
-
-  useEffect(() => {
-    setLocations(locationsQuery.data);
-  }, [locationsQuery.data]);
 
   const [findOrgs, { loading, error, data }] = useLazyQuery(
     GET_ALL_REQUESTS_BY_AREA,
   );
 
-  
+  function setSearchLocation(target) {
+    const [city, state] = target.split(' ')
+
+    setCity(city);
+    setState(state);
+  }
 
   return (
     <div className='search-section'>
@@ -42,6 +37,7 @@ export default function Search({ selectOrganization }) {
           onChange={e => setCity(e.target.value)}
           placeholder='City (optional)'
         />
+        {city && <DropDown city={city} setSearchLocation={setSearchLocation} />}
         <input
           type='text'
           value={state}
@@ -52,6 +48,7 @@ export default function Search({ selectOrganization }) {
         <label htmlFor='filter'>Filter Requests by</label>
         <select
           id='filter'
+          className='dropDown'
           onChange={e => {
             setSearchFilter(e.target.value);
           }}
