@@ -19,7 +19,7 @@ export default function NavBar({ isLoggedIn, handleLogin }) {
     <nav className='nav-bar'>
       <div className="navbar-logo">
         <NavLink to='/'>
-          <img src={logoImage} alt="Logo" />
+        <img src={logoImage} alt="Logo" className="logo-image"/>
         </NavLink>
       </div>
       <div className="nav-items">
