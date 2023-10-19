@@ -30,7 +30,7 @@ export default function OrganizationDashboard() {
 
   const handleDecline = (requestId) => {
     const updatedRequests = aidRequests.map(request =>
-      request.id === requestId ? { ...request, status: 'Declined' } : request
+      request.id === requestId ? { ...request, status: 'Fufilled' } : request
     );
     setAidRequests(updatedRequests);
   };
