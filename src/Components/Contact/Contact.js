@@ -62,7 +62,7 @@ const ContactSection = () => {
                 </p>
                 <footer>
                     <p>Copyright © 2016 Refugee Processing Center</p>
-                    <p class="special-links">
+                    <p className="special-links">
                         <a href="#">Privacy Statement</a> | <a href="#">Terms of Use</a>
                     </p>
 
