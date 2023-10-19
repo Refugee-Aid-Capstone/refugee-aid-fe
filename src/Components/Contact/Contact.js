@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Contact/Contact.scss'
-// import weAllHuman from '../../images/usa-custom.jpeg';
-import weAllHuman from '../../images/images.jpeg';
+import weAllHuman from '../../images/usa-custom.jpeg';
+// import weAllHuman from '../../images/images.jpeg';
 
 const ContactSection = () => {
     return (
