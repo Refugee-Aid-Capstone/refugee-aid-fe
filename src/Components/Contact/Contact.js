@@ -13,7 +13,7 @@ const ContactSection = () => {
                     </div>
                 </div>
                 <div className="right-side">
-                <h3 className="resources-header">HELPFUL RESOURCES</h3>
+                    <h3 className="resources-header">HELPFUL RESOURCES</h3>
                     <ul>
                         <li>
                             <a href="https://www.wrapsnet.org/documents/FY%202023%20Reception%20&%20Placement%20Fact%20Sheet.pdf" target="_blank" rel="noopener noreferrer">
@@ -46,26 +46,27 @@ const ContactSection = () => {
 
             <div className="bottom-section">
                 <h2>CONTACT US</h2>
-                <p>Need technical assistance with this website? Send an email to:
-                    <a href="mailto:webhelp@wrapsnet.org" className="email-link">nanajon66@gmail.com</a>.
-                </p>
+                <p className="small-text">Need technical assistance with this website? Send an email to:<a href="mailto:nanajon66@gmail.com">nanajon66@gmail.com</a></p>
+
 
                 <p className="netflix-red">
                     The U.S. Refugee Admissions Program (USRAP) is free of charge.
                     Any requests to solicit funds for referral or access to the USRAP
                     are illegitimate and not associated with the U.S. government.
                 </p>
-                <p>
+                <p className="government-links">
                     <a href="#">U.S. Department of State</a> |
                     <a href="#">Bureau of Population, Refugees, and Migration</a> |
                     <a href="#">Refugee Admissions</a>
                 </p>
+
                 <footer>
-                    <p>Copyright © 2016 Refugee Processing Center</p>
+                    <p className="copyright-links">
+                        Copyright © 2016 Refugee Processing Center
+                    </p>
                     <p className="special-links">
                         <a href="#">Privacy Statement</a> | <a href="#">Terms of Use</a>
                     </p>
-
                 </footer>
             </div>
         </div>
