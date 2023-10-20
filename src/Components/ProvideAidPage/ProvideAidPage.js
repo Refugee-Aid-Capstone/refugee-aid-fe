@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import NavBar from '../NavBar/NavBar';
 import '../ProvideAidPage/ProvideAidPage.scss';
 import Search from '../Search/Search';
 import OrganizationDisplay from '../OrganizationDisplay/OrganizationDisplay';
@@ -10,12 +9,11 @@ export default function ProvideAidPage() {
 
   function selectOrganization(organization) {
     setSelectedOrganization(organization)
-    console.log(selectOrganization)
+    console.log(selectOrganization) //dont forget to delete
   }
 
   return (
     <div className='provide-aid-page'>
-      <NavBar />
       <main className='content-section'>
         <Search selectOrganization={selectOrganization} />
         <OrganizationDisplay selectedOrganization={selectedOrganization} />
