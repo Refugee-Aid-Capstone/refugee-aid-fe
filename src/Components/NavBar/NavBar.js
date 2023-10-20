@@ -28,9 +28,8 @@ export default function NavBar({ isLoggedIn, handleLogin }) {
       <div className="login-container">
         {isLoggedIn ? (
           <>
-            <NavLink className='nav-link' to='/organizationDashboard'>organization dashboard</NavLink>
+            <NavLink className='nav-link org-dashboard' to='/organizationDashboard'>organization dashboard</NavLink>
             <button className='nav-button logout' onClick={handleLogin}>logout</button>
-
           </>
         ) : (
           <button className='nav-button' onClick={handleLogin}>organization login</button>
