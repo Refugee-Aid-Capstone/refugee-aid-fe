@@ -1,5 +1,4 @@
 describe('Error Handling', () => {
-
   // Test for 500 - Internal Server Error
   it('Should navigate to error page when a 500 error occurs', () => {
     cy.intercept('POST', 'https://refugee-aid-capstone-be-fb1ab84cf89d.herokuapp.com/graphql', { statusCode: 500 });
