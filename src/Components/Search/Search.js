@@ -31,7 +31,7 @@ export default function Search({ selectOrganization }) {
           findOrgs({ variables: { city, state } });
         }}
       >
-        <input
+        <input className='city-input'
           type='text'
           value={city}
           onChange={e => setCity(e.target.value)}
