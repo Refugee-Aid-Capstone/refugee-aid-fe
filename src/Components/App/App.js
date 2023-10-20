@@ -4,19 +4,19 @@ import NavBar from '../NavBar/NavBar';
 import Homepage from '../Homepage/Homepage';
 import OrganizationDashboard from '../OrganizationDashboard/OrganizationDashboard';
 import ProvideAidPage from '../ProvideAidPage/ProvideAidPage';
-import Error404 from '../ErrorHandling/Error404'; 
+import Error404 from '../ErrorHandling/Error404';
 import Error500 from '../ErrorHandling/Error500';
 import GeneralError from '../ErrorHandling/GeneralError';
 import Contact from '../Contact/Contact'
 
 function App() {
   console.log('App component is rendering');
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   const handleOrganizationLogin = () => {
     if (isLoggedIn) {
-      setIsLoggedIn(false); 
+      setIsLoggedIn(false);
       console.log("Attempting to logout and redirect to homepage");
       navigate('/');
     } else {
@@ -33,7 +33,7 @@ function App() {
         <Route exact path='/' element={<Homepage />} />
         <Route exact path='/Contact' element={<Contact />} />
         <Route exact path='/provideAid' element={<ProvideAidPage />} />
-        <Route exact path='/OrganizationDashboard' element={<OrganizationDashboard orgId={99}/>} />
+        <Route exact path='/OrganizationDashboard' element={<OrganizationDashboard orgId={99} />} />
         <Route path='/error500' element={<Error500 />} />
         {window.location.pathname === '/500-test' && (
           <Route path="/500-test" element={<Error500 />} />

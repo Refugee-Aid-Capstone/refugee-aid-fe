@@ -26,14 +26,14 @@ export default function OrganizationDisplay({ selectedOrganization }) {
           </div>
         </>
       ) : (
-                    <div className='welcome-image-container'>
-                      <img
-                        src={welcomeImage}
-                        alt='welcome-usa-refugee'
-                        className='welcome-image'
-                      />
-                    </div>
-                  )}
+        <div className='welcome-image-container'>
+          <img
+            src={welcomeImage}
+            alt='welcome-usa-refugee'
+            className='welcome-image'
+          />
+        </div>
+      )}
     </div>
   );
 }

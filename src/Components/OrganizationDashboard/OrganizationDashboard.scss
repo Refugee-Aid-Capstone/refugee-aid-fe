@@ -52,16 +52,12 @@
                 cursor: pointer;
                 border: none;
                 border-radius: 4px;
-                // background-color: #2196F3;
                 background-color: #f8ac1f;
-                color: #fff;
                 color: black;
                 transition: background-color 0.3s ease;
         
                 &:hover {
-                  // background: linear-gradient(to bottom, #f8ac1f, #f8ac1f);
                   background-color: #2196F3;
-                  color: black;
                   color: #fff;
                 }
               }
@@ -108,8 +104,6 @@
   }
 }
 
-
-//just in case team want to change the colors
 // Blue (#2196F3) for trust and confidence
 // White (#FFFFFF) for purity and new beginnings
 // Green (#0ECB3A) for hope and growth

@@ -1,16 +1,8 @@
-import React, { useEffect } from 'react';
 import './NavBar.scss';
 import { NavLink } from 'react-router-dom';
 import logoImage from '../../images/refuge.png';
 
 export default function NavBar({ isLoggedIn, handleLogin }) {
-
-
-  console.log("NavBar rendering. isLoggedIn:", isLoggedIn); //dont forget to delete
-
-  useEffect(() => {
-    console.log("NavBar Mounted"); //dont forget to delete
-  }, []);
 
   return (
     <nav className='nav-bar'>

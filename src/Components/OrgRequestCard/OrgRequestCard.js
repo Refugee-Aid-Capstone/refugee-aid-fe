@@ -1,9 +1,9 @@
-import '../RequestCard/RequestCard.scss'  
+import '../RequestCard/RequestCard.scss'
 
 import React from 'react'
 
 export default function OrgRequestCard({ request, handleApprove, handleDecline }) {
-  const { id, description, aidType, language, status, organization } = request;
+  const { id, description, aidType, language, status } = request;
 
   return (
     <article
