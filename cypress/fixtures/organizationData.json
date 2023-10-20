@@ -1,0 +1,37 @@
+{
+    "organization": {
+      "id": "99",
+      "name": "Test Organization",
+      "contactPhone": "1234567890",
+      "contactEmail": "test@email.com",
+      "streetAddress": "4095 Dach Fords",
+      "website": "http://heaney.example/serina.jerde",
+      "city": "New York City",
+      "state": "NY",
+      "zip": "20813-8431",
+      "latitude": 40.7128,
+      "longitude": -74.0060,
+      "shareAddress": "123 Sample St, New York City, NY",
+      "sharePhone": "9876543210",
+      "shareEmail": "share@test.com",
+      "aidRequests": [
+        {
+          "id": "1",
+          "organizationId": "99",
+          "aidType": "Food",
+          "status": "Pending",
+          "language": "German",
+          "description": "Ipsum et nihil ducimus"
+        },
+        {
+          "id": "2",
+          "organizationId": "99",
+          "aidType": "Legal",
+          "status": "Pending",
+          "language": "English",
+          "description": "Veniam dolorem hic sint"
+        }
+      ]
+    }
+  }
+  
