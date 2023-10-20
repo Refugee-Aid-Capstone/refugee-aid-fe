@@ -55,17 +55,19 @@ const ContactSection = () => {
                     are illegitimate and not associated with the U.S. government.
                 </p>
                 <p className="government-links">
-                    <a href="#">U.S. Department of State</a> |
-                    <a href="#">Bureau of Population, Refugees, and Migration</a> |
-                    <a href="#">Refugee Admissions</a>
+                    <a href="https://www.state.gov/" target="_blank" rel="noopener noreferrer">U.S. Department of State</a> |
+                    <a href="https://www.state.gov/bureaus-offices/under-secretary-for-civilian-security-democracy-and-human-rights/bureau-of-population-refugees-and-migration/" target="_blank" rel="noopener noreferrer">Bureau of Population, Refugees, and Migration</a> |
+                    <a href="https://www.state.gov/refugee-admissions/" target="_blank" rel="noopener noreferrer">Refugee Admissions</a>
                 </p>
+
 
                 <footer>
                     <p className="copyright-links">
                         Copyright © 2016 Refugee Processing Center
                     </p>
                     <p className="special-links">
-                        <a href="#">Privacy Statement</a> | <a href="#">Terms of Use</a>
+                        <a href="https://www.wrapsnet.org/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Statement</a> |
+                        <a href="https://www.wrapsnet.org/terms-of-use/" target="_blank" rel="noopener noreferrer">Terms of Use</a>
                     </p>
                 </footer>
             </div>
