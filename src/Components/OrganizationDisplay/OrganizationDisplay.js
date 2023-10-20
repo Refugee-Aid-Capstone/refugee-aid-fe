@@ -1,5 +1,6 @@
 import React from 'react';
 import welcomeImage from '../../images/welcome-usa-refugee.png'
+import Map from '../../Map/Map';
 
 export default function OrganizationDisplay({ selectedOrganization }) {
   return (
@@ -16,13 +17,11 @@ export default function OrganizationDisplay({ selectedOrganization }) {
           <p>ZIP: {selectedOrganization.zip}</p>
           <div
             style={{
-              width: '300px',
               height: '300px',
-              backgroundColor: 'gray',
             }}
           >
+            <Map />
             {' '}
-            {/* Map Here (Integration with map service required)*/}
           </div>
         </>
       ) : (
