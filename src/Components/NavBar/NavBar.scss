@@ -159,6 +159,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav-link.org-dashboard {
+    display: none;
+  }
   .hamburger {
     display: block;
   }
@@ -169,7 +172,6 @@ body {
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
-    margin-top: -30rem;
     order: 2; 
 
     &.active {
