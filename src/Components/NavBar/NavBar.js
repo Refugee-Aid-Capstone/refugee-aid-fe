@@ -1,8 +1,11 @@
+import React, { useState } from 'react';
 import './NavBar.scss';
 import { NavLink } from 'react-router-dom';
 import logoImage from '../../images/refuge.png';
 
 export default function NavBar({ isLoggedIn, handleLogin }) {
+  
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className='nav-bar'>
@@ -11,7 +14,10 @@ export default function NavBar({ isLoggedIn, handleLogin }) {
           <img src={logoImage} alt="Logo" className="logo-image" />
         </NavLink>
       </div>
-      <div className="nav-items">
+      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        &#9776;
+      </button>
+      <div className={`nav-items ${menuOpen ? 'active' : ''}`}>
         <NavLink className='nav-link' to='/provideAid'>aid request</NavLink>
         <NavLink className='nav-link' to='/'>mission</NavLink>
         <NavLink className='nav-link' to='/contact'>helpful resources</NavLink>
@@ -29,6 +35,5 @@ export default function NavBar({ isLoggedIn, handleLogin }) {
     </nav>
   );
 }
-
 
 

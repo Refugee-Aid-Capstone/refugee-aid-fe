@@ -51,7 +51,7 @@ body {
 }
 
 .nav-items {
-  display: flex;
+  display: flex; 
   align-items: center;
   gap: 1rem;
 }
@@ -144,56 +144,43 @@ body {
   }
 
 }
+.hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  color: #EDEDED;
+  
+  &:focus {
+    outline: none;
+  }
+}
 
 @media (max-width: 768px) {
-  .nav-bar {
-    justify-content: center;
-    padding: 0.5rem;
-  }
-
-  .org-dashboard {
-    display: none;
-  }
-
-  .navbar-logo {
-    margin: 0.5rem 0;
-    width: 10%;
-    text-align: center;
-    order: 1;
+  .hamburger {
+    display: block;
   }
 
   .nav-items {
+    display: none; 
     width: 100%;
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
     margin-top: -30rem;
     order: 2; 
-  }
 
-  .login-container {
-    width: 100%; 
-    display: flex;
-    justify-content: center;
-    flex-direction: column; 
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    order: 3; 
-  }
-
-  .nav-link {
-    font-size: 1rem;
-    margin: 0.2rem 0.5rem;
-  }
-
-  .nav-button {
-    font-size: 0.6rem;
-    padding: 5px 15px;
-  }
-
-  .nav-button.logout {
-    font-size: 0.8rem;
-    padding: 7px 18px;
+    &.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 70px; 
+      right: 10px; 
+      background-color: #30acf6;
+      border-radius: 10px;
+      z-index: 1000;
+    }
   }
 }

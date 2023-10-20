@@ -23,7 +23,6 @@ function App() {
     }
   }
 
-
   return (
     <>
       <NavBar isLoggedIn={isLoggedIn} handleLogin={handleOrganizationLogin} />
