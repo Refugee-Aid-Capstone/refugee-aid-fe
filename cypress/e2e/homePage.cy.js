@@ -4,6 +4,11 @@ describe('Homepage Tests', () => {
     });
 
     it('should display the main elements of the homepage', () => {
+        cy.get('.logo-image').should('be.visible')
+        cy.get('[href="/provideAid"]').click()
+        cy.url().should('include', '/provideAid')
+        cy.get('.logo-image').click()
+        cy.url().should('include', '/')
         cy.get('.home-header').should('be.visible');
         cy.get('.content-section').should('be.visible');
         cy.get('.media-side').should('be.visible');
@@ -34,21 +39,21 @@ describe('Homepage Tests', () => {
 
     // Sad Path
 
+    it('should handle missing images gracefully', () => {
+        cy.intercept('GET', '**/refugees.png', { statusCode: 404 });
+        cy.reload();
+        cy.get('img[alt="Refugees"]').should('be.visible');
+    });
+
     it('should handle missing video gracefully', () => {
-        cy.intercept('GET', 'https://www.youtube.com/embed/*', {statusCode: 404}); 
+        cy.intercept('GET', 'https://www.youtube.com/embed/*', { statusCode: 404 });
         cy.viewport(1280, 720);
         cy.get('.play-video').click();
         cy.get('iframe').then(($iframe) => {
             const iframeSrc = $iframe.attr('src');
             if (!iframeSrc) {
-              cy.wrap($iframe).should('not.be.visible');
+                cy.wrap($iframe).should('not.be.visible');
             }
-          });
-    });
-
-    it('should handle missing images gracefully', () => {
-        cy.intercept('GET', '**/refugees.png', {statusCode: 404}); 
-        cy.reload();
-        cy.get('img[alt="Refugees"]').should('be.visible');
+        });
     });
 });
