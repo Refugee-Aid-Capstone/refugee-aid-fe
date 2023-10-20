@@ -50,7 +50,7 @@ body {
 
 
 .logo-image {
-  position: relative; 
+  position: relative;
   top: -7px;
   // width: 5rem;
   // height: auto;
@@ -151,12 +151,14 @@ body {
   }
 
 }
+
 @media (max-width: 768px) {
   .nav-bar {
     justify-content: center;
     padding: 0.5rem;
+    flex-direction: column; 
   }
-  
+
   .navbar-logo {
     margin: 0.5rem 0;
     width: 100%;
@@ -164,14 +166,18 @@ body {
   }
 
   .nav-items {
-    width: 100%;
+    width: auto; 
     justify-content: center;
     gap: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .login-container {
-    width: 100%;
-    text-align: center;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 0.5rem;
     margin-top: 0.5rem;
   }
 
