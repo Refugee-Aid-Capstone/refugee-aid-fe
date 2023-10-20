@@ -7,7 +7,6 @@ export default function RequestCard({ request, selectOrganization }) {
     description,
     aidType,
     language,
-    status,
     organization,
   } = request;
 
@@ -21,7 +20,6 @@ export default function RequestCard({ request, selectOrganization }) {
       <p className='card-text org'>{organization.name}</p>
       {language && <p className='card-text'>Language: {language}</p>}
       <p className='card-text description'>{description}</p>
-      <p className='card-text'>Status: {status}</p>
     </article>
   );
 }
