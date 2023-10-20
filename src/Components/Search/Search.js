@@ -20,7 +20,7 @@ export default function Search({ selectOrganization }) {
       <form className='search-bar' onSubmit={e => {
         document.querySelector('.search-bar').reportValidity()
         e.preventDefault()
-        findOrgs({variables: {city, state}})
+        findOrgs({ variables: { city, state } })
       }}>
         <input
           type='text'
@@ -36,9 +36,7 @@ export default function Search({ selectOrganization }) {
           placeholder='State'
           required
         />
-        <button>
-          Find
-        </button>
+        <button className="find-button"> Find</button>
         {/* <select>
           <option value='filter1'>Filter 1</option>
           <option value='filter2'>Filter 2</option>

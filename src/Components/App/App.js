@@ -10,14 +10,12 @@ import GeneralError from '../ErrorHandling/GeneralError';
 import Contact from '../Contact/Contact'
 
 function App() {
-  console.log('App component is rendering');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   const handleOrganizationLogin = () => {
     if (isLoggedIn) {
       setIsLoggedIn(false);
-      console.log("Attempting to logout and redirect to homepage");
       navigate('/');
     } else {
       setIsLoggedIn(true);
