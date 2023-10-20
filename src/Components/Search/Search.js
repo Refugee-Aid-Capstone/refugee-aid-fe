@@ -14,9 +14,7 @@ export default function Search({ selectOrganization }) {
     GET_ALL_REQUESTS_BY_AREA,
   );
 
-  function setSearchLocation(target) {
-    const [city, state] = target.split(' ')
-
+  function setSearchLocation(city, state) {
     setCity(city);
     setState(state);
   }
@@ -31,13 +29,7 @@ export default function Search({ selectOrganization }) {
           findOrgs({ variables: { city, state } });
         }}
       >
-        <input className='city-input'
-          type='text'
-          value={city}
-          onChange={e => setCity(e.target.value)}
-          placeholder='City (optional)'
-        />
-        {city && <DropDown city={city} setSearchLocation={setSearchLocation} />}
+        <DropDown city={city} setSearchLocation={setSearchLocation} />
         <input
           type='text'
           value={state}
