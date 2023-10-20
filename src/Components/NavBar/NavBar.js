@@ -21,7 +21,6 @@ export default function NavBar({ isLoggedIn, handleLogin }) {
       </div>
       <div className="nav-items">
         <NavLink className='nav-link' to='/provideAid'>aid request</NavLink>
-        <NavLink className='nav-link' to='/'>donate</NavLink>
         <NavLink className='nav-link' to='/'>mission</NavLink>
         <NavLink className='nav-link' to='/contact'>helpful resources</NavLink>
       </div>
