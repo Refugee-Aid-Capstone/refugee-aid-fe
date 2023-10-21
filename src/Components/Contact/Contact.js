@@ -8,7 +8,7 @@ const ContactSection = () => {
             <div className="top-section">
                 <div className="left-side">
                     <div className="weallhuman-container">
-                        <img src={weAllHuman} alt="Refugees" className="wehalluman-img" />
+                        <img src={weAllHuman} alt="usa-custom" className="weallhuman-img" />
                     </div>
                 </div>
                 <div className="right-side">
