@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Error404.scss";
 import RefugeeKids from "../../images/refugees-kids.png";
-// import RefugeeImage from '../../images/welcome-usa-refugee3.png';
 
 const refugeeInformativeFacts = [
   "Refugees: A refugee is someone who has been forced to flee his or her country because of persecution, war, or violence. They often can't return home or are afraid to do so.",
@@ -55,7 +54,6 @@ function Error404() {
 
       </div>
       <div className="image-container">
-        {/* <img src={RefugeeImage} alt="Refugee Image" className="refugee-image" /> */}
         <img src={RefugeeKids} alt="Refugees Kids" className="refugee-image" />
       </div>
     </div>

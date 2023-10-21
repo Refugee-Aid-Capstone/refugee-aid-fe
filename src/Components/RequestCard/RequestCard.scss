@@ -3,7 +3,7 @@
   background-color: whitesmoke;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  
+
   &:hover {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   }
@@ -27,37 +27,5 @@
 
   &.description {
     text-transform: none;
-  }
-}
-
-
-
-.btn {
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem; 
-  border-radius: 9px;
-  margin-left: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  // Approve button style
-  &:nth-child(1) {
-      background-color: #0ECB3A;
-      color: white;
-
-      &:hover {
-          background-color: darken(#0ECB3A, 10%);
-      }
-  }
-
-  // Decline button style
-  &:nth-child(2) {
-    background: linear-gradient(to bottom, #e50914, #db0200);
-    color: white;
-
-    &:hover {
-        background-color: #da190b; 
-    }
   }
 }

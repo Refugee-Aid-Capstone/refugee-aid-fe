@@ -5,9 +5,6 @@ import '../Homepage/Homepage.scss'
 function Homepage() {
   const [showVideo, setShowVideo] = useState(false);
 
-  console.log('Homepage component is rendering'); //dont forget to delet
-  console.log('Value of showVideo is:', showVideo); //dont forget to delete
-
   return (
     <header className="home-header">
       <main>

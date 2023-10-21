@@ -1,9 +1,10 @@
-import '../RequestCard/RequestCard.scss'  
+import '../RequestCard/RequestCard.scss'
+import '../OrganizationDashboard/OrganizationDashboard.scss';
 
 import React from 'react'
 
 export default function OrgRequestCard({ request, handleApprove, handleDecline }) {
-  const { id, description, aidType, language, status, organization } = request;
+  const { id, description, aidType, language, status } = request;
 
   return (
     <article
@@ -15,8 +16,8 @@ export default function OrgRequestCard({ request, handleApprove, handleDecline }
       <p className='card-text description'>{description}</p>
       <p className='card-text'>Status: {status}</p>
       <div>
-        <button className='approve-btn btn' onClick={() => handleApprove(request.id)}>Approve</button>
-        <button className='decline-btn btn' onClick={() => handleDecline(request.id)}>Fulfilled</button>
+        <button className="action-button" onClick={() => handleApprove(request.id)}>Approve</button>
+        <button className="action-button" onClick={() => handleDecline(request.id)}>Fulfilled</button>
       </div>
     </article>
   );

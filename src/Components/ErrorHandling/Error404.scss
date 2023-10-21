@@ -1,13 +1,13 @@
 $primary-color: #5a3822;
 $secondary-color: #FFC300;
-$btn-color:  #FFD700;
+$btn-color: #FFD700;
 $font-stack: 'Times New Roman', serif;
 
 .not-found-page-container {
-  color: $primary-color; 
+  color: $primary-color;
   text-align: center;
   padding: 2em;
-  min-height: 100vh; 
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +20,7 @@ $font-stack: 'Times New Roman', serif;
       font-size: 2em;
       margin-bottom: 1em;
       text-align: center;
-      border-bottom: 3px solid $secondary-color; 
+      border-bottom: 3px solid $secondary-color;
       padding-bottom: 0.5em;
     }
   }
@@ -34,7 +34,6 @@ $font-stack: 'Times New Roman', serif;
   }
 
   & .error404-go-home-button {
-    // background-color: $btn-color !important;
     background-color: $btn-color;
     color: black;
     padding: 10px 20px;
@@ -46,13 +45,12 @@ $font-stack: 'Times New Roman', serif;
     margin-top: 20px;
 
     &:hover {
-      // background-color: $btn-color !important;
       background-color: $secondary-color;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       transform: translateY(-2px);
     }
   }
-  
+
   & .error404-navlink {
     background-color: transparent;
     box-shadow: none;
@@ -64,17 +62,18 @@ $font-stack: 'Times New Roman', serif;
     padding: 0.7em;
     border-radius: 5px;
     background-color: whitesmoke;
-    display: flex; 
-    flex-direction: row; 
+    display: flex;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     justify-content: center;
     max-width: 90%;
     max-height: 10rem;
 
-    & .ref-fact-heading, & .ref-fact {
-      padding: 0.1em; 
+    & .ref-fact-heading,
+    & .ref-fact {
+      padding: 0.1em;
       margin: 0.1em;
     }
   }
@@ -83,7 +82,7 @@ $font-stack: 'Times New Roman', serif;
     width: 100%;
     max-width: 500px;
     margin-top: 10%;
-    margin-right: 5%; 
+    margin-right: 5%;
     border-radius: 1%;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   }

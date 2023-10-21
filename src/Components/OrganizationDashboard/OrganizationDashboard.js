@@ -13,7 +13,7 @@ export default function OrganizationDashboard( {orgId}) {
 
   const [aidRequests, setAidRequests] = useState([]);
 
-  useEffect(() => {
+  useEffect(() => { 
     if (data && data.organization) {
       setAidRequests(data.organization.aidRequests);
     }
@@ -80,7 +80,7 @@ export default function OrganizationDashboard( {orgId}) {
           <p>City: {organization.city}</p>
           <p>State: {organization.state}</p>
           <p>ZIP: {organization.zip}</p>
-          <button>Edit Details</button>
+          <button className="edit-button">Edit Details</button>
         </div>
       </div>
     </div>

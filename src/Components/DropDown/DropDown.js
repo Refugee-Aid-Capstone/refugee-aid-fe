@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_ALL_LOCATIONS } from '../../apollo-client/queries';
 import './DropDown.scss';

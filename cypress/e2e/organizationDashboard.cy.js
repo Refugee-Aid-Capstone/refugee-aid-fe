@@ -36,18 +36,18 @@ describe('OrganizationDashboard Tests', () => {
     cy.get(':nth-child(2)').should('contain', 'Language: German');
     cy.get('.description').should('contain', 'Ipsum et nihil ducimus');
     cy.get(':nth-child(4)').should('contain', 'Status: Pending');
-    cy.get('.approve-btn').should('be.visible');
-    cy.get('.decline-btn').should('be.visible');
-    cy.get('.approve-btn').eq(0).click();
+    cy.get('.action-button').should('be.visible');
+    cy.get('.action-button').should('be.visible');
+    cy.get('.action-button').eq(0).click();
     cy.get(':nth-child(4)').should('contain', 'Status: Approved');
 
     cy.get('.left-column').should('contain', 'Legal Aid');
     cy.get(':nth-child(2)').should('contain', 'Language: German');
     cy.get('.description').should('contain', 'Veniam dolorem hic sint');
     cy.get(':nth-child(4)').should('contain', 'Status: Pending');
-    cy.get('.approve-btn').should('be.visible');
-    cy.get('.decline-btn').should('be.visible');
-    cy.get('.decline-btn').eq(1).click();
+    cy.get('.action-button').should('be.visible');
+    cy.get('.action-button').should('be.visible');
+    cy.get('.action-button').eq(1).click();
     cy.get(':nth-child(4)').should('contain', 'Status: Fulfilled');
 
     cy.get('.right-column > h3').should('contain', 'Organization Details');
