@@ -1,18 +1,23 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import './Map.scss'
+import {useEffect } from 'react';
+import { MapContainer, TileLayer, Marker, Popup , useMap} from 'react-leaflet';
 
-export default function Map() {
+import './Map.scss'
+import MapController from './MapController';
+
+export default function Map({latitude, longitude}) {
+  
+
   return (
     <div className='leaflet-container'>
-      <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+      <MapContainer  center={[latitude, longitude]} zoom={13} scrollWheelZoom={false}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
-        <Marker position={[51.505, -0.09]}>
+        <MapController latLon={[latitude,longitude]} />
+        <Marker position={[latitude, longitude]}>
           <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
+            this popup needs info
           </Popup>
         </Marker>
       </MapContainer>

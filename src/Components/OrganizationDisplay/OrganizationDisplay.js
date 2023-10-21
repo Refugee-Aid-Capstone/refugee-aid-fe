@@ -3,6 +3,8 @@ import welcomeImage from '../../images/welcome-usa-refugee.png'
 import Map from '../../Map/Map';
 
 export default function OrganizationDisplay({ selectedOrganization }) {
+  const {latitude, longitude} = selectedOrganization
+
   return (
     <div className='organization-display'>
       {selectedOrganization.name ? (
@@ -20,7 +22,7 @@ export default function OrganizationDisplay({ selectedOrganization }) {
               height: '300px',
             }}
           >
-            <Map />
+            <Map latitude={latitude} longitude={longitude}/>
             {' '}
           </div>
         </>
