@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import logoImage from '../../images/refuge.png';
 
 export default function NavBar({ isLoggedIn, handleLogin }) {
-  
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (

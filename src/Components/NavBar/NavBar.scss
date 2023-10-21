@@ -51,7 +51,7 @@ body {
 }
 
 .nav-items {
-  display: flex; 
+  display: flex;
   align-items: center;
   gap: 1rem;
 }
@@ -144,6 +144,7 @@ body {
   }
 
 }
+
 .hamburger {
   display: none;
   background-color: transparent;
@@ -152,7 +153,7 @@ body {
   cursor: pointer;
   margin-right: 1rem;
   color: #EDEDED;
-  
+
   &:focus {
     outline: none;
   }
@@ -162,28 +163,30 @@ body {
   .nav-link.org-dashboard {
     display: none;
   }
+
   .nav-link {
     font-size: 1rem;
   }
+
   .hamburger {
     display: block;
   }
 
   .nav-items {
-    display: none; 
+    display: none;
     width: 100%;
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
-    order: 2; 
+    order: 2;
 
     &.active {
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 70px; 
-      right: 10px; 
-      background-color: rgba(48, 172, 246, 0.5); 
+      top: 70px;
+      right: 10px;
+      background-color: rgba(48, 172, 246, 0.5);
       border-radius: 10px;
       z-index: 1000;
     }
