@@ -1,0 +1,29 @@
+.action-button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 9px;
+  margin-left: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  // Approve button style
+  &:nth-child(1) {
+      background-color: #4CAF50;
+      color: white;
+
+      &:hover {
+          background-color: #45a049;
+      }
+  }
+
+  // Decline button style
+  &:nth-child(2) {
+    background: linear-gradient(to bottom, #e50914, #db0200);
+    color: white;
+
+    &:hover {
+        background-color: #da190b;
+    }
+  }
+}
