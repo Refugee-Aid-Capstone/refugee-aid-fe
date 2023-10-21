@@ -4,3 +4,21 @@
   height: 70vh;
   overflow-y: scroll;
 }
+
+.search-results::-webkit-scrollbar {
+  width: 10px;  /* Adjust width for vertical scrollbar */
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background: #4CAF50;  /* Thumb's color */
+  border-radius: 5px;  /* Rounded scrollbar */
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+  background: #45a049;  /* Darken the thumb's color a bit when hovered */
+}
+
+.search-results::-webkit-scrollbar-track {
+  background: #f1f1f1;  /* Track's color */
+  border-radius: 5px;   /* Rounded scrollbar */
+}

@@ -1,6 +1,6 @@
 <div>
     <h1 style="color:red; display: inline;">
-      Refuge
+      <!-- Refuge -->
          <img src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge.png" alt="refuge logo" width="105" style="margin-left: 5px; border-radius: 50%; vertical-align: middle;">
     </h1>
 </div>

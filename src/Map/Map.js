@@ -13,6 +13,7 @@ export default function Map({
   const { city, state, streetAddress, zip } = selectedOrganization;
 
   return (
+    <div className="map-wrapper"> 
     <div className='leaflet-container'>
       <MapContainer
         center={[latitude, longitude]}
@@ -38,6 +39,7 @@ export default function Map({
           />
         )}
       </MapContainer>
+    </div>
     </div>
   );
 }
