@@ -22,7 +22,7 @@ export default function OrganizationDisplay({ selectedOrganization }) {
               height: '300px',
             }}
           >
-            <Map latitude={latitude} longitude={longitude}/>
+            <Map latitude={latitude} longitude={longitude} selectedOrganization={selectedOrganization}/>
             {' '}
           </div>
         </>

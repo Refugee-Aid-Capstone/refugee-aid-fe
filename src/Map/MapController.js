@@ -5,7 +5,7 @@ export default function MapController({latLon}) {
   const map = useMap();
 
   useEffect(() => {
-    map.flyTo(latLon, 13, {duration: 1.5})
+    map.flyTo(latLon, 15, {duration: 1.5})
   }, [latLon])
 
   return null;

@@ -4,8 +4,8 @@ import { MapContainer, TileLayer, Marker, Popup , useMap} from 'react-leaflet';
 import './Map.scss'
 import MapController from './MapController';
 
-export default function Map({latitude, longitude}) {
-  
+export default function Map({latitude, longitude, selectedOrganization}) {
+  const { city, state, streetAddress, zip} = selectedOrganization
 
   return (
     <div className='leaflet-container'>
@@ -17,7 +17,7 @@ export default function Map({latitude, longitude}) {
         <MapController latLon={[latitude,longitude]} />
         <Marker position={[latitude, longitude]}>
           <Popup>
-            this popup needs info
+            {streetAddress}, {city}, {state} {zip}
           </Popup>
         </Marker>
       </MapContainer>
