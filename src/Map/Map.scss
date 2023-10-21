@@ -1,4 +1,20 @@
+// .leaflet-container {
+//   height: 300px;
+//   width: 300px;
+// }
+
 .leaflet-container {
   height: 300px;
   width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden; 
+  margin: 10px;
+}
+
+.map-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  height: 100%;       
 }

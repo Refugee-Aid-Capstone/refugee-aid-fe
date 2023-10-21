@@ -1,11 +1,55 @@
+// .request-card {
+//   padding: 1rem 2rem;
+//   background-color: whitesmoke;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//   cursor: pointer;
+
+//   &:hover {
+//     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+//   }
+// }
+
+// .org {
+//   cursor: default;
+// }
+
+// .card-text {
+//   text-transform: capitalize;
+//   margin: 0.5rem 0;
+
+//   &.type {
+//     text-decoration: underline;
+//   }
+
+//   &.org {
+//     font-weight: 700;
+//   }
+
+//   &.description {
+//     text-transform: none;
+//   }
+// }
+
+$primary-color: #37b3fe;
+$secondary-color: #3c8bc9;
+$netflix-red: #031662;
+$default-padding: 10px;
+$dark-bg: $secondary-color; 
+$lighter-bg: #2a6f9e; 
+$font-stack: 'Arial', sans-serif;
+
 .request-card {
-  padding: 1rem 2rem;
-  background-color: whitesmoke;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: $default-padding * 2;
+  background-color: $lighter-bg;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  color: #fff;
   cursor: pointer;
+  transition: transform 0.3s;
 
   &:hover {
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -14,18 +58,24 @@
 }
 
 .card-text {
+  font-family: $font-stack;
   text-transform: capitalize;
-  margin: 0.5rem 0;
+  margin: $default-padding / 2;
 
   &.type {
-    text-decoration: underline;
+    font-weight: 700;
+    color: $netflix-red;
+    border-bottom: 2px solid $netflix-red;
+    display: inline-block;
   }
 
   &.org {
-    font-weight: 700;
+    font-size: 1.2em;
   }
 
   &.description {
     text-transform: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9em;
   }
 }
