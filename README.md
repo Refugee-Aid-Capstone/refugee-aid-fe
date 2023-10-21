@@ -1,6 +1,6 @@
 <div>
     <h1 style="color:red; display: inline;">
-      <!-- Refuge -->
+      Refuge
          <img src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge.png" alt="refuge logo" width="105" style="margin-left: 5px; border-radius: 50%; vertical-align: middle;">
     </h1>
 </div>
@@ -9,13 +9,12 @@
 
 ### <span style="color:#2E8B57;">Description</span>
 
-**Refuge - AidConnect/RefugeeAid** emerges as a platform addressing the challenge of efficiently connecting aid workers and compassionate citizens with refugee camps or organisations. It ensures that assistance meets the refugees, asylees and migrants' current and specific needs in an engaging, real-time feed.
-
+**Refuge - AidConnect/RefugeeAid** emerges as a platform addressing the challenge of efficiently connecting aid workers and compassionate citizens with refugee camps or organisations. It ensures that assistance meets the refugees, asylees, and migrants' current and specific needs in an engaging, real-time feed.
+This initiative is a part of the Mod 4, [Capstone Project](https://mod4.turing.edu/projects/capstone/) at Turing School.
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/07d2bf4c-0b57-42b3-8254-56e133f377a3">
 
 ### <span style="color:#2E8B57;">Live Demo</span>
-
 
 [Engage with Refuge](https://refugee-aid-fe.vercel.app/).
 
@@ -31,7 +30,7 @@
 
 
 ### <span style="color:#2E8B57;">Preview of App</span>
-<!-- ![Refuge](https://github.com/Sulton88Mehron90/showcase-project/blob/main/src/Images/avicenna-method-romjon.gif) -->
+![Refuge](https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge-2023.gif)
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/b3c82159-82b5-4ba6-bae0-f26675c94957">
 
@@ -49,32 +48,25 @@
   <a href="https://docs.cypress.io/guides/overview/why-cypress" target="_blank"><img style="margin: 10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoXfntUBC8eXPGA7V8dQp74I5Xofeze3tnRua5hKQkd0ofyH0cy5mJm3_Y-zPhHO2ty9k&usqp=CAU" alt="Cypress" height="50" /></a>  
   <a href="https://graphql.org/" target="_blank"><img style="margin: 10px" src="https://graphql.org/img/logo.svg" alt="GraphQL" height="50" /></a>
   
-  <!-- <a href="https://www.apollographql.com/" target="_blank"><img style="margin: 10px" src="https://www.apollographql.com/docs/react/logo-apollo.svg" alt="Apollo Client" height="50" /></a>
-  
-  <a href="#" target="_blank"><img style="margin: 10px" src="https://cdn.iconscout.com/icon/free/png-256/ci-cd-2957902-2445791.png" alt="CI/CD" height="50" /></a>
-</div> -->
 <div>
   <a href="https://www.apollographql.com/" target="_blank" style="margin: 10px">Apollo Client</a>
-  <a href="YOUR_CI_CD_URL_HERE" target="_blank" style="margin: 10px">CI/CD</a>
+  <a href="Yhttps://circleci.com/" target="_blank" style="margin: 10px">CI/CD</a>
 </div>
-
-
-
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/7b5f262b-9ed5-4594-acb2-5e71efe3c2ff">
 
-<!-- ### <span style="color:#2E8B57;">Setup & Installation</span> -->
+### <span style="color:#2E8B57;">Setup & Installation</span>
 
-<!-- Get **Refuge** running on your machine:
+Get **Refuge** running on your machine:
 
 1. Clone the repository: `git clone git@github.com:Sulton88Mehron90/showcase-project.git`
 2. Move to the project directory: `cd showcase-project`
 3. Grab the dependencies: `npm install`
-4. Fire up the app: `npm start` -->
+4. Fire up the app: `npm start`
 
 ### Feedback & Contributions
 
-We welcome feedback and contributions to **Refuge**. If you have suggestions, bug reports, or wish to contribute to the code, follow these steps:
+We welcome feedback and contributions to **Refuge**. If you have suggestions, bug reports, or wish to contribute to the code or just want to, follow these steps:
 
 1. **Fork the Repository**: Start by forking [the main repository](https://github.com/Refugee-Aid-Capstone).
 2. **Clone Your Fork**: `git clone git@github.com:YOUR_USERNAME/REPO_NAME.git`
@@ -96,16 +88,6 @@ For bug reports and feedback, please open an issue on our [GitHub issues page](h
 - **User-Centric Design**: Prioritized the user, focusing on their needs and feedback to drive the platform's features and design.
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/4d3bd651-f26c-45fc-8994-d1e81f47cee2">
-
-<!-- ### <span style="color:#2E8B57;">Contributor</span>
-
-| Name | Role | GitHub | LinkedIn |
-|------|------|--------|----------|
-| Artemy Gibson | Backend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
-| Ethan Black | Backend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
-| Davis Weimer | Backend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
-| Renee Pinna | Frontend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
-| Parvin Sattorova | Frontend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) | -->
 
 Meet the developers behind **Refuge**:
 
@@ -204,19 +186,3 @@ Meet the developers behind **Refuge**:
 - **Diverse Technologies**: Integrating a plethora of modern web technologies, from GraphQL to CI/CD pipelines, required a steep learning curve and rigorous testing. Yet, the end product stands as a testament to our commitment and persistence.
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/d07cdccf-01dc-4aad-ab97-143def51d789">
-
-<!-- 
-Ethan Black Back-End Developer
-https://github.com/ethanrossblack
-https://avatars.githubusercontent.com/u/8324716?v=4
-https://www.linkedin.com/in/ethanrossblack/
-
-Artemy Gibson
-https://github.com/algibson1
-https://avatars.githubusercontent.com/u/123849704?v=4
-https://www.linkedin.com/in/artemy-gibson/
-
-Davis Weimer
-https://github.com/DavisWeimer
-https://avatars.githubusercontent.com/u/128326999?v=4
-https://www.linkedin.com/in/davis-weimer/ -->
