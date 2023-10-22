@@ -19,7 +19,7 @@
           "id": "1",
           "organizationId": "99",
           "aidType": "Food",
-          "status": "Pending",
+          "status": "pending",
           "language": "German",
           "description": "Ipsum et nihil ducimus"
         },
@@ -27,7 +27,7 @@
           "id": "2",
           "organizationId": "99",
           "aidType": "Legal",
-          "status": "Pending",
+          "status": "pending",
           "language": "English",
           "description": "Veniam dolorem hic sint"
         }
