@@ -30,7 +30,7 @@ This initiative is a part of the Mod 4, [Capstone Project](https://mod4.turing.e
 
 
 ### <span style="color:#2E8B57;">Preview of App</span>
-![Refuge](https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge-2023.gif)
+[Refuge](https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge-2023.gif)
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/b3c82159-82b5-4ba6-bae0-f26675c94957">
 
