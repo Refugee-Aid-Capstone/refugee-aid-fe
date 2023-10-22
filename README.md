@@ -49,16 +49,9 @@ Upon entering the platform, users are greeted with a dynamic real-time feed show
   <a href="https://react.dev/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
   <a href="https://docs.cypress.io/guides/overview/why-cypress" target="_blank"><img style="margin: 10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoXfntUBC8eXPGA7V8dQp74I5Xofeze3tnRua5hKQkd0ofyH0cy5mJm3_Y-zPhHO2ty9k&usqp=CAU" alt="Cypress" height="50" /></a>  
   <a href="https://graphql.org/" target="_blank"><img style="margin: 10px" src="https://graphql.org/img/logo.svg" alt="GraphQL" height="50" /></a>
-
-  ...
-[![Apollo Client](https://img.shields.io/badge/-Apollo_Client-blue)](https://www.apollographql.com/)
-**Apollo Client**: A comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL.
-
-[![CI/CD](https://img.shields.io/badge/-CI/CD-green)](https://circleci.com/)
-**CI/CD**: Continuous Integration and Continuous Deployment/Delivery, a coding practice where team members integrate their work frequently to detect integration bugs as early as possible.
-...
-
-  
+  <a href="https://www.apollographql.com/" target="_blank"><img style="margin: 10px" src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/apollo-client.png" alt="Apollo Client" height="50" /></a>
+  <a href="https://circleci.com/" target="_blank"><img style="margin: 10px" src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/ci-cd.png" alt="CI/CD" height="50" /></a>
+</div>
 <div>
   <a href="https://www.apollographql.com/" target="_blank" style="margin: 10px">Apollo Client</a>
   <a href="Yhttps://circleci.com/" target="_blank" style="margin: 10px">CI/CD</a>
@@ -74,6 +67,8 @@ Get **Refuge** running on your machine:
 2. Move to the project directory: `cd showcase-project`
 3. Grab the dependencies: `npm install`
 4. Fire up the app: `npm start`
+
+<img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/4d3bd651-f26c-45fc-8994-d1e81f47cee2">
 
 ### Feedback & Contributions
 
@@ -93,10 +88,13 @@ For bug reports and feedback, please open an issue on our [GitHub issues page](h
 ### <span style="color:#2E8B57;">Learning Highlights</span>
 
 - **GraphQL Mastery**: Delved deep into the world of GraphQL, harnessing its power for efficient and flexible data retrieval.
+- **Apollo Client**: A comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL.
 - **CI/CD Implementation**: Integrated Continuous Integration and Continuous Deployment pipelines, ensuring smooth transitions from development to production.
+- **CI/CD Practices**: Continuous Integration and Continuous Deployment/Delivery, a coding practice where team members integrate their work frequently to detect integration bugs as early as possible.
 - **React & Router**: Crafted a multi-page application, navigating the complexities of React Router.
 - **Cypress**: Delved into Cypress, ensuring a robust frontend testing experience.
 - **User-Centric Design**: Prioritized the user, focusing on their needs and feedback to drive the platform's features and design.
+
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/4d3bd651-f26c-45fc-8994-d1e81f47cee2">
 
