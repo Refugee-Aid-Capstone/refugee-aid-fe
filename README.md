@@ -9,7 +9,7 @@
 
 ### <span style="color:#2E8B57;">Description</span>
 
-**Refuge - AidConnect/RefugeeAid** emerges as a platform addressing the challenge of efficiently connecting aid workers and compassionate citizens with refugee camps or organisations. It ensures that assistance meets the refugees, asylees, and migrants' current and specific needs in an engaging, real-time feed.
+**Refuge - AidConnect/RefugeeAid** emerges as a platform addressing the challenge of efficiently connecting aid workers and compassionate citizens with refugee camps or organizations. It ensures that assistance meets the refugees, asylees, and migrants' current and specific needs in an engaging, real-time feed.
 This initiative is a part of the Mod 4, [Capstone Project](https://mod4.turing.edu/projects/capstone/) at Turing School.
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/07d2bf4c-0b57-42b3-8254-56e133f377a3">
