@@ -1,39 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { useQuery } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import OrgRequestCard from '../OrgRequestCard/OrgRequestCard';
 import { useNavigate } from 'react-router-dom';
 import { GET_ONE_ORG } from '../../apollo-client/queries';
 import '../OrganizationDashboard/OrganizationDashboard.scss';
 import Spinner from '../Spinner/Spinner';
-export default function OrganizationDashboard( {orgId}) {
+import { UPDATE_AID_REQUEST } from '../../apollo-client/mutations';
 
+export default function OrganizationDashboard({ orgId }) {
   const { loading, error, data } = useQuery(GET_ONE_ORG, {
     variables: { id: orgId },
   });
-
+  const [updateStatus] = useMutation(UPDATE_AID_REQUEST, {
+    refetchQueries: [GET_ONE_ORG],
+  });
+  const navigate = useNavigate();
   const [aidRequests, setAidRequests] = useState([]);
 
-  useEffect(() => { 
+  useEffect(() => {
     if (data && data.organization) {
       setAidRequests(data.organization.aidRequests);
     }
   }, [data]);
-
-  const handleApprove = requestId => {
-    const updatedRequests = aidRequests.map(request =>
-      request.id === requestId ? { ...request, status: 'Approved' } : request,
-    );
-    setAidRequests(updatedRequests);
-  };
-
-  const handleDecline = requestId => {
-    const updatedRequests = aidRequests.map(request =>
-      request.id === requestId ? { ...request, status: 'Fulfilled' } : request,
-    );
-    setAidRequests(updatedRequests);
-  };
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (error) {
@@ -62,14 +50,13 @@ export default function OrganizationDashboard( {orgId}) {
       <div className='dashboard-content'>
         <div className='left-column'>
           <h3>Aid Requests</h3>
-            {aidRequests.map(request => (
-              <OrgRequestCard
-                key={request.id}
-                request={request}
-                handleApprove={handleApprove}
-                handleDecline={handleDecline}
-              />
-            ))}
+          {aidRequests.map(request => (
+            <OrgRequestCard
+              key={request.id}
+              request={request}
+              updateStatus={updateStatus}
+            />
+          ))}
         </div>
         <div className='right-column'>
           <h3>Organization Details</h3>
@@ -80,7 +67,7 @@ export default function OrganizationDashboard( {orgId}) {
           <p>City: {organization.city}</p>
           <p>State: {organization.state}</p>
           <p>ZIP: {organization.zip}</p>
-          <button className="edit-button">Edit Details</button>
+          <button className='edit-button'>Edit Details</button>
         </div>
       </div>
     </div>
