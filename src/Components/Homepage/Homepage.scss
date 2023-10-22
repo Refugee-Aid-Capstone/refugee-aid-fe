@@ -9,7 +9,11 @@ $netflix-red: #E50914;
   box-sizing: border-box;
 }
 
-//A11y
+body {
+  overflow-y: scroll;
+}
+
+// A11y
 .skip-link {
   position: absolute;
   top: -40px;
@@ -168,6 +172,8 @@ $netflix-red: #E50914;
 }
 
 .video-container {
+  opacity: 0;
+  transition: opacity 0.3s ease;
   margin-top: 30px;
   position: relative;
   width: 100%;
@@ -175,7 +181,12 @@ $netflix-red: #E50914;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  
+  &.active {
+    opacity: 1;
+  }
 }
+
 
 iframe {
   position: absolute;
