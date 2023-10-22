@@ -13,17 +13,16 @@ export default function OrgRequestCard({ request, updateStatus }) {
       <p className='card-text description'>{description}</p>
       <p className='card-text'>Status: {status}</p>
       <div>
-        <button
+        {status !== 'pending' && <button
           className='action-button'
           onClick={() =>
             updateStatus({ variables: { id: id, status: 'pending' } })
           }
-          aria-label={`Mark request for ${aidType} aid as fulfilled`}
-
+          aria-label={`Mark request for ${aidType} aid as pending`}
         >
           Approve
-        </button>
-        <button
+        </button>}
+       { status !== 'fulfilled' && <button
           className='action-button'
           onClick={() =>
             updateStatus({ variables: { id: id, status: 'fulfilled' } })
@@ -32,17 +31,16 @@ export default function OrgRequestCard({ request, updateStatus }) {
 
         >
           Fulfilled
-        </button>
-        <button
+        </button>}
+        {status !== 'active' && <button
           className='action-button'
           onClick={() =>
-            updateStatus({ variables: { id: id, status: 'Active' } })
+            updateStatus({ variables: { id: id, status: 'active' } })
           }
-          aria-label={`Mark request for ${aidType} aid as fulfilled`}
-
+          aria-label={`Mark request for ${aidType} aid as active`}
         >
           Reactivate
-        </button>
+        </button>}
       </div>
     </article>
   );

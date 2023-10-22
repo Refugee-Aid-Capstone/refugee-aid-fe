@@ -11,9 +11,8 @@ export default function OrganizationDashboard({ orgId }) {
   const { loading, error, data } = useQuery(GET_ONE_ORG, {
     variables: { id: orgId },
   });
-  const [updateStatus] = useMutation(UPDATE_AID_REQUEST, {
-    refetchQueries: [GET_ONE_ORG],
-  });
+  const [updateStatus] = useMutation(UPDATE_AID_REQUEST);
+
   const navigate = useNavigate();
   const [aidRequests, setAidRequests] = useState([]);
 
@@ -46,7 +45,7 @@ export default function OrganizationDashboard({ orgId }) {
   return (
     <div className='organization-dashboard-container'>
       <h1>Welcome, {organization.name}!</h1>
-  
+
       <div className='dashboard-content'>
         <section className='left-column'>
           <h3>Aid Requests</h3>
@@ -67,7 +66,7 @@ export default function OrganizationDashboard({ orgId }) {
           <p>City: {organization.city}</p>
           <p>State: {organization.state}</p>
           <p>ZIP: {organization.zip}</p>
-          <button className="edit-button">Edit Details</button>
+          <button className='edit-button'>Edit Details</button>
         </section>
       </div>
     </div>
