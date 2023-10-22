@@ -58,8 +58,8 @@ Upon entering the platform, users are greeted with a dynamic real-time feed show
 
 Get **Refuge** running on your machine:
 
-1. Clone the repository: `git clone git@github.com:Sulton88Mehron90/showcase-project.git`
-2. Move to the project directory: `cd showcase-project`
+1. Clone the repository from: `git clone https://github.com/Refugee-Aid-Capstone/refugee-aid-fe`
+2. Move to the project directory: `cd refugee-aid-fe`
 3. Grab the dependencies: `npm install`
 4. Fire up the app: `npm start`
 
