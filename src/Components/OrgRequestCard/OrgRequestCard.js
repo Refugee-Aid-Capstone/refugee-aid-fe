@@ -1,47 +1,35 @@
 import '../RequestCard/RequestCard.scss';
 import '../OrganizationDashboard/OrganizationDashboard.scss';
+import './OrgRequest.scss';
+import { useMutation } from '@apollo/client';
+import { UPDATE_AID_REQUEST } from '../../apollo-client/mutations';
 
-import React from 'react';
-
-export default function OrgRequestCard({ request, updateStatus }) {
+export default function OrgRequestCard({ request }) {
   const { id, description, aidType, language, status } = request;
+  const [updateStatus] = useMutation(UPDATE_AID_REQUEST);
+
+  const buttons = ['pending', 'fulfilled', 'active']
+    .filter(buttonType => buttonType !== status)
+    .map(buttonType => (
+      <button
+        key={buttonType}
+        className='action-button'
+        onClick={() =>
+          updateStatus({ variables: { id: id, status: buttonType } })
+        }
+        aria-label={`Mark request for ${aidType} aid as ${buttonType}`}
+      >
+        {buttonType}
+      </button>
+    ));
 
   return (
     <article className='request-card org' id={id}>
       <h3 className='card-text type'>{aidType} Aid</h3>
-      {language && <p className='card-text'>Language: {language}</p>}
+      {language !== 'None' && <p className='card-text'>Language: {language}</p>}
       <p className='card-text description'>{description}</p>
       <p className='card-text'>Status: {status}</p>
-      <div>
-        {status !== 'pending' && <button
-          className='action-button'
-          onClick={() =>
-            updateStatus({ variables: { id: id, status: 'pending' } })
-          }
-          aria-label={`Mark request for ${aidType} aid as pending`}
-        >
-          Approve
-        </button>}
-       { status !== 'fulfilled' && <button
-          className='action-button'
-          onClick={() =>
-            updateStatus({ variables: { id: id, status: 'fulfilled' } })
-          }
-          aria-label={`Mark request for ${aidType} aid as fulfilled`}
-
-        >
-          Fulfilled
-        </button>}
-        {status !== 'active' && <button
-          className='action-button'
-          onClick={() =>
-            updateStatus({ variables: { id: id, status: 'active' } })
-          }
-          aria-label={`Mark request for ${aidType} aid as active`}
-        >
-          Reactivate
-        </button>}
-      </div>
+      <div>{buttons}</div>
     </article>
   );
 }

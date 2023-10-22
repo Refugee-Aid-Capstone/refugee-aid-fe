@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { useMutation, useQuery } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import OrgRequestCard from '../OrgRequestCard/OrgRequestCard';
 import { useNavigate } from 'react-router-dom';
 import { GET_ONE_ORG } from '../../apollo-client/queries';
 import '../OrganizationDashboard/OrganizationDashboard.scss';
 import Spinner from '../Spinner/Spinner';
-import { UPDATE_AID_REQUEST } from '../../apollo-client/mutations';
 
 export default function OrganizationDashboard({ orgId }) {
+  const navigate = useNavigate();
+  const [aidRequests, setAidRequests] = useState([]);
+
   const { loading, error, data } = useQuery(GET_ONE_ORG, {
     variables: { id: orgId },
   });
-  const [updateStatus] = useMutation(UPDATE_AID_REQUEST);
-
-  const navigate = useNavigate();
-  const [aidRequests, setAidRequests] = useState([]);
 
   useEffect(() => {
     if (data && data.organization) {
@@ -53,7 +51,6 @@ export default function OrganizationDashboard({ orgId }) {
             <OrgRequestCard
               key={request.id}
               request={request}
-              updateStatus={updateStatus}
             />
           ))}
         </section>
@@ -66,7 +63,6 @@ export default function OrganizationDashboard({ orgId }) {
           <p>City: {organization.city}</p>
           <p>State: {organization.state}</p>
           <p>ZIP: {organization.zip}</p>
-          <button className='edit-button'>Edit Details</button>
         </section>
       </div>
     </div>
