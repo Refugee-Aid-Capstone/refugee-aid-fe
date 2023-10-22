@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import refugeesImage from '../../images/refugees.png';
 import '../Homepage/Homepage.scss';
 
 function Homepage() {
   const [showVideo, setShowVideo] = useState(false);
+  const videoRef = useRef(null);
+
+  const handlePlayVideo = () => {
+    setShowVideo(true);
+    setTimeout(() => {
+      videoRef.current.focus();
+    }, 300); 
+  };
 
   return (
     <header className="home-header">
@@ -13,13 +21,13 @@ function Homepage() {
           <div className="media-side">
             <div className="media-content">
               {showVideo ? (
-                <div className="video-container">
+                <div className={`video-container ${showVideo ? 'active' : ''}`}>
                   <iframe
+                    ref={videoRef}
                     width="560"
                     height="315"
                     src="https://www.youtube.com/embed/Jzg842IC5e0?si=kj0WxGYPqjOZRywf"
                     title="YouTube video player"
-                    style={{border: "none"}}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                   ></iframe>
@@ -54,7 +62,7 @@ function Homepage() {
               <div className="video-controls">
                 <button 
                   className="play-video" 
-                  onClick={() => setShowVideo(true)}
+                  onClick={handlePlayVideo}
                   aria-expanded={showVideo}
                 >
                   Play Video
