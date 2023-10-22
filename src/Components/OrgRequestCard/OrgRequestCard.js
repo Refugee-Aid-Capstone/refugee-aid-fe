@@ -18,6 +18,8 @@ export default function OrgRequestCard({ request, updateStatus }) {
           onClick={() =>
             updateStatus({ variables: { id: id, status: 'pending' } })
           }
+          aria-label={`Mark request for ${aidType} aid as fulfilled`}
+
         >
           Approve
         </button>
@@ -26,6 +28,8 @@ export default function OrgRequestCard({ request, updateStatus }) {
           onClick={() =>
             updateStatus({ variables: { id: id, status: 'fulfilled' } })
           }
+          aria-label={`Mark request for ${aidType} aid as fulfilled`}
+
         >
           Fulfilled
         </button>
@@ -34,6 +38,8 @@ export default function OrgRequestCard({ request, updateStatus }) {
           onClick={() =>
             updateStatus({ variables: { id: id, status: 'Active' } })
           }
+          aria-label={`Mark request for ${aidType} aid as fulfilled`}
+
         >
           Reactivate
         </button>

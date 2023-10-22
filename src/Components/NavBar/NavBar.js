@@ -11,16 +11,21 @@ export default function NavBar({ isLoggedIn, handleLogin }) {
     <nav className='nav-bar'>
       <div className="navbar-logo">
         <NavLink to='/'>
-          <img src={logoImage} alt="Logo" className="logo-image" />
+          <img src={logoImage} alt="Refuge Organization Logo" className="logo-image" />
         </NavLink>
       </div>
-      <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+      <button
+        className="hamburger"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation menu"
+        aria-expanded={menuOpen}
+      >
         &#9776;
       </button>
-      <div className={`nav-items ${menuOpen ? 'active' : ''}`}>
-        <NavLink className='nav-link' to='/provideAid'>aid request</NavLink>
-        <NavLink className='nav-link' to='/'>mission</NavLink>
-        <NavLink className='nav-link' to='/contact'>helpful resources</NavLink>
+      <div className={`nav-items ${menuOpen ? 'active' : ''}`} role="menu">
+        <NavLink className='nav-link' to='/provideAid' role="menuitem" onClick={() => setMenuOpen(false)}>aid request</NavLink>
+        <NavLink className='nav-link' to='/' role="menuitem" onClick={() => setMenuOpen(false)}>mission</NavLink>
+        <NavLink className='nav-link' to='/contact' role="menuitem" onClick={() => setMenuOpen(false)}>helpful resources</NavLink>
       </div>
       <div className="login-container">
         {isLoggedIn ? (
@@ -35,5 +40,3 @@ export default function NavBar({ isLoggedIn, handleLogin }) {
     </nav>
   );
 }
-
-
