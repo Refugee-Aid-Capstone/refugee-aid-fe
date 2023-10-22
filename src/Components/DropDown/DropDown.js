@@ -3,11 +3,14 @@ import { useQuery } from '@apollo/client';
 import { GET_ALL_LOCATIONS } from '../../apollo-client/queries';
 import './DropDown.scss';
 import { useCombobox } from 'downshift';
+import { useNavigate } from 'react-router-dom';
+import Spinner from '../Spinner/Spinner';
 
 export default function DropDown({ city, setSearchLocation }) {
   const [autocompleteSuggestions, setAutocompleteSuggestions] = useState([]);
   const { loading, error, data } = useQuery(GET_ALL_LOCATIONS);
   const [selectedItem, setSelectedItem] = useState('')
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.addEventListener('click', e => console.log(e));
@@ -33,7 +36,9 @@ export default function DropDown({ city, setSearchLocation }) {
             .slice(0, 5);
 
             suggestions.forEach(location => {
-              const [city, state] = location.split(', ')
+              const [city, 
+              // state
+            ] = location.split(', ')
 
               if (inputValue.toLowerCase() === city.toLowerCase()) {
                 suggestions = []
@@ -52,6 +57,15 @@ export default function DropDown({ city, setSearchLocation }) {
         setSelectedItem(city)
       },
     });
+
+    if (error) {
+      navigate('/error500');
+      return null;
+    }
+  
+    if (loading) {
+      return <Spinner />;
+    }
 
   return (
     <>
@@ -72,6 +86,7 @@ export default function DropDown({ city, setSearchLocation }) {
         {...getMenuProps({
           'aria-label': 'Autocomplete suggestions',
           'aria-labelledby': null,
+          role: 'listbox', 
         })}
       >
         {autocompleteSuggestions.length > 0 &&
@@ -84,6 +99,7 @@ export default function DropDown({ city, setSearchLocation }) {
                 {...getItemProps({
                   location,
                   index,
+                  role: 'option',
                 })}
               >
                 {location}
