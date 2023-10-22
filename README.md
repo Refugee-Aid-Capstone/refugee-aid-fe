@@ -52,10 +52,6 @@ Upon entering the platform, users are greeted with a dynamic real-time feed show
   <a href="https://www.apollographql.com/" target="_blank"><img style="margin: 10px" src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/apollo-client.png" alt="Apollo Client" height="50" /></a>
   <a href="https://circleci.com/" target="_blank"><img style="margin: 10px" src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/ci-cd.png" alt="CI/CD" height="50" /></a>
 </div>
-<div>
-  <a href="https://www.apollographql.com/" target="_blank" style="margin: 10px">Apollo Client</a>
-  <a href="Yhttps://circleci.com/" target="_blank" style="margin: 10px">CI/CD</a>
-</div>
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/7b5f262b-9ed5-4594-acb2-5e71efe3c2ff">
 
