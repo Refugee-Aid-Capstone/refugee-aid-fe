@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useQuery } from '@apollo/client';
-import OrgRequestCard from '../OrgRequestCard/OrgRequestCard';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
 import { GET_ONE_ORG } from '../../apollo-client/queries';
-import '../OrganizationDashboard/OrganizationDashboard.scss';
+import OrgRequestCard from '../OrgRequestCard/OrgRequestCard';
 import Spinner from '../Spinner/Spinner';
+import '../OrganizationDashboard/OrganizationDashboard.scss';
 
 export default function OrganizationDashboard({ orgId }) {
   const navigate = useNavigate();
@@ -38,31 +38,36 @@ export default function OrganizationDashboard({ orgId }) {
     return <p>No organization data available.</p>;
   }
 
-  const organization = data.organization;
+  const {
+    name,
+    contactPhone,
+    contactEmail,
+    streetAddress,
+    website,
+    city,
+    state,
+    zip,
+  } = data.organization;
 
   return (
     <div className='organization-dashboard-container'>
-      <h1>Welcome, {organization.name}!</h1>
-
+      <h1>Welcome, {name}!</h1>
       <div className='dashboard-content'>
         <section className='left-column'>
           <h3>Aid Requests</h3>
           {aidRequests.map(request => (
-            <OrgRequestCard
-              key={request.id}
-              request={request}
-            />
+            <OrgRequestCard key={request.id} request={request} />
           ))}
         </section>
         <section className='right-column'>
           <h3>Organization Details</h3>
-          <p>Phone: {organization.contactPhone}</p>
-          <p>Email: {organization.contactEmail}</p>
-          <p>Address: {organization.streetAddress}</p>
-          <p>Website: {organization.website}</p>
-          <p>City: {organization.city}</p>
-          <p>State: {organization.state}</p>
-          <p>ZIP: {organization.zip}</p>
+          <p>Phone: {contactPhone}</p>
+          <p>Email: {contactEmail}</p>
+          <p>Address: {streetAddress}</p>
+          <p>Website: {website}</p>
+          <p>City: {city}</p>
+          <p>State: {state}</p>
+          <p>ZIP: {zip}</p>
         </section>
       </div>
     </div>
