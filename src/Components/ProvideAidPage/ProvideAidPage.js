@@ -8,14 +8,16 @@ export default function ProvideAidPage() {
   const [selectedOrganization, setSelectedOrganization] = useState({});
 
   function selectOrganization(organization) {
-    setSelectedOrganization(organization)
+    setSelectedOrganization(organization);
   }
 
   return (
     <div className='provide-aid-page'>
       <main className='content-section'>
         <Search selectOrganization={selectOrganization} />
-        <OrganizationDisplay selectedOrganization={selectedOrganization} />
+        <div aria-live="polite">
+          <OrganizationDisplay selectedOrganization={selectedOrganization} />
+        </div>
       </main>
     </div>
   );

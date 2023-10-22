@@ -58,20 +58,20 @@ export default function OrganizationDashboard( {orgId}) {
   return (
     <div className='organization-dashboard-container'>
       <h1>Welcome, {organization.name}!</h1>
-
+  
       <div className='dashboard-content'>
-        <div className='left-column'>
+        <section className='left-column'>
           <h3>Aid Requests</h3>
-            {aidRequests.map(request => (
-              <OrgRequestCard
-                key={request.id}
-                request={request}
-                handleApprove={handleApprove}
-                handleDecline={handleDecline}
-              />
-            ))}
-        </div>
-        <div className='right-column'>
+          {aidRequests.map(request => (
+            <OrgRequestCard
+              key={request.id}
+              request={request}
+              handleApprove={handleApprove}
+              handleDecline={handleDecline}
+            />
+          ))}
+        </section>
+        <section className='right-column'>
           <h3>Organization Details</h3>
           <p>Phone: {organization.contactPhone}</p>
           <p>Email: {organization.contactEmail}</p>
@@ -81,8 +81,8 @@ export default function OrganizationDashboard( {orgId}) {
           <p>State: {organization.state}</p>
           <p>ZIP: {organization.zip}</p>
           <button className="edit-button">Edit Details</button>
-        </div>
-      </div>
+        </section>
     </div>
+  </div>
   );
 }

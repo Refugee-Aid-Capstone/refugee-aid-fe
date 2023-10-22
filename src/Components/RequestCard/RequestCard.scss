@@ -1,34 +1,4 @@
-// .request-card {
-//   padding: 1rem 2rem;
-//   background-color: whitesmoke;
-//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-//   cursor: pointer;
-
-//   &:hover {
-//     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-//   }
-// }
-
-// .org {
-//   cursor: default;
-// }
-
-// .card-text {
-//   text-transform: capitalize;
-//   margin: 0.5rem 0;
-
-//   &.type {
-//     text-decoration: underline;
-//   }
-
-//   &.org {
-//     font-weight: 700;
-//   }
-
-//   &.description {
-//     text-transform: none;
-//   }
-// }
+@use "sass:math";
 
 $primary-color: #37b3fe;
 $secondary-color: #3c8bc9;
@@ -46,6 +16,7 @@ $font-stack: 'Arial', sans-serif;
   color: #fff;
   cursor: pointer;
   transition: transform 0.3s;
+  margin-top: 0.4rem;
 
   &:hover {
     transform: translateY(-10px);
@@ -60,7 +31,7 @@ $font-stack: 'Arial', sans-serif;
 .card-text {
   font-family: $font-stack;
   text-transform: capitalize;
-  margin: $default-padding / 2;
+  margin: math.div($default-padding, 2); 
 
   &.type {
     font-weight: 700;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_ALL_LOCATIONS } from '../../apollo-client/queries';
 import './DropDown.scss';
@@ -11,10 +11,6 @@ export default function DropDown({ city, setSearchLocation }) {
   const { loading, error, data } = useQuery(GET_ALL_LOCATIONS);
   const [selectedItem, setSelectedItem] = useState('')
   const navigate = useNavigate();
-
-  useEffect(() => {
-    document.addEventListener('click', e => console.log(e));
-  }, []);
 
   const { getInputProps, getMenuProps, getItemProps, highlightedIndex } =
     useCombobox({
@@ -38,12 +34,11 @@ export default function DropDown({ city, setSearchLocation }) {
             suggestions.forEach(location => {
               const [city, 
               // state
-            ] = location.split(', ')
+            ] = location.split(', ');
 
               if (inputValue.toLowerCase() === city.toLowerCase()) {
-                suggestions = []
+                suggestions = [];
               }
-              
             });
         }
 
@@ -51,10 +46,10 @@ export default function DropDown({ city, setSearchLocation }) {
       },
       selectedItem,
       onSelectedItemChange: ({ selectedItem: newSelectedItem }) => {
-        const [city, state] = newSelectedItem.split(', ')
+        const [city, state] = newSelectedItem.split(', ');
 
         setSearchLocation(city, state);
-        setSelectedItem(city)
+        setSelectedItem(city);
       },
     });
 
@@ -74,8 +69,7 @@ export default function DropDown({ city, setSearchLocation }) {
         {...getInputProps({
           'aria-expanded': autocompleteSuggestions.length > 0,
           'aria-label': 'Search for a place on the map',
-          'aria-labelledby': null,
-          autoFocus: 'true',
+          autoFocus: true,
           inputMode: 'search',
           placeholder: 'City (optional)',
           type: 'search',
@@ -85,27 +79,22 @@ export default function DropDown({ city, setSearchLocation }) {
         className='suggestion-dropdown'
         {...getMenuProps({
           'aria-label': 'Autocomplete suggestions',
-          'aria-labelledby': null,
-          role: 'listbox', 
         })}
       >
         {autocompleteSuggestions.length > 0 &&
-          autocompleteSuggestions.map((location, index) => {
-            return (
-              <li
-                data-highlighted={index === highlightedIndex}
-                className='suggestion'
-                key={`suggestion-${index}`}
-                {...getItemProps({
-                  location,
-                  index,
-                  role: 'option',
-                })}
-              >
-                {location}
-              </li>
-            );
-          })}
+          autocompleteSuggestions.map((location, index) => (
+            <li
+              data-highlighted={index === highlightedIndex}
+              className='suggestion'
+              key={`suggestion-${index}`}
+              {...getItemProps({
+                item: location,
+                index,
+              })}
+            >
+              {location}
+            </li>
+          ))}
       </ul>
     </>
   );
