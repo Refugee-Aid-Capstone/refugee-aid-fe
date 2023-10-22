@@ -11,13 +11,11 @@ export default function SearchResults({
   searchFilter,
 }) {
   const [searchResults, setSearchResults] = useState([]);
-  const [noResults, setNoResults] = useState(true);
 
   useEffect(() => {
-    const noResults = data?.aidRequests.length ? false : true;
-    setNoResults(noResults);
-
-    let results = data ? data.aidRequests.filter(request => request.status === 'active') : [];
+    let results = data
+      ? data.aidRequests.filter(request => request.status === 'active')
+      : [];
 
     if (searchFilter) {
       results = results.filter(

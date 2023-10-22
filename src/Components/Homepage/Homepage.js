@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import refugeesImage from '../../images/refugees.png';
-import '../Homepage/Homepage.scss'
+import '../Homepage/Homepage.scss';
 
 function Homepage() {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
     <header className="home-header">
-      <main>
+      <a href="#main-content" className="skip-link">Skip to main content</a>
+      <main id="main-content">
         <section className="content-section">
           <div className="media-side">
             <div className="media-content">
@@ -18,10 +19,10 @@ function Homepage() {
                     height="315"
                     src="https://www.youtube.com/embed/Jzg842IC5e0?si=kj0WxGYPqjOZRywf"
                     title="YouTube video player"
-                    frameborder="0"
+                    style={{border: "none"}}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                  </iframe>
+                    allowFullScreen
+                  ></iframe>
                 </div>
               ) : (
                 <div className="refugee-image-container">
@@ -31,7 +32,11 @@ function Homepage() {
             </div>
             {showVideo && (
               <div className="video-controls">
-                <button className="hide-video" onClick={() => setShowVideo(false)}>
+                <button 
+                  className="hide-video" 
+                  onClick={() => setShowVideo(false)}
+                  aria-expanded={showVideo}
+                >
                   Hide Video
                 </button>
               </div>
@@ -47,7 +52,11 @@ function Homepage() {
             <p>We do everything within our power and capabilities to transform the fear in the hearts of those in need into hope.</p>
             {!showVideo && (
               <div className="video-controls">
-                <button className="play-video" onClick={() => setShowVideo(true)}>
+                <button 
+                  className="play-video" 
+                  onClick={() => setShowVideo(true)}
+                  aria-expanded={showVideo}
+                >
                   Play Video
                 </button>
               </div>

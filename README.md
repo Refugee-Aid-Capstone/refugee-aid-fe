@@ -1,6 +1,6 @@
 <div>
     <h1 style="color:red; display: inline;">
-      <!-- Refuge -->
+      Refuge
          <img src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge.png" alt="refuge logo" width="105" style="margin-left: 5px; border-radius: 50%; vertical-align: middle;">
     </h1>
 </div>
@@ -9,15 +9,16 @@
 
 ### <span style="color:#2E8B57;">Description</span>
 
-**Refuge - AidConnect/RefugeeAid** emerges as a platform addressing the challenge of efficiently connecting aid workers and compassionate citizens with refugee camps or organisations. It ensures that assistance meets the refugees, asylees and migrants' current and specific needs in an engaging, real-time feed.
-
+**Refuge - AidConnect/RefugeeAid** emerges as a platform addressing the challenge of efficiently connecting aid workers and compassionate citizens with refugee camps or organizations. It ensures that assistance meets the refugees, asylees, and migrants' current and specific needs in an engaging, real-time feed.
+This initiative is a part of the Mod 4, [Capstone Project](https://mod4.turing.edu/projects/capstone/) at Turing School.
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/07d2bf4c-0b57-42b3-8254-56e133f377a3">
 
 ### <span style="color:#2E8B57;">Live Demo</span>
 
-
 [Engage with Refuge](https://refugee-aid-fe.vercel.app/).
+
+Upon entering the platform, users are greeted with a dynamic real-time feed showcasing the current needs of each camp. Navigate through the integrated map interface to locate nearby refugee camps swiftly. The platform also offers educational resources, empowering users with insights on effective assistance methods and cultural considerations.
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/11311fac-e5a5-4ee8-aa0c-f1008cb1ad03">
 
@@ -29,9 +30,8 @@
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/ed99f7c3-67db-4b94-b607-0b2856770eb1">
 
-
 ### <span style="color:#2E8B57;">Preview of App</span>
-<!-- ![Refuge](https://github.com/Sulton88Mehron90/showcase-project/blob/main/src/Images/avicenna-method-romjon.gif) -->
+![Refuge](https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/refuge-2023.gif)
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/b3c82159-82b5-4ba6-bae0-f26675c94957">
 
@@ -48,33 +48,26 @@
   <a href="https://react.dev/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
   <a href="https://docs.cypress.io/guides/overview/why-cypress" target="_blank"><img style="margin: 10px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoXfntUBC8eXPGA7V8dQp74I5Xofeze3tnRua5hKQkd0ofyH0cy5mJm3_Y-zPhHO2ty9k&usqp=CAU" alt="Cypress" height="50" /></a>  
   <a href="https://graphql.org/" target="_blank"><img style="margin: 10px" src="https://graphql.org/img/logo.svg" alt="GraphQL" height="50" /></a>
-  
-  <!-- <a href="https://www.apollographql.com/" target="_blank"><img style="margin: 10px" src="https://www.apollographql.com/docs/react/logo-apollo.svg" alt="Apollo Client" height="50" /></a>
-  
-  <a href="#" target="_blank"><img style="margin: 10px" src="https://cdn.iconscout.com/icon/free/png-256/ci-cd-2957902-2445791.png" alt="CI/CD" height="50" /></a>
-</div> -->
-<div>
-  <a href="https://www.apollographql.com/" target="_blank" style="margin: 10px">Apollo Client</a>
-  <a href="YOUR_CI_CD_URL_HERE" target="_blank" style="margin: 10px">CI/CD</a>
+  <a href="https://www.apollographql.com/" target="_blank"><img style="margin: 10px" src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/apollo-client.png" alt="Apollo Client" height="50" /></a>
+  <a href="https://circleci.com/" target="_blank"><img style="margin: 10px" src="https://github.com/Refugee-Aid-Capstone/refugee-aid-fe/blob/main/src/images/ci-cd.png" alt="CI/CD" height="50" /></a>
 </div>
-
-
-
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/7b5f262b-9ed5-4594-acb2-5e71efe3c2ff">
 
-<!-- ### <span style="color:#2E8B57;">Setup & Installation</span> -->
+### <span style="color:#2E8B57;">Setup & Installation</span>
 
-<!-- Get **Refuge** running on your machine:
+Get **Refuge** running on your machine:
 
-1. Clone the repository: `git clone git@github.com:Sulton88Mehron90/showcase-project.git`
-2. Move to the project directory: `cd showcase-project`
+1. Clone the repository from: `git clone https://github.com/Refugee-Aid-Capstone/refugee-aid-fe`
+2. Move to the project directory: `cd refugee-aid-fe`
 3. Grab the dependencies: `npm install`
-4. Fire up the app: `npm start` -->
+4. Fire up the app: `npm start`
+
+<img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/4d3bd651-f26c-45fc-8994-d1e81f47cee2">
 
 ### Feedback & Contributions
 
-We welcome feedback and contributions to **Refuge**. If you have suggestions, bug reports, or wish to contribute to the code, follow these steps:
+We welcome feedback and contributions to **Refuge**. If you have suggestions, bug reports, or wish to contribute to the code or just want to, follow these steps:
 
 1. **Fork the Repository**: Start by forking [the main repository](https://github.com/Refugee-Aid-Capstone).
 2. **Clone Your Fork**: `git clone git@github.com:YOUR_USERNAME/REPO_NAME.git`
@@ -90,22 +83,15 @@ For bug reports and feedback, please open an issue on our [GitHub issues page](h
 ### <span style="color:#2E8B57;">Learning Highlights</span>
 
 - **GraphQL Mastery**: Delved deep into the world of GraphQL, harnessing its power for efficient and flexible data retrieval.
+- **Apollo Client**: A comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL.
 - **CI/CD Implementation**: Integrated Continuous Integration and Continuous Deployment pipelines, ensuring smooth transitions from development to production.
+- **CI/CD Practices**: Continuous Integration and Continuous Deployment/Delivery, a coding practice where team members integrate their work frequently to detect integration bugs as early as possible.
 - **React & Router**: Crafted a multi-page application, navigating the complexities of React Router.
 - **Cypress**: Delved into Cypress, ensuring a robust frontend testing experience.
 - **User-Centric Design**: Prioritized the user, focusing on their needs and feedback to drive the platform's features and design.
 
+
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/4d3bd651-f26c-45fc-8994-d1e81f47cee2">
-
-<!-- ### <span style="color:#2E8B57;">Contributor</span>
-
-| Name | Role | GitHub | LinkedIn |
-|------|------|--------|----------|
-| Artemy Gibson | Backend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
-| Ethan Black | Backend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
-| Davis Weimer | Backend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
-| Renee Pinna | Frontend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) |
-| Parvin Sattorova | Frontend | [GitHub](LINK_TO_GITHUB) | [LinkedIn](LINK_TO_LINKEDIN) | -->
 
 Meet the developers behind **Refuge**:
 
@@ -199,24 +185,8 @@ Meet the developers behind **Refuge**:
   
 - **Custom Map Interface**: Designing an integrated map interface that was intuitive and user-friendly took several iterations and user feedback sessions. The final result was a blend of performance and aesthetics.
 
-- **Responsive Design**: Ensuring the platform was equally effective across devices was challenging, given the variety of interactive elements. We utilized modern CSS frameworks and regular cross-device testing to achieve this.
+- **Responsive Design**: Ensuring the platform was equally effective across devices was challenging, given the variety of interactive elements. We utilized SCSS and regular cross-device testing to achieve this.
 
 - **Diverse Technologies**: Integrating a plethora of modern web technologies, from GraphQL to CI/CD pipelines, required a steep learning curve and rigorous testing. Yet, the end product stands as a testament to our commitment and persistence.
 
 <img width="504" alt="image" src="https://github.com/Sulton88Mehron90/showcase-project/assets/119267809/d07cdccf-01dc-4aad-ab97-143def51d789">
-
-<!-- 
-Ethan Black Back-End Developer
-https://github.com/ethanrossblack
-https://avatars.githubusercontent.com/u/8324716?v=4
-https://www.linkedin.com/in/ethanrossblack/
-
-Artemy Gibson
-https://github.com/algibson1
-https://avatars.githubusercontent.com/u/123849704?v=4
-https://www.linkedin.com/in/artemy-gibson/
-
-Davis Weimer
-https://github.com/DavisWeimer
-https://avatars.githubusercontent.com/u/128326999?v=4
-https://www.linkedin.com/in/davis-weimer/ -->

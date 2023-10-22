@@ -37,7 +37,7 @@ function Error404() {
         </button>
       </NavLink>
 
-      <div className="ref-fact-container">
+      <div className="ref-fact-container" aria-live="polite">
         <h2 className="ref-fact-heading">
           Did you know?
         </h2>
@@ -54,7 +54,7 @@ function Error404() {
 
       </div>
       <div className="image-container">
-        <img src={RefugeeKids} alt="Refugees Kids" className="refugee-image" />
+        <img src={RefugeeKids} alt="Young refugee children" className="refugee-image" />
       </div>
     </div>
   );

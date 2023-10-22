@@ -34,6 +34,6 @@ describe('ContactSection Component - Sad Path', () => {
     cy.visit('http://localhost:3000/contact');
     cy.reload();
     cy.viewport(1280, 720);
-    cy.get('img[alt="usa-custom"]').should('be.visible');
+    cy.get('img[alt="An illustration representing unity and inclusivity in the USA"]').should('be.visible');
   });
 });
