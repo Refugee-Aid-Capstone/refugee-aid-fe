@@ -185,7 +185,7 @@ Meet the developers behind **Refuge**:
   
 - **Custom Map Interface**: Designing an integrated map interface that was intuitive and user-friendly took several iterations and user feedback sessions. The final result was a blend of performance and aesthetics.
 
-- **Responsive Design**: Ensuring the platform was equally effective across devices was challenging, given the variety of interactive elements. We utilized modern CSS frameworks and regular cross-device testing to achieve this.
+- **Responsive Design**: Ensuring the platform was equally effective across devices was challenging, given the variety of interactive elements. We utilized SCSS and regular cross-device testing to achieve this.
 
 - **Diverse Technologies**: Integrating a plethora of modern web technologies, from GraphQL to CI/CD pipelines, required a steep learning curve and rigorous testing. Yet, the end product stands as a testament to our commitment and persistence.
 
