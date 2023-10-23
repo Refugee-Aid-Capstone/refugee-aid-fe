@@ -1,25 +1,18 @@
-@use "sass:math";
-
-$primary-color: #37b3fe;
-$secondary-color: #3c8bc9;
-$netflix-red: #031662;
-$default-padding: 10px;
-$dark-bg: $secondary-color; 
-$lighter-bg: #2a6f9e; 
-$font-stack: 'Arial', sans-serif;
+@import '../../index.scss';
 
 .request-card {
-  padding: $default-padding * 2;
-  background-color: $lighter-bg;
-  border-radius: 5px;
+  padding: 1.2rem;
+  border-radius: $defaultRadius;
+  margin-top: 0.2rem;
+  margin-right: 1rem;
+  background-color: $offWhite;
+  color: $darkBlue;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-  color: #fff;
   cursor: pointer;
   transition: transform 0.3s;
-  margin-top: 0.4rem;
-
+  
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   }
 }
@@ -29,24 +22,22 @@ $font-stack: 'Arial', sans-serif;
 }
 
 .card-text {
-  font-family: $font-stack;
   text-transform: capitalize;
-  margin: math.div($default-padding, 2); 
+  margin: 5px; 
 
   &.type {
     font-weight: 700;
-    color: $netflix-red;
-    border-bottom: 2px solid $netflix-red;
+    border-bottom: 2px solid $darkBlue;
     display: inline-block;
   }
 
   &.org {
+    font-weight: 700;
     font-size: 1.2em;
   }
 
   &.description {
     text-transform: none;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9em;
+    font-size: 1rem;
   }
 }
