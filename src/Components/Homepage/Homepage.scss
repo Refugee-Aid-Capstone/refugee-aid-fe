@@ -42,7 +42,7 @@ body {
   justify-content: flex-start;
 }
 
-.content-section {
+.mission-content-section {
   padding-top: 30px;
   display: flex;
   align-items: flex-start;
@@ -192,7 +192,7 @@ iframe {
 }
 
 @media (max-width: 768px) {
-  .content-section {
+  .mission-content-section {
     flex-direction: column;
 
     .media-side,
