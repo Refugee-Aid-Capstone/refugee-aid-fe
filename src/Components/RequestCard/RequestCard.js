@@ -1,5 +1,7 @@
 import React from 'react';
 import './RequestCard.scss';
+import PropTypes from 'prop-types';
+
 
 export default function RequestCard({ request, selectOrganization }) {
   const {
@@ -23,3 +25,14 @@ export default function RequestCard({ request, selectOrganization }) {
     </article>
   );
 }
+
+RequestCard.propTypes = {
+  request: PropTypes.shape({
+    id: PropTypes.number,
+    description: PropTypes.string,
+    aidType: PropTypes.string,
+    language: PropTypes.string,
+    status: PropTypes.string,
+  }),
+  selectOrganization: PropTypes.func
+};

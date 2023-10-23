@@ -1,40 +1,46 @@
 .search-bar {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.5rem;
   align-items: center;
   padding-bottom: 2rem;
   position: relative;
 
   input[type='text'] {
-    margin-right: 1rem;
-    flex: 1;
-    max-width: 300px;
     height: 40px;
+    padding: 0.6rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
   }
 
   .filter-fields {
-    display: flex;
-    gap: 10px;
-
     select {
       padding: 10px;
-      border: none;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
   }
 
   .dropDown {
-    height: 40px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-right: 1rem;
-
+    height: 40px;
+  }
+  
+  .city-input {
+    grid-column: span 3;
+    border-radius: 5px;
+    height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0.6rem;
+    font-size: 1rem;
   }
 
   button {
     padding: 12px 19px;
     background-color: #37b3fe;
-    // color: #031662;
     color: white;
     border: none;
     border-radius: 5px;
@@ -44,7 +50,7 @@
     height: 40px;
 
     &:hover {
-      background-color: #0ECB3A;
+      background-color: #0ecb3a;
       box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
   }

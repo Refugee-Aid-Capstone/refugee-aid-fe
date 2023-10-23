@@ -10,7 +10,7 @@ describe('Homepage Tests', () => {
         cy.get('.logo-image').click()
         cy.url().should('include', '/')
         cy.get('.home-header').should('be.visible');
-        cy.get('.content-section').should('be.visible');
+        cy.get('.mission-content-section').should('be.visible');
         cy.get('.media-side').should('be.visible');
         cy.get('.text-side').should('be.visible');
         cy.get('.refugee-image-container img').should('have.attr', 'alt', 'Refugees');

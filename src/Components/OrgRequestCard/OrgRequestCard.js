@@ -3,6 +3,7 @@ import '../OrganizationDashboard/OrganizationDashboard.scss';
 import './OrgRequest.scss';
 import { useMutation } from '@apollo/client';
 import { UPDATE_AID_REQUEST } from '../../apollo-client/mutations';
+import PropTypes from 'prop-types';
 
 export default function OrgRequestCard({ request }) {
   const { id, description, aidType, language, status } = request;
@@ -33,3 +34,13 @@ export default function OrgRequestCard({ request }) {
     </article>
   );
 }
+
+OrgRequestCard.propTypes = {
+  request: PropTypes.shape({
+    id: PropTypes.string,
+    description: PropTypes.string,
+    aidType: PropTypes.string,
+    language: PropTypes.string,
+    status: PropTypes.string,
+  }),
+};

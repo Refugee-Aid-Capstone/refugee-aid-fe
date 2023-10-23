@@ -2,6 +2,7 @@ import React from 'react';
 import welcomeImage from '../../images/welcome-usa-refugee.png';
 import Map from '../../Map/Map';
 import '../ProvideAidPage/ProvideAidPage.scss'
+import PropTypes from 'prop-types';
 
 export default function OrganizationDisplay({ selectedOrganization }) {
   const {
@@ -54,3 +55,20 @@ export default function OrganizationDisplay({ selectedOrganization }) {
     );
   }
   
+  OrganizationDisplay.propTypes = {
+    selectedOrganization: PropTypes.shape({
+      name: PropTypes.string,
+      contactPhone: PropTypes.string,
+      contactEmail: PropTypes.string,
+      streetAddress: PropTypes.string,
+      website: PropTypes.string,
+      city: PropTypes.string,
+      state: PropTypes.string,
+      zip: PropTypes.string,
+      latitude: PropTypes.number,
+      longitude: PropTypes.number,
+      shareAddress: PropTypes.bool,
+      sharePhone: PropTypes.bool,
+      shareEmail: PropTypes.bool,
+    })
+  }

@@ -17,7 +17,7 @@ function Homepage() {
     <header className="home-header">
       <a href="#main-content" className="skip-link">Skip to main content</a>
       <main id="main-content">
-        <section className="content-section">
+        <section className="mission-content-section">
           <div className="media-side">
             <div className="media-content">
               {showVideo ? (

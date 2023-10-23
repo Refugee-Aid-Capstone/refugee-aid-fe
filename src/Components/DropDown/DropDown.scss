@@ -1,6 +1,6 @@
 .suggestion-dropdown {
-  // background-color: white;
-  background-color: #30acf6;
+  color: black;
+  background-color: white;
   margin-right: 1rem;
   flex: 1;
   max-width: 300px;
@@ -10,23 +10,14 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
-.suggestion {
-  padding: 0.5rem;
-  list-style-type: none;
-
-}
-
 .suggestion[data-highlighted='true'] {
   background-color: #30acf6;
 }
 
-.city-input {
-  margin-right: 1rem;
-  flex: 1;
-  max-width: 300px;
-  height: 40px;
+.suggestion {
+  padding: 0.5rem;
+  list-style-type: none;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 0.6rem;
-  font-size: 1rem;
 }
+
+

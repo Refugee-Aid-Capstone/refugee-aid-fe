@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+@import '../../index.scss';
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -6,25 +7,16 @@ body {
 }
 
 .header {
-  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-}
-
-.paragraph {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
 }
 
 .nav-bar {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: center;
-  background-color: #30acf6;
+  background-color: $primaryBlue;
   padding: 1rem 2rem;
-  box-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #30acf6, 0 0 25px #30acf6, 0 0 30px #30acf6, 0 0 35px #30acf6;
+  box-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $primaryBlue, 0 0 25px #30acf6, 0 0 30px #30acf6, 0 0 35px #30acf6;
   height: 100px;
-  overflow: hidden;
 }
 
 .navbar-logo {
@@ -40,6 +32,7 @@ body {
     width: 4rem;
     height: auto;
     margin-right: 0.5rem;
+    margin-top: 1rem;
     transition: transform 0.3s ease;
     position: relative;
     top: -7px;
@@ -60,16 +53,6 @@ body {
   margin-left: auto;
 }
 
-.login-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-}
-
 .nav-link {
   text-decoration: none;
   cursor: pointer;
@@ -77,7 +60,7 @@ body {
   font-weight: 700;
   font-size: 1.3rem;
   margin-right: 1rem;
-  color: #EDEDED;
+  color: $offWhite;
   font-weight: 600;
   letter-spacing: 1px;
   padding: 0.5rem 1rem;
@@ -89,61 +72,30 @@ body {
   }
 
   &.active {
-    border-bottom: 2px solid #EDEDED;
+    border-bottom: 2px solid $offWhite;
   }
 }
 
 .nav-button {
-  background-color: #3498db;
-  color: #ffffff;
-  // color: #031662;
+  background-color: $secondaryBlue;
+  text-transform: capitalize;
+  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
-  font-size: 0.7rem;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
-  box-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #30acf6, 0 0 25px #30acf6, 0 0 30px #30acf6, 0 0 35px #30acf6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background-color: #2980b9;
+    background-color: $tertiaryBlue;
   }
 
   &:active {
     transform: scale(0.98);
   }
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4);
-  }
-
-  .nav-button.logout {
-    background-color: #e74c3c;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #c0392b;
-    }
-
-    &:active {
-      transform: scale(0.98);
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.4);
-    }
-  }
-
 }
 
 .hamburger {
@@ -185,9 +137,9 @@ body {
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 70px;
-      right: 10px;
-      background-color: rgba(48, 172, 246, 0.5);
+      top: 80px;
+      right: 0px;
+      background-color: $primaryBlue;
       border-radius: 10px;
       z-index: 1000;
     }

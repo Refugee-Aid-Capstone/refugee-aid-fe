@@ -29,12 +29,6 @@ body {
   }
 }
 
-// below is for testing perpose only
-// .content-section { border: 2px solid red; }
-// .media-side { border: 2px solid green; }
-// .text-side { border: 2px solid blue; }
-// .refugee-image-container { border: 2px solid yellow; }
-
 .home-header {
   .navbar-container {
     width: 100%;
@@ -48,7 +42,7 @@ body {
   justify-content: flex-start;
 }
 
-.content-section {
+.mission-content-section {
   padding-top: 30px;
   display: flex;
   align-items: flex-start;
@@ -198,7 +192,7 @@ iframe {
 }
 
 @media (max-width: 768px) {
-  .content-section {
+  .mission-content-section {
     flex-direction: column;
 
     .media-side,
