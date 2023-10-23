@@ -37,7 +37,7 @@ export default function OrgRequestCard({ request }) {
 
 OrgRequestCard.propTypes = {
   request: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.string,
     description: PropTypes.string,
     aidType: PropTypes.string,
     language: PropTypes.string,

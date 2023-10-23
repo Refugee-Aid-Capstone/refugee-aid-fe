@@ -64,7 +64,7 @@ export default function OrganizationDisplay({ selectedOrganization }) {
       website: PropTypes.string,
       city: PropTypes.string,
       state: PropTypes.string,
-      zip: PropTypes.number,
+      zip: PropTypes.string,
       latitude: PropTypes.number,
       longitude: PropTypes.number,
       shareAddress: PropTypes.bool,
