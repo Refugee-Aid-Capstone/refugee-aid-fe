@@ -13,7 +13,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
     });
   }
   if (networkError && networkError.statusCode === 500) {
-    console.log('Network Error:', networkError);
+    console.error('Network Error:', networkError);
   }
 });
 

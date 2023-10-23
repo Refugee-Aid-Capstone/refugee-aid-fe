@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import './NavBar.scss';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logoImage from '../../images/refuge.png';
+import './NavBar.scss';
 
 export default function NavBar({ isLoggedIn, handleLogin }) {
 
