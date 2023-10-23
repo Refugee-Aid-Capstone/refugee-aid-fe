@@ -28,7 +28,9 @@ export default function OrganizationDisplay({ selectedOrganization }) {
             <h2>{name}</h2>
             {sharePhone && <p>Phone: {contactPhone}</p>}
             {shareEmail && <p>Email: {contactEmail}</p>}
-            {shareAddress && <address>Address: {streetAddress}</address>}
+            {/* {shareAddress && <address>Address: {streetAddress}</address>} */}
+            {shareAddress && <p>Address: {streetAddress}</p>}
+
             <p>Website: {website}</p>
             <p>City: {city}</p>
             <p>State: {state}</p>
