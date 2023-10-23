@@ -4,9 +4,10 @@ import { GET_ALL_LOCATIONS } from '../../apollo-client/queries';
 import { useCombobox } from 'downshift';
 import { useNavigate } from 'react-router-dom';
 import Spinner from '../Spinner/Spinner';
+import PropTypes from 'prop-types';
 import './DropDown.scss';
 
-export default function DropDown({ city, setSearchLocation }) {
+export default function DropDown({ setSearchLocation }) {
   const [autocompleteSuggestions, setAutocompleteSuggestions] = useState([]);
   const { loading, error, data } = useQuery(GET_ALL_LOCATIONS);
   const [selectedItem, setSelectedItem] = useState('');
@@ -96,4 +97,9 @@ export default function DropDown({ city, setSearchLocation }) {
       </ul>
     </>
   );
+}
+
+
+DropDown.propTypes = {
+  setSearchLocation: PropTypes.func.isRequired
 }

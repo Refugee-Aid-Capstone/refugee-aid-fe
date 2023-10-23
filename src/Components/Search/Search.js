@@ -4,6 +4,8 @@ import { useLazyQuery } from '@apollo/client';
 import SearchResults from '../SearchResults/SearchResults';
 import './Search.scss';
 import DropDown from '../DropDown/DropDown';
+import PropTypes from 'prop-types';
+
 
 export default function Search({ selectOrganization }) {
   const [city, setCity] = useState('');
@@ -62,4 +64,8 @@ export default function Search({ selectOrganization }) {
       />
     </div>
   );
+}
+
+Search.propTypes = {
+  selectOrganization: PropTypes.func
 }

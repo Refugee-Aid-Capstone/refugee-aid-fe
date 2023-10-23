@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logoImage from '../../images/refuge.png';
 import './NavBar.scss';
+import PropTypes from 'prop-types';
 
 export default function NavBar({ isLoggedIn, handleLogin }) {
 
@@ -39,4 +40,9 @@ export default function NavBar({ isLoggedIn, handleLogin }) {
       </div>
     </nav>
   );
+}
+
+NavBar.propTypes = {
+  isLoggedIn: PropTypes.bool,
+  handleLogin: PropTypes.func
 }

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import RequestCard from '../RequestCard/RequestCard';
 import Spinner from '../Spinner/Spinner';
 import './SearchResults.scss';
+import PropTypes from 'prop-types';
+
 
 export default function SearchResults({
   selectOrganization,
@@ -41,4 +43,9 @@ export default function SearchResults({
       {searchResults.length ? cards : <p>Start by inputting a location!</p>}
     </div>
   );
+}
+
+SearchResults.propTypes = {
+  selectOrganization: PropTypes.func,
+  searchFilter: PropTypes.string,
 }

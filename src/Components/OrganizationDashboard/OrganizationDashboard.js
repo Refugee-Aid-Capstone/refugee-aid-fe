@@ -5,6 +5,7 @@ import { GET_ONE_ORG } from '../../apollo-client/queries';
 import OrgRequestCard from '../OrgRequestCard/OrgRequestCard';
 import Spinner from '../Spinner/Spinner';
 import '../OrganizationDashboard/OrganizationDashboard.scss';
+import PropTypes from 'prop-types';
 
 export default function OrganizationDashboard({ orgId }) {
   const navigate = useNavigate();
@@ -72,4 +73,8 @@ export default function OrganizationDashboard({ orgId }) {
       </div>
     </div>
   );
+}
+
+OrganizationDashboard.propTypes = {
+  orgId: PropTypes.number
 }
