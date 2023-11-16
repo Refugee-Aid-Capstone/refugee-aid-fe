@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Route, Routes, useNavigate, } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 import Homepage from '../Homepage/Homepage';
 import OrganizationDashboard from '../OrganizationDashboard/OrganizationDashboard';
@@ -7,7 +7,8 @@ import ProvideAidPage from '../ProvideAidPage/ProvideAidPage';
 import Error404 from '../ErrorHandling/Error404';
 import Error500 from '../ErrorHandling/Error500';
 import GeneralError from '../ErrorHandling/GeneralError';
-import Contact from '../Contact/Contact'
+import Contact from '../Contact/Contact';
+import CareRequestForm from '../CareRequestForm/CareRequestForm';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -31,6 +32,7 @@ function App() {
         <Route exact path='/Contact' element={<Contact />} />
         <Route exact path='/provideAid' element={<ProvideAidPage />} />
         <Route exact path='/OrganizationDashboard' element={<OrganizationDashboard orgId={99} />} />
+        <Route path='/care-request' element={<CareRequestForm />} />
         <Route path='/error500' element={<Error500 />} />
         {window.location.pathname === '/500-test' && (
           <Route path="/500-test" element={<Error500 />} />

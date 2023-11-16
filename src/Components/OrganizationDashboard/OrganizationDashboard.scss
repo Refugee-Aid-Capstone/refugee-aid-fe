@@ -31,6 +31,7 @@
     }
 
     .right-column {
+      position: relative; 
       flex: 1;
       padding-left: 1rem;
 
@@ -45,28 +46,28 @@
         margin-bottom: 10px;
       }
 
-      .edit-button,
-      button {
+      .create-org-aid-request {
+        position: absolute; 
+        top: 0; 
+        right: 0; 
+        background-color: #f8ac1f;
+        color: black; 
         padding: 0.4rem 0.8rem;
         font-size: 0.9rem;
         border-radius: 9px;
-        margin-left: 1rem;
+        margin-top: 5rem; 
+        margin-right: 1rem; 
         border: none;
         cursor: pointer;
         transition: background-color 0.3s ease;
-      }
-
-      .edit-button {
-        background-color: #f8ac1f;
-        color: black;
-
-        &:hover {
-          background-color: #2196F3;
-          color: #fff;
+      
+          &:hover {
+              background-color: #2196F3;
+              color: #fff;
+            }
         }
       }
     }
-  }
 
   @media (max-width: 992px) {
     .dashboard-content {
@@ -93,7 +94,7 @@
         font-size: 1.5rem;
       }
 
-      button {
+      .create-org-aid-request {
         padding: 0.3rem 0.6rem;
         font-size: 0.8rem;
       }

@@ -6,19 +6,19 @@
 }
 
 .search-results::-webkit-scrollbar {
-  width: 10px;  /* Adjust width for vertical scrollbar */
+  width: 10px;  
 }
 
 .search-results::-webkit-scrollbar-thumb {
-  background: #4CAF50;  /* Thumb's color */
-  border-radius: 5px;  /* Rounded scrollbar */
+  background: #4CAF50;  
+  border-radius: 5px; 
 }
 
 .search-results::-webkit-scrollbar-thumb:hover {
-  background: #45a049;  /* Darken the thumb's color a bit when hovered */
+  background: #45a049;
 }
 
 .search-results::-webkit-scrollbar-track {
-  background: #f1f1f1;  /* Track's color */
-  border-radius: 5px;   /* Rounded scrollbar */
+  background: #f1f1f1;
+  border-radius: 5px;
 }
