@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
-import '../CareRequestForm/CareRequestForm.scss'; 
+import '../CareRequestForm/CareRequestForm.scss';
+import { useMutation } from '@apollo/client';
+import { CREATE_AID_REQUEST } from '../../apollo-client/mutations';
 
-function CareRequestForm() {
-    const navigate = useNavigate();
-    const [formData, setFormData] = useState({
-        aidType: '',
-        description: '',
-        // more fields ?
-    });
+    function CareRequestForm({ organizationId }) {
+        const navigate = useNavigate();
+        const [formData, setFormData] = useState({
+          aidType: '',
+          description: '',
+        });
+
+        const [createAidRequest, { loading, error }] = useMutation(CREATE_AID_REQUEST);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -19,14 +22,17 @@ function CareRequestForm() {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here we should add the logic to send data to the server
-        // For now, we'll just log the formData and navigate to a different page
-        console.log(formData);
-
-        // After submitting, navigate to a different page, mayby the dashboard or a success page?
-        navigate('/success'); 
-    };
+      e.preventDefault();
+      createAidRequest({ variables: { ...formData, organizationId } })
+        .then(() => {
+          navigate('/organization-dashboard');
+        })
+        .catch((err) => {
+          console.error('Error creating aid request:', err);
+          alert('Failed to create aid request. Please try again.');
+        });
+  };
+     
 
     return (
         <div className="care-request-form-container">

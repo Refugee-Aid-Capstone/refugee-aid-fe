@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logoImage from '../../images/refuge.png';
+import logoImage from '../../images/refugee-aid.PNG';
 import './NavBar.scss';
 import PropTypes from 'prop-types';
 
