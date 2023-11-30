@@ -28,11 +28,24 @@ export default function RequestCard({ request, selectOrganization }) {
 
 RequestCard.propTypes = {
   request: PropTypes.shape({
-    id: PropTypes.number,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     description: PropTypes.string,
     aidType: PropTypes.string,
     language: PropTypes.string,
-    status: PropTypes.string,
+    organization: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }).isRequired,
   }),
-  selectOrganization: PropTypes.func
+  selectOrganization: PropTypes.func.isRequired
 };
+
+// RequestCard.propTypes = {
+//   request: PropTypes.shape({
+//     id: PropTypes.number,
+//     description: PropTypes.string,
+//     aidType: PropTypes.string,
+//     language: PropTypes.string,
+//     status: PropTypes.string,
+//   }),
+//   selectOrganization: PropTypes.func
+// };
