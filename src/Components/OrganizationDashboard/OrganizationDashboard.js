@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { GET_ONE_ORG } from '../../apollo-client/queries';
@@ -6,6 +6,8 @@ import OrgRequestCard from '../OrgRequestCard/OrgRequestCard';
 import Spinner from '../Spinner/Spinner';
 import '../OrganizationDashboard/OrganizationDashboard.scss';
 import PropTypes from 'prop-types';
+import CareRequestForm from '../CareRequestForm/CareRequestForm';
+import { Routes, Route } from 'react-router-dom';
 
 export default function OrganizationDashboard({ orgId }) {
   const navigate = useNavigate();
@@ -39,6 +41,10 @@ export default function OrganizationDashboard({ orgId }) {
     return <p>No organization data available.</p>;
   }
 
+  const handleOpenForm = () => {
+    navigate('/care-request');
+  };
+
   const {
     name,
     contactPhone,
@@ -56,7 +62,7 @@ export default function OrganizationDashboard({ orgId }) {
       <div className='dashboard-content'>
         <section className='left-column'>
           <h3>Aid Requests</h3>
-          {aidRequests.map(request => (
+          {aidRequests.map((request) => (
             <OrgRequestCard key={request.id} request={request} />
           ))}
         </section>
@@ -69,12 +75,18 @@ export default function OrganizationDashboard({ orgId }) {
           <p>City: {city}</p>
           <p>State: {state}</p>
           <p>ZIP: {zip}</p>
+          <button className='create-org-aid-request' onClick={handleOpenForm}>
+            Create New Aid Request
+          </button>
         </section>
       </div>
+      <Routes>
+  <Route path='/care-request' element={<CareRequestForm orgId={orgId} />} />
+</Routes>
     </div>
   );
 }
 
 OrganizationDashboard.propTypes = {
-  orgId: PropTypes.number
-}
+  orgId: PropTypes.number,
+};

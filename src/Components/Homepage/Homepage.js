@@ -54,9 +54,9 @@ function Homepage() {
             <div className="title-container">
               <h2>Our Mission</h2>
             </div>
-            <p>Our mission at Refuge is to ensure that refugees, asylum seekers, and migrants, wherever they may be, have access to trusted services and accurate information right at their fingertips.</p>
+            <p>Our mission at Refugee Aid is to ensure that refugees, asylum seekers, and migrants, wherever they may be, have access to trusted services and accurate information right at their fingertips.</p>
             <p>Article 14 of the UN Declaration of Human Rights promises that all individuals have "the right to seek and enjoy asylum from persecution in other countries."</p>
-            <p>At Refuge, we are dedicated to helping people realize and exercise this right, no matter where they are in their journey.</p>
+            <p>At Refugee Aid, we are dedicated to helping people realize and exercise this right, no matter where they are in their journey.</p>
             <p>We do everything within our power and capabilities to transform the fear in the hearts of those in need into hope.</p>
             {!showVideo && (
               <div className="video-controls">

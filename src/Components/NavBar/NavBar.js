@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logoImage from '../../images/refuge.png';
+import logoImage from '../../images/refugee-aid.PNG';
 import './NavBar.scss';
 import PropTypes from 'prop-types';
 
@@ -24,7 +24,7 @@ export default function NavBar({ isLoggedIn, handleLogin }) {
         &#9776;
       </button>
       <div className={`nav-items ${menuOpen ? 'active' : ''}`} role="menu">
-        <NavLink className='nav-link' to='/provideAid' role="menuitem" onClick={() => setMenuOpen(false)}>aid request</NavLink>
+        <NavLink className='nav-link' to='/provideAid' role="menuitem" onClick={() => setMenuOpen(false)}>search for requests</NavLink>
         <NavLink className='nav-link' to='/' role="menuitem" onClick={() => setMenuOpen(false)}>mission</NavLink>
         <NavLink className='nav-link' to='/contact' role="menuitem" onClick={() => setMenuOpen(false)}>helpful resources</NavLink>
       </div>
